@@ -6,10 +6,10 @@ services:
     volumes: ['./database/mysql:/var/lib/mysql']
     restart: always
     environment:
-      MYSQL_ROOT_PASSWORD: password
-      MYSQL_DATABASE: wordpress
-      MYSQL_USER: wordpress
-      MYSQL_PASSWORD: wordpress
+      MYSQL_ROOT_PASSWORD: starrec
+      MYSQL_DATABASE: starrec
+      MYSQL_USER: starrec
+      MYSQL_PASSWORD: starrec
     networks:
       - starwork
   # phpmyadmin
@@ -25,8 +25,8 @@ services:
       MYSQL_ROOT_PASSWORD: password 
     networks:
       - starwork
-  # Wordpress
-  wordpress:
+  # Webserver
+  webserver:
     depends_on:
       - db
     image: php:8.0-apache
@@ -34,10 +34,6 @@ services:
       - '8000:80'
     restart: always
     volumes: ['./code:/var/www/html']
-    environment:
-      WORDPRESS_DB_HOST: db:3306
-      WORDPRESS_DB_USER: wordpress
-      WORDPRESS_DB_PASSWORD: wordpress
     networks:
       - starwork
 networks:
