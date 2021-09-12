@@ -50,7 +50,7 @@ $myfile = fopen("html_template.html", "r") or die("Unable to open file!");
 $htmlcontent = fread($myfile,"100");
 fclose($myfile);
 
-
+var_dump($myfile);
 
 $myfile = str_replace(VORNAME, $vorname, $myfile);
 $myfile = str_replace(NACHNAME, $nachname, $myfile);
