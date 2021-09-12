@@ -20,7 +20,7 @@ if ($conn->connect_error) {
 } 
 
 $sql = "INSERT INTO test (name, email)
-VALUES ($name, $email)";
+VALUES ('$name', '$email')";
 
 if ($conn->query($sql) === TRUE) {
   echo "New record created successfully";
