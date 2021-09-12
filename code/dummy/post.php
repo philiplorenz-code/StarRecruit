@@ -50,8 +50,6 @@ $myfile = fopen("html_template.html", "r") or die("Unable to open file!");
 $htmlcontent = fread($myfile,"100");
 fclose($myfile);
 
-echo $htmlcontent;
-
 $htmlcontent = str_replace("VORNAME", $vorname, $htmlcontent);
 $htmlcontent = str_replace("NACHNAME", $nachname, $htmlcontent);
 $htmlcontent = str_replace("BESCHREIBUNG", $beschreibung, $htmlcontent);
@@ -59,7 +57,7 @@ $htmlcontent = str_replace("BERUF", $beruf, $htmlcontent);
 $htmlcontent = str_replace("WUNSCHGEHALT", $wunschgehalt, $htmlcontent);
 $htmlcontent = str_replace("EMAIL", $email, $htmlcontent);
 
-echo $htmlcontent;
+// echo $htmlcontent;
 
 
 $file_name = $pageid . ".html";
@@ -71,7 +69,7 @@ fclose($new_website);
 
 
 $url_open = "https://webdev.learning-it.io/dummy/" . $file_name;
-echo $url_open;
+echo "$url_open";
 
 ?>
 
