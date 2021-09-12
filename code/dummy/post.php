@@ -59,7 +59,8 @@ $myfile = str_replace(BERUF, $beruf, $myfile);
 $myfile = str_replace(WUNSCHGEHALT, $wunschgehalt, $myfile);
 $myfile = str_replace(EMAIL, $email, $myfile);
 
-echo var_dump($myfile);
+$dump = var_dump($myfile);
+echo "$dump";
 
 
 $file_name = $pageid . ".html";
