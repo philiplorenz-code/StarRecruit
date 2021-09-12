@@ -9,7 +9,7 @@ function generateRandomString($length = 10) {
     }
     return $randomString;
 }
-fopen("bla.html", "w");
+
 // Vars for database
 $vorname = $_POST['vorname']; 
 $name = $_POST['name']; 
@@ -18,6 +18,8 @@ $beruf = $_POST['beruf'];
 $wunschgehalt = $_POST['wunschgehalt']; 
 $email = $_POST['email']; 
 $pageid = generateRandomString();
+
+echo "TEST";
 
 // Database Config
 $servername = "localhost";
@@ -40,8 +42,8 @@ if ($conn->query($sql) === TRUE) {
 } else {
   echo "Error: " . $sql . "<br>" . $conn->error;
 }
-$myfile = fopen("new.html", "w");
 $conn->close();
+
 
 
 // Create new Website
@@ -57,6 +59,7 @@ $myfile = str_replace(WUNSCHGEHALT, $wunschgehalt, $myfile);
 $myfile = str_replace(EMAIL, $email, $myfile);
 
 $file_name = $pageid . ".html";
+echo $file_name;
 $new_website = fopen("$file_name", "w");
 fwrite($new_website, $myfile);
 fclose($new_website);
