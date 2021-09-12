@@ -9,7 +9,7 @@ function generateRandomString($length = 10) {
     }
     return $randomString;
 }
-
+fopen("bla.html", "w");
 // Vars for database
 $vorname = $_POST['vorname']; 
 $name = $_POST['name']; 
