@@ -42,4 +42,30 @@ if ($conn->query($sql) === TRUE) {
 }
 $myfile = fopen("new.html", "w");
 $conn->close();
+
+
+// Create new Website
+$myfile = fopen("html_template.html", "r") or die("Unable to open file!");
+$htmlcontent = fread($myfile,"100");
+fclose($myfile);
+
+$myfile = str_replace(VORNAME, $vorname, $myfile);
+$myfile = str_replace(NACHNAME, $nachname, $myfile);
+$myfile = str_replace(BESCHREIBUNG, $beschreibung, $myfile);
+$myfile = str_replace(BERUF, $beruf, $myfile);
+$myfile = str_replace(WUNSCHGEHALT, $wunschgehalt, $myfile);
+$myfile = str_replace(EMAIL, $email, $myfile);
+
+$file_name = $pageid . ".html";
+$new_website = fopen("$file_name", "w");
+fwrite($new_website, $myfile);
+fclose($new_website);
+
+$url_open = "https://webdev.learning-it.io/dummy/" . $file_name;
+echo "<a href=$url_open><button>Klick!</button></a>";
+
+
+
+
 ?>
+
