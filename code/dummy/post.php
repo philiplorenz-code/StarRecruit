@@ -61,11 +61,10 @@ $new_website = fopen("$file_name", "w");
 fwrite($new_website, $myfile);
 fclose($new_website);
 
+
+
 $url_open = "https://webdev.learning-it.io/dummy/" . $file_name;
-echo "<a href=$url_open><button>Klick!</button></a>";
-
-
-
+echo $url_open;h
 
 ?>
 
