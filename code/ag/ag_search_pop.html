@@ -17,7 +17,14 @@
         <div class="d-flex flex-column" id="content-wrapper">
             <div>
                 <h1 style="padding: 40px;">Sucheingabe</h1>
-                <form style="padding: 0;margin: 0;"><label class="form-label">Label</label><input class="form-control" type="text"><label class="form-label">Label</label><input class="form-control" type="number"><label class="form-label">Label</label><input class="form-range form-control" type="range"><label class="form-label">Label</label><input class="form-control" type="date"></form>
+                <form action="submit.php" method="POST" style="padding: 0;margin: 0;">
+                    <label class="form-label">Label</label><input class="form-control" type="text" name="name">
+                    <label class="form-label">Label</label><input class="form-control" type="number">
+                    <label class="form-label">Label</label><input class="form-range form-control" type="range">
+                    <label class="form-label">Label</label><input class="form-control" type="date">
+                    <input type="submit">
+                </form>
+                    
             </div>
         </div>
     </div><button class="btn btn-primary" type="button">Starten</button>
