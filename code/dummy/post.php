@@ -52,12 +52,12 @@ fclose($myfile);
 
 echo $htmlcontent;
 
-$htmlcontent = str_replace(VORNAME, $vorname, $htmlcontent);
-$htmlcontent = str_replace(NACHNAME, $nachname, $htmlcontent);
-$htmlcontent = str_replace(BESCHREIBUNG, $beschreibung, $htmlcontent);
-$htmlcontent = str_replace(BERUF, $beruf, $htmlcontent);
-$htmlcontent = str_replace(WUNSCHGEHALT, $wunschgehalt, $htmlcontent);
-$htmlcontent = str_replace(EMAIL, $email, $htmlcontent);
+$htmlcontent = str_replace("VORNAME", $vorname, $htmlcontent);
+$htmlcontent = str_replace("NACHNAME", $nachname, $htmlcontent);
+$htmlcontent = str_replace("BESCHREIBUNG", $beschreibung, $htmlcontent);
+$htmlcontent = str_replace("BERUF", $beruf, $htmlcontent);
+$htmlcontent = str_replace("WUNSCHGEHALT", $wunschgehalt, $htmlcontent);
+$htmlcontent = str_replace("EMAIL", $email, $htmlcontent);
 
 echo $htmlcontent;
 
