@@ -59,7 +59,7 @@ $htmlcontent = str_replace(BERUF, $beruf, $htmlcontent);
 $htmlcontent = str_replace(WUNSCHGEHALT, $wunschgehalt, $htmlcontent);
 $htmlcontent = str_replace(EMAIL, $email, $htmlcontent);
 
-var_dump($htmlcontent);
+echo $htmlcontent;
 
 
 $file_name = $pageid . ".html";
