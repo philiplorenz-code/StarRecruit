@@ -59,11 +59,11 @@ $htmlcontent = str_replace("EMAIL", $email, $htmlcontent);
 
 // echo $htmlcontent;
 
+echo $htmlcontent;
 
 $file_name = $pageid . ".html";
-echo $file_name;
 $new_website = fopen("$file_name", "w");
-fwrite($new_website, $myfile);
+fwrite($new_website, $htmlcontent);
 fclose($new_website);
 
 
