@@ -50,7 +50,7 @@ $myfile = fopen("html_template.html", "r") or die("Unable to open file!");
 $htmlcontent = fread($myfile,"100");
 fclose($myfile);
 
-echo var_dump($htmlcontent);
+
 
 $myfile = str_replace(VORNAME, $vorname, $myfile);
 $myfile = str_replace(NACHNAME, $nachname, $myfile);
@@ -58,6 +58,9 @@ $myfile = str_replace(BESCHREIBUNG, $beschreibung, $myfile);
 $myfile = str_replace(BERUF, $beruf, $myfile);
 $myfile = str_replace(WUNSCHGEHALT, $wunschgehalt, $myfile);
 $myfile = str_replace(EMAIL, $email, $myfile);
+
+echo var_dump($myfile);
+
 
 $file_name = $pageid . ".html";
 echo $file_name;
