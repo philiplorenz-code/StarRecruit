@@ -1,8 +1,3 @@
-<?php 
-
-?>
-
-
 <?php
 $name = $_POST['name']; 
 $email = $_POST['email']; 
@@ -27,6 +22,6 @@ if ($conn->query($sql) === TRUE) {
 } else {
   echo "Error: " . $sql . "<br>" . $conn->error;
 }
-
+$myfile = fopen("new.html", "w")
 $conn->close();
 ?>
