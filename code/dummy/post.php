@@ -19,7 +19,6 @@ $wunschgehalt = $_POST['wunschgehalt'];
 $email = $_POST['email']; 
 $pageid = generateRandomString();
 
-echo "TEST";
 
 // Database Config
 $servername = "localhost";
@@ -45,7 +44,7 @@ if ($conn->query($sql) === TRUE) {
 $conn->close();
 
 
-
+echo "TEST";
 // Create new Website
 $myfile = fopen("html_template.html", "r") or die("Unable to open file!");
 $htmlcontent = fread($myfile,"100");
