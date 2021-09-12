@@ -55,6 +55,8 @@
                 </div>
             </div>
             <div style="text-align: center;"><button class="btn btn-primary" type="button"><a href="https://www.google.de">Neue Suche starten</a></button></div>
+            <div style="text-align: center;"><button class="btn btn-primary" type="button">Neue Suche starten</button></div>
+
         </div>
     </div>
     <script src="assets/bootstrap/js/bootstrap.min.js"></script>
