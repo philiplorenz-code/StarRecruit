@@ -44,11 +44,13 @@ if ($conn->query($sql) === TRUE) {
 $conn->close();
 
 
-echo "TEST";
+
 // Create new Website
 $myfile = fopen("html_template.html", "r") or die("Unable to open file!");
 $htmlcontent = fread($myfile,"100");
 fclose($myfile);
+
+echo var_dump($htmlcontent);
 
 $myfile = str_replace(VORNAME, $vorname, $myfile);
 $myfile = str_replace(NACHNAME, $nachname, $myfile);
@@ -66,7 +68,7 @@ fclose($new_website);
 
 
 $url_open = "https://webdev.learning-it.io/dummy/" . $file_name;
-echo $url_open;h
+echo $url_open;
 
 ?>
 
