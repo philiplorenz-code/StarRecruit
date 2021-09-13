@@ -47,7 +47,7 @@ $conn->close();
 
 // Create new Website
 $myfile = fopen("html_template.html", "r") or die("Unable to open file!");
-$htmlcontent = fread($myfile,"100");
+$htmlcontent = fread($myfile,"10000");
 fclose($myfile);
 
 $htmlcontent = str_replace("VORNAME", $vorname, $htmlcontent);
