@@ -63,10 +63,6 @@ $new_website = fopen("$file_name", "w");
 fwrite($new_website, $htmlcontent);
 fclose($new_website);
 
-
-echo $file_name;
-
-
 $url_open = "https://webdev.learning-it.io/dummy/" . $file_name;
 echo "$url_open";
 
