@@ -1,5 +1,5 @@
 <?php
-
+// Function for generating PageID
 function generateRandomString($length = 10) {
     $characters = 'abcdefghijklmnopqrstuvwxyz';
     $charactersLength = strlen($characters);
@@ -19,7 +19,6 @@ $wunschgehalt = $_POST['wunschgehalt'];
 $email = $_POST['email']; 
 $pageid = generateRandomString();
 
-
 // Database Config
 $servername = "localhost";
 $username = "webd_philip";
@@ -28,11 +27,13 @@ $dbname = "webd_db";
 
 // Create connection
 $conn = new mysqli($servername, $username, $password, $dbname);
+
 // Check connection
 if ($conn->connect_error) {
   die("Connection failed: " . $conn->connect_error);
 } 
 
+// SQL Insert
 $sql = "INSERT INTO userprofile (Vorname, Name, Beschreibung, Beruf, Wunschgehalt, Email, Pageid)
 VALUES ('$vorname', '$name', '$beschreibung', '$beruf', '$wunschgehalt', '$email', '$pageid')";
 
@@ -41,6 +42,8 @@ if ($conn->query($sql) === TRUE) {
 } else {
   echo "Error: " . $sql . "<br>" . $conn->error;
 }
+
+// Close Connection
 $conn->close();
 
 
@@ -50,6 +53,7 @@ $myfile = fopen("html_template.html", "r") or die("Unable to open file!");
 $htmlcontent = fread($myfile,"10000");
 fclose($myfile);
 
+// Fill HTML-File with user-input
 $htmlcontent = str_replace("VORNAME", $vorname, $htmlcontent);
 $htmlcontent = str_replace("NACHNAME", $nachname, $htmlcontent);
 $htmlcontent = str_replace("BESCHREIBUNG", $beschreibung, $htmlcontent);
@@ -57,12 +61,13 @@ $htmlcontent = str_replace("BERUF", $beruf, $htmlcontent);
 $htmlcontent = str_replace("WUNSCHGEHALT", $wunschgehalt, $htmlcontent);
 $htmlcontent = str_replace("EMAIL", $email, $htmlcontent);
 
-// echo $htmlcontent;
+// Insert content to HTMl-Page
 $file_name = $pageid . ".html";
 $new_website = fopen("$file_name", "w");
 fwrite($new_website, $htmlcontent);
 fclose($new_website);
 
+// Echo new Website-Link
 $url_open = "https://webdev.learning-it.io/dummy/" . $file_name;
 echo "$url_open";
 
