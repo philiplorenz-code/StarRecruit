@@ -37,7 +37,7 @@ $sql = "INSERT INTO userprofile (Vorname, Name, Beschreibung, Beruf, Wunschgehal
 VALUES ('$vorname', '$name', '$beschreibung', '$beruf', '$wunschgehalt', '$email', '$pageid')";
 
 if ($conn->query($sql) === TRUE) {
-  echo "New record created successfully";
+  // echo "New record created successfully";
 } else {
   echo "Error: " . $sql . "<br>" . $conn->error;
 }
