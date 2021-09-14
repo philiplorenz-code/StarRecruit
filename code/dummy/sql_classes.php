@@ -20,12 +20,16 @@ function getAllUsers($sqlConfig) {
     // SQL Insert
     $sql = "SELECT * FROM `users`;";
     $result = $conn->query($sql);
-    if ($result === TRUE) {
-        echo $result;
-    } else {
-        echo "Error: " . $sql . "<br>" . $conn->error;
+    if ($result->num_rows > 0) {
+        // output data of each row
+        while($row = $result->fetch_assoc()) {
+          echo "user_id: " . $row["user_id"]. " - user_name: " . $row["user_name"]. " - user_email: " . $row["user_email"] . "<br>";
+        }
+    } 
+    else {
+        echo "0 results";
     }
-    echo $result;
+
 
     // Close Connection
     $conn->close();
