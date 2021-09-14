@@ -25,6 +25,7 @@ function getAllUsers($sqlConfig) {
     } else {
         echo "Error: " . $sql . "<br>" . $conn->error;
     }
+    echo $result;
 
     // Close Connection
     $conn->close();
