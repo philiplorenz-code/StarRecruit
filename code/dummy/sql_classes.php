@@ -105,6 +105,36 @@ function createNewMessageFromUnternehmen($sqlConfig, $unternehmen_id, $user_id) 
 
 }
 
+function getAllNachrichtenByUser($sqlConfig, $user_id){
+    // Create connection
+    $conn = new mysqli($sqlConfig["servername"], $sqlConfig["username"], $sqlConfig["password"], $sqlConfig["dbname"]);
+
+    // Check connection
+    if ($conn->connect_error) {
+        die("Connection failed: " . $conn->connect_error);
+    } 
+  
+    // SQL Insert
+    $sql = "SELECT * FROM `nachrichten` WHERE user_id='$user_id';";
+    $result = $conn->query($sql);
+    if ($result->num_rows > 0) {
+        // output data of each row
+        while($row = $result->fetch_assoc()) {
+            echo $row["id"] . "<br>";
+            echo $row["user_id"] . "<br>";
+            echo $row["unternehmen_id"] . "<br>";
+            echo $row["status"] . "<br>";
+        }
+    } 
+    else {
+        echo "0 results";
+    }
+
+
+    // Close Connection
+    $conn->close(); 
+}
 
 //createNewMessageFromUnternehmen($sqlConfig, "unternehmen3", "user3");
-getAllNachrichten($sqlConfig);
+//getAllNachrichten($sqlConfig);
+getAllNachrichtenByUser($sqlConfig, "user3");
