@@ -80,7 +80,7 @@ function getAllNachrichten($sqlConfig) {
     $conn->close();
 
 }
-// Returns all Nachrichten 
+// Insert new Nachricht
 function createNewMessageFromUnternehmen($sqlConfig, $unternehmen_id, $user_id) {
     // Create connection
     $conn = new mysqli($sqlConfig["servername"], $sqlConfig["username"], $sqlConfig["password"], $sqlConfig["dbname"]);
@@ -106,4 +106,5 @@ function createNewMessageFromUnternehmen($sqlConfig, $unternehmen_id, $user_id) 
 }
 
 
-createNewMessageFromUnternehmen($sqlConfig, "unternehmen3", "user3");
+//createNewMessageFromUnternehmen($sqlConfig, "unternehmen3", "user3");
+getAllNachrichten($sqlConfig);
