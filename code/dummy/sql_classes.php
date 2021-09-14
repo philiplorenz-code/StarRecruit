@@ -136,7 +136,8 @@ function getAllNachrichtenByUser($sqlConfig, $user_id){
     $conn->close(); 
 }
 
-function matchNachricht($sqlConfig, $nachricht_id){
+// Accept Request by User
+function matchNachrichtByUser($sqlConfig, $nachricht_id){
     // Create connection
     $conn = new mysqli($sqlConfig["servername"], $sqlConfig["username"], $sqlConfig["password"], $sqlConfig["dbname"]);
 
@@ -160,8 +161,33 @@ function matchNachricht($sqlConfig, $nachricht_id){
 
 }
 
+// Invite User
+function matchNachrichtByUnternehmen($sqlConfig, $nachricht_id){
+    // Create connection
+    $conn = new mysqli($sqlConfig["servername"], $sqlConfig["username"], $sqlConfig["password"], $sqlConfig["dbname"]);
+
+    // Check connection
+    if ($conn->connect_error) {
+        die("Connection failed: " . $conn->connect_error);
+    } 
+  
+    // SQL Insert
+    $sql = "UPDATE nachrichten SET status='invited' WHERE id='$nachricht_id';";
+
+
+    if ($conn->query($sql) === TRUE) {
+        echo "New record created successfully";
+      } else {
+        echo "Error: " . $sql . "<br>" . $conn->error;
+      }
+
+    // Close Connection
+    $conn->close();
+
+}
+
 //createNewMessageFromUnternehmen($sqlConfig, "unternehmen3", "user3");
 //getAllNachrichten($sqlConfig);
 //getAllNachrichtenByUser($sqlConfig, "user3");
 
-matchNachricht($sqlConfig, "1");
+matchNachrichtByUnternehmen($sqlConfig, "1");
