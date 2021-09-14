@@ -92,8 +92,14 @@ function createNewMessageFromUnternehmen($sqlConfig, $unternehmen_id, $user_id) 
   
     // SQL Insert
     $sql = "INSERT INTO nachrichten (user_id, unternehmen_id, status) VALUES ($user_id, $unternehmen_id, 'offen');";
-    $result = $conn->query($sql);
-    echo $result;
+
+
+    if ($conn->query($sql) === TRUE) {
+        echo "New record created successfully";
+      } else {
+        echo "Error: " . $sql . "<br>" . $conn->error;
+      }
+
     // Close Connection
     $conn->close();
 
