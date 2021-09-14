@@ -100,4 +100,4 @@ function createNewMessageFromUnternehmen($sqlConfig, $unternehmen_id, $user_id) 
 }
 
 
-createNewMessageFromUnternehmen($sqlConfig, "unternehmen3", );
+createNewMessageFromUnternehmen($sqlConfig, "unternehmen3", "user3");
