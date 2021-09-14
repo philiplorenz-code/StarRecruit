@@ -9,7 +9,7 @@ $sqlConfig = array(
 );
 
 
-// Returns all Users (id, name, mail)
+// Returns all Users 
 function getAllUsers($sqlConfig) {
     // Create connection
     $conn = new mysqli($sqlConfig["servername"], $sqlConfig["username"], $sqlConfig["password"], $sqlConfig["dbname"]);
@@ -25,9 +25,19 @@ function getAllUsers($sqlConfig) {
     if ($result->num_rows > 0) {
         // output data of each row
         while($row = $result->fetch_assoc()) {
-            echo $row["user_id"] . "<br>";
-            echo $row["user_name"] . "<br>";
-            echo $row["user_email"] . "<br>";
+            echo "UserID: " . $row["user_id"] . "<br>";
+            echo "Mail: " . $row["user_email"] . "<br>";
+            echo "Password: " . $row["user_password"] . "<br>";
+            echo "Vorname: " . $row["vorname"] . "<br>";
+            echo "Nachname: " . $row["name"] . "<br>";
+            echo "Beschreibung: " . $row["beschreibung"] . "<br>";
+            echo "Beruf: " . $row["beruf"] . "<br>";
+            echo "Mindestgehalt: " . $row["mind_gehalt"] . "<br>";
+            echo "Skills: " . $row["skills"] . "<br>";
+            echo "Profilbild: " . $row["profilbild"] . "<br>";
+            echo "Template: " . $row["template"] . "<br>";
+            echo "PageID: " . $row["pageid"] . "<br>";
+            echo "Startdatum: " . $row["startdatum"] . "<br>";
         }
     } 
     else {
@@ -39,10 +49,7 @@ function getAllUsers($sqlConfig) {
     $conn->close();
 
 }
-
-
-
-// Returns all Nachrichten (id, user_id, unternehmen_id, status)
+// Returns all Nachrichten 
 function getAllNachrichten($sqlConfig) {
     // Create connection
     $conn = new mysqli($sqlConfig["servername"], $sqlConfig["username"], $sqlConfig["password"], $sqlConfig["dbname"]);
@@ -73,7 +80,24 @@ function getAllNachrichten($sqlConfig) {
     $conn->close();
 
 }
+// Returns all Nachrichten 
+function createNewMessageFromUnternehmen($sqlConfig, $unternehmen_id, $user_id) {
+    // Create connection
+    $conn = new mysqli($sqlConfig["servername"], $sqlConfig["username"], $sqlConfig["password"], $sqlConfig["dbname"]);
+
+    // Check connection
+    if ($conn->connect_error) {
+        die("Connection failed: " . $conn->connect_error);
+    } 
+  
+    // SQL Insert
+    $sql = "INSERT INTO nachrichten ($user_id, $unternehmen_id, status) VALUES ('user2', 'unternehmen2', 'offen');";
+    $result = $conn->query($sql);
+
+    // Close Connection
+    $conn->close();
+
+}
 
 
-
-getAllNachrichten($sqlConfig);
+createNewMessageFromUnternehmen($sqlConfig, "unternehmen3", "user3");
