@@ -3,8 +3,7 @@
 // SQL Server Config
 $sqlConfig = array(
     "servername" => "localhost",
-    // "username" => "webd_philip",
-    "username" => "philip",
+    "username" => "webd_philip",
     "password" => "nvzHol-#p6PEu#ai",
     "dbname" => "users"
 );
@@ -19,7 +18,7 @@ function getAllUsers($sqlConfig) {
     } 
   
     // SQL Insert
-    $sql = "SELECT * FROM 'users'";
+    $sql = "SELECT * FROM 'userprofile'";
     $result = $conn->query($sql);
     if ($result === TRUE) {
         echo $result;
