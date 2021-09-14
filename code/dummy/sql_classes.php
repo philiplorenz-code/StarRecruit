@@ -18,7 +18,7 @@ function getAllUsers($sqlConfig) {
     } 
   
     // SQL Insert
-    $sql = "SELECT * FROM 'users'";
+    $sql = "SELECT * FROM `users`;";
     $result = $conn->query($sql);
     if ($result === TRUE) {
         echo $result;
