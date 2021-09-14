@@ -5,7 +5,7 @@ $sqlConfig = array(
     "servername" => "localhost",
     "username" => "webd_philip",
     "password" => "nvzHol-#p6PEu#ai",
-    "dbname" => "users"
+    "dbname" => "webd_db"
 );
 
 function getAllUsers($sqlConfig) {
@@ -18,7 +18,7 @@ function getAllUsers($sqlConfig) {
     } 
   
     // SQL Insert
-    $sql = "SELECT * FROM 'userprofile'";
+    $sql = "SELECT * FROM 'users'";
     $result = $conn->query($sql);
     if ($result === TRUE) {
         echo $result;
