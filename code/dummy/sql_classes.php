@@ -8,7 +8,7 @@ $sqlConfig = array(
     "dbname" => "users"
 );
 
-function getAllUsers($sqlConf) {
+function getAllUsers($sqlConfig) {
     // Create connection
     $conn = new mysqli($sqlConfig["servername"], $sqlConfig["username"], $sqlConfig["password"], $sqlConfig["dbname"]);
 
