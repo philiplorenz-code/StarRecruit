@@ -3,7 +3,8 @@
 // SQL Server Config
 $sqlConfig = array(
     "servername" => "localhost",
-    "username" => "webd_philip",
+    // "username" => "webd_philip",
+    "username" => "philip",
     "password" => "nvzHol-#p6PEu#ai",
     "dbname" => "users"
 );
