@@ -11,7 +11,7 @@ session_start();
 
         if(!empty($user_email) && !empty($user_password) && !is_numeric($user_email)){
             // save to db
-            $query = "insert into users (user_email,user_password) values ('$user_email','$user_password')";
+            $query = "insert into users (user_email,user_password) values ('$user_email','$user_password');";
             mysqli_query($con, $query);
 
             //header("Location: login.php");
