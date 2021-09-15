@@ -14,8 +14,8 @@ session_start();
             $query = "insert into users (user_email,user_password) values ('$user_email','$user_password')";
             mysqli_query($con, $query);
 
-            //header("Location: login.php");
-            //die;
+            header("Location: login.php");
+            die;
         }
         else {
             echo "Please enter valid information!!!";
