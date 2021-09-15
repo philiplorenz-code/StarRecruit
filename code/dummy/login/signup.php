@@ -3,6 +3,24 @@ session_start();
 
     include("connection.php");
     include("functions.php");
+
+    if($_SERVER['REQUEST_METHOD'] == "POST"){
+        //sth was posted
+        $user_email = $_POST['user_email'];
+        $user_password = $_POST['user_password'];
+
+        if(!empty($user_mail) && !empty($user_password) && !is_numeric($user_mail)){
+            // save to db
+            $query = "insert into users (user_email,user_password) values ('$user_email','$user_password')";
+            mysqli_query($query);
+
+            //header("Location: login.php");
+            //die;
+        }
+        else {
+            echo "Please enter valid information!!!";
+        }
+    }
     
 ?>
 
@@ -49,8 +67,8 @@ session_start();
 		<form method="post">
 			<div style="font-size: 20px;margin: 10px;color: white;">Signup</div>
 
-			<input id="text" type="text" name="user_name"><br><br>
-			<input id="text" type="password" name="password"><br><br>
+			<input id="text" type="text" name="user_email"><br><br>
+			<input id="text" type="password" name="user_password"><br><br>
 
 			<input id="button" type="submit" value="Signup"><br><br>
 
