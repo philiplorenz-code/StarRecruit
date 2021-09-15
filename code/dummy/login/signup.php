@@ -9,7 +9,7 @@ session_start();
         $user_email = $_POST['user_email'];
         $user_password = $_POST['user_password'];
 
-        if(!empty($user_mail) && !empty($user_password) && !is_numeric($user_mail)){
+        if(!empty($user_email) && !empty($user_password) && !is_numeric($user_email)){
             // save to db
             $query = "insert into users (user_email,user_password) values ('$user_email','$user_password')";
             mysqli_query($query);
