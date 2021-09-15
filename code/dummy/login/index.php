@@ -11,7 +11,7 @@ session_start();
 <html>
 <body>
     <a href="logout.php">Logout</a>
-    <h1>INDEX</h1>
+    <h1>Hello, <?php echo $user_data['user_email'] ?></h1>
 
     <form action="post.php" method="post">
     Vorname: <input type="text" name="vorname"><br>
