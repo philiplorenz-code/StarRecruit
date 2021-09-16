@@ -88,7 +88,19 @@ session_start();
                     <h5>About</h5>
                     <p>BlaBlaBla</p>
                 </div>
-                <div class="about">
+
+            </div>
+        </div>
+    </div>
+    </div>
+
+
+    <div class="col-xl-9 col-lg-9 col-md-12 col-sm-12 col-12">
+    <div class="card h-100">
+        <div class="card-body">
+            <form method="post">
+            <div class="row gutters">
+            <div class="about">
                 <table>
                     <tbody>
                     <th><form action="upload.php" method="post" enctype="multipart/form-data">
@@ -111,17 +123,6 @@ session_start();
                     </tbody>
                 </table>
                 </div>
-            </div>
-        </div>
-    </div>
-    </div>
-
-
-    <div class="col-xl-9 col-lg-9 col-md-12 col-sm-12 col-12">
-    <div class="card h-100">
-        <div class="card-body">
-            <form method="post">
-            <div class="row gutters">
                 <div class="col-xl-12 col-lg-12 col-md-12 col-sm-12 col-12">
                     <h6 class="mb-2 text-primary">Persönlich</h6>
                 </div>
