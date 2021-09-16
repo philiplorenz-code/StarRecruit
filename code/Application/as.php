@@ -131,7 +131,7 @@ session_start();
             </div>
             <div class="row gutters">
                 <div class="col-xl-12 col-lg-12 col-md-12 col-sm-12 col-12">
-                    <h6 class="mt-3 mb-2 text-primary">Fähigkeiten (kommagetrennt eintragen)</h6>
+                    <h6 class="mt-3 mb-2 text-primary">Fähigkeiten (getrennt durch +)</h6>
                 </div>
                 <div class="col-xl-6 col-lg-6 col-md-6 col-sm-6 col-12">
                     <div class="form-group">
@@ -159,13 +159,13 @@ session_start();
                 <div class="col-xl-6 col-lg-6 col-md-6 col-sm-6 col-12">
                     <div class="form-group">
                         <label for="mind_gehalt">Gewünschtes Jahresgehalt</label>
-                        <input type="name" class="form-control" id="mind_gehalt" placeholder="">
+                        <input type="text" class="form-control" id="mind_gehalt" placeholder="">
                     </div>
                 </div>
                 <div class="col-xl-6 col-lg-6 col-md-6 col-sm-6 col-12">
                     <div class="form-group">
                         <label for="beruf">Beruf</label>
-                        <input type="name" class="form-control" id="beruf" placeholder="">
+                        <input type="text" class="form-control" id="beruf" placeholder="">
                     </div>
                 </div>
             </div>
