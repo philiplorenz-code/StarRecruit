@@ -215,14 +215,6 @@ session_start();
     </div>
     </div>
     </div>
-
-
-    
-    </div>
-
-            <div></div>
-        </div>
-    </div>
     <table>
             <tbody>
             <tr>
@@ -242,6 +234,14 @@ session_start();
             </tr>
             </tbody>
             </table>
+
+    
+    </div>
+
+            <div></div>
+        </div>
+    </div>
+
     <script src="assets/bootstrap/js/bootstrap.min.js"></script>
     <script src="assets/js/theme.js"></script>
 </body>
