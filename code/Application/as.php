@@ -190,25 +190,7 @@ session_start();
 
 
 
-            <table>
-            <tbody>
-            <tr>
-            <th>Table Header first column</th>
-            <th>Table Header second column</th>
-            <th>Table Header third column</th>
-            </tr>
-            <tr>
-            <td>data goes here</td>
-            <td>data goes here</td>
-            <td>data goes here</td>
-            </tr>
-            <tr>
-            <td>more data here</td>
-            <td>more data here</td>
-            <td>more data here</td>
-            </tr>
-            </tbody>
-            </table>
+
 
 
 
@@ -241,6 +223,25 @@ session_start();
             <div></div>
         </div>
     </div>
+    <table>
+            <tbody>
+            <tr>
+            <th>Table Header first column</th>
+            <th>Table Header second column</th>
+            <th>Table Header third column</th>
+            </tr>
+            <tr>
+            <td>data goes here</td>
+            <td>data goes here</td>
+            <td>data goes here</td>
+            </tr>
+            <tr>
+            <td>more data here</td>
+            <td>more data here</td>
+            <td>more data here</td>
+            </tr>
+            </tbody>
+            </table>
     <script src="assets/bootstrap/js/bootstrap.min.js"></script>
     <script src="assets/js/theme.js"></script>
 </body>
