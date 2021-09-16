@@ -194,7 +194,10 @@ session_start();
                 <div class="col-xl-6 col-lg-6 col-md-6 col-sm-6 col-12">
                     <div class="form-group">
                         <label for="mind_gehalt">Profilbild</label>
-                        <input type="text" class="form-control" name="mind_gehalt" placeholder="">
+                        <form action="upload.php" method="post" enctype="multipart/form-data">
+                        <input type="file" name="fileToUpload" id="fileToUpload">
+                        <input type="submit" value="Upload Image" name="submit">
+                        </form>
                     </div>
                 </div>
                 <div class="col-xl-6 col-lg-6 col-md-6 col-sm-6 col-12">
