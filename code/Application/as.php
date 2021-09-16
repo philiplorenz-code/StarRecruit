@@ -5,22 +5,23 @@ session_start();
     include("functions.php");
     
     $user_data = check_login($con);
-    var_dump($user_data);
+
     if($_SERVER['REQUEST_METHOD'] == "POST"){
         //sth was posted
+        $user_id = $user_data["user_id"];
         $user_vorname = $_POST['user_vorname'];
         $user_name = $_POST['user_name'];
         $wohnort = $_POST['wohnort'];
         $user_alter = $_POST['user_alter'];
         $beschreibung = $_POST['beschreibung'];
-        $sprachen = $_POST['sprachen'];
-        $softskills = $_POST['softskills'];
-        $hardskills = $_POST['hardskills'];
+        $sprachen = $_POST['sprachen'] . ",";
+        $softskills = $_POST['softskills'] . ",";
+        $hardskills = $_POST['hardskills'] . ",";
         $mind_gehalt = $_POST['mind_gehalt'];
         $beruf = $_POST['beruf'];
 
         // save to db
-        $query = "insert into users (user_email,user_password,user_acctype) values ('$user_email','$user_password','$user_acctype');";
+        $query = "update users set user_vorname='$user_vorname' where user_id='$user_id';";
         mysqli_query($con, $query);
 
         header("Location: login.php");
