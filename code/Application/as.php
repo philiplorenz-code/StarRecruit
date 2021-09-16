@@ -24,9 +24,6 @@ session_start();
         $query = "update users set user_vorname='$user_vorname' where user_id='$user_id';";
         mysqli_query($con, $query);
 
-        header("Location: login.php");
-        die;
-
     }
 
 
@@ -176,7 +173,7 @@ session_start();
             <div class="row gutters">
                 <div class="col-xl-12 col-lg-12 col-md-12 col-sm-12 col-12">
                     <div class="text-right">
-                    <input type="submit">
+                    <button class="btn btn-info mt-2" type="submit" style="background: #9c3f2a;">Update</button>
                     </div>
                 </div>
             </div>
