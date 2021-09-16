@@ -6,6 +6,8 @@ session_start();
     
     $user_data = check_login($con);
 
+    // Hier noch ein Select * auf users machen und die aktuellen Werte in die Felder unten schreiben
+
     if($_SERVER['REQUEST_METHOD'] == "POST"){
         //sth was posted
         $user_id = $user_data["user_id"];
@@ -22,8 +24,7 @@ session_start();
 
         // save to db
         $query = "update users set vorname='$vorname',name='$name',wohnort='$wohnort',user_alter='$user_alter',beschreibung='$beschreibung',sprachen='$sprachen',softskills='$softskills',hardskills='$hardskills',mind_gehalt='$mind_gehalt',beruf='$beruf' where user_id='$user_id';";
-        echo $beschreibung;
-        echo $_POST['beschreibung'];
+
         echo $query;
         mysqli_query($con, $query);
 
@@ -180,6 +181,12 @@ session_start();
                     </div>
                 </div>
             </div>
+            <form action="upload.php" method="post" enctype="multipart/form-data">
+            Select image to upload:
+            <input type="file" name="fileToUpload" id="fileToUpload">
+            <input type="submit" value="Upload Image" name="submit">
+            </form>
+
             </form>
         </div>
     </div>
