@@ -104,7 +104,7 @@ session_start();
                 <table>
                     <tbody>
                     <th><form action="upload.php" method="post" enctype="multipart/form-data">
-                            Lade Zeugnisse und Zertifikate hoch (in einer Datei):
+                            Zeugnisse:
                     <input type="file" name="fileToUpload" id="fileToUpload">
                     <input type="submit" value="Upload Image" name="submit"></form></th>
                     </tr>
