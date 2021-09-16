@@ -198,7 +198,7 @@ session_start();
         </div>
     </div>
     </div>
-    <div class="tableupload">
+    <div style="text-align:center;">
             <table>
             <tbody>
             <th><form action="upload.php" method="post" enctype="multipart/form-data">
