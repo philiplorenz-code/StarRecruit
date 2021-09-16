@@ -52,7 +52,8 @@ session_start();
                         <select id="acctype" name="accounttype">
                             <option value="Recruiter">Volvo</option>
                             <option value="Arbeitssuchender">Saab</option>
-                        </select>                    </form><a href="login.php" style="text-align: right;">Already having an account? Click here to Login!</a>
+                        </select>                    
+                    </form><a href="login.php" style="text-align: right;">Already having an account? Click here to Login!</a>
                     <p class="mt-3 mb-0"></p>
                 </div>
             </div>
