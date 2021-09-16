@@ -2,3 +2,21 @@
   display: flex;
 }
 
+#wrapper {
+  overflow:hidden;
+}
+.item {
+  float:left;
+  width:27%;
+  outline:1px solid blue;
+  margin:0 0.5%;
+  padding:2%;
+}
+
+@media only screen and (max-width: 40em) {
+  .item {
+      float:none;
+      width:100%;
+      margin-bottom:5px
+  }
+}
