@@ -200,25 +200,20 @@ session_start();
     </div>
     <table>
             <tbody>
-            <tr>
-            <th>  ffffffffffffff      </th>
-            </tr>
-            <tr>
-            <tr>
             <th><form action="upload.php" method="post" enctype="multipart/form-data">
-            Lade Zeugnisse und Zertifikate hoch (in einer Datei):
+                      Lade Zeugnisse und Zertifikate hoch (in einer Datei):
             <input type="file" name="fileToUpload" id="fileToUpload">
             <input type="submit" value="Upload Image" name="submit"></form></th>
             </tr>
             <tr>
             <th><form action="upload.php" method="post" enctype="multipart/form-data">
-            Lade Zeugnisse und Zertifikate hoch (in einer Datei):
+                      Lade Zeugnisse und Zertifikate hoch (in einer Datei):
             <input type="file" name="fileToUpload" id="fileToUpload">
             <input type="submit" value="Upload Image" name="submit"></form></th>
             </tr>
             <tr>
             <th><form action="upload.php" method="post" enctype="multipart/form-data">
-            Lade Zeugnisse und Zertifikate hoch (in einer Datei):
+                       Lade Zeugnisse und Zertifikate hoch (in einer Datei):
             <input type="file" name="fileToUpload" id="fileToUpload">
             <input type="submit" value="Upload Image" name="submit"></form></th>
             </tr>
