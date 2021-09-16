@@ -48,7 +48,7 @@ session_start();
                     <form method="post">
                         <div class="form-group mb-3"><label class="form-label text-secondary">Email</label><input class="form-control" type="text" name="user_email" required="" pattern="[a-z0-9._%+-]+@[a-z0-9.-]+\.[a-z]{2,15}$" inputmode="email"></div>
                         <div class="form-group mb-3"><label class="form-label text-secondary">Password</label><input class="form-control" type="password" name="user_password" required=""></div><button class="btn btn-info mt-2" type="submit" style="background: #9c3f2a;">Log In</button>
-                    </form><a href="#" style="text-align: right;">Already having an account? Click here to Login!</a>
+                    </form><a href="login.php" style="text-align: right;">Already having an account? Click here to Login!</a>
                     <p class="mt-3 mb-0"></p>
                 </div>
             </div>
