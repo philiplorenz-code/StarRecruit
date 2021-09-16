@@ -184,8 +184,8 @@ session_start();
                     <tbody>
                     <th><form action="upload.php" method="post" enctype="multipart/form-data">
                     </br> Profilbild hochladen: </br>
-                    <input type="file" name="fileToUpload" id="fileToUpload">
-                    <input type="submit" value="Upload Image" name="submit"></form></th>
+                    <input class="btn btn-info mt-2" style="background: #9c3f2a;" type="file" name="fileToUpload" id="fileToUpload">
+                    <input class="btn btn-info mt-2" style="background: #9c3f2a;" type="submit" value="Upload Image" name="submit"></form></th>
                     </tr>
                     </tbody>
                 </table>
