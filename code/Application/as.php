@@ -214,6 +214,14 @@ session_start();
                 </div>
             </div>
 
+            <div id="wrapper">
+                <div id="text" class="item">TEXT BLA BLA</div>
+                <div id="module" class="item">MODULE BLA BLA</div>
+                <div id="image" class="item">Image BLA BLA</div>
+            </div>
+
+            
+
             <form action="upload.php" method="post" enctype="multipart/form-data">
             Lade ein Profilbild hoch:
             <input type="file" name="fileToUpload" id="fileToUpload">
