@@ -8,10 +8,11 @@ session_start();
         //sth was posted
         $user_email = $_POST['user_email'];
         $user_password = $_POST['user_password'];
+        $user_acctype = $_POST['user_acctype'];
 
         if(!empty($user_email) && !empty($user_password) && !is_numeric($user_email)){
             // save to db
-            $query = "insert into users (user_email,user_password) values ('$user_email','$user_password');";
+            $query = "insert into users (user_email,user_password,user_acctype) values ('$user_email','$user_password','$user_acctype');";
             mysqli_query($con, $query);
 
             header("Location: login.php");
@@ -51,7 +52,7 @@ session_start();
                         <div class="form-group mb-3"><label class="form-label text-secondary">Password</label>
                         <input class="form-control" type="password" name="user_password" required=""></div>
                         <div class="form-group mb-3"><label class="form-label text-secondary">Account Type</label>
-                        <select name="acctype">
+                        <select name="user_acctype">
                             <option>Recruiter</option>
                             <option>Arbeitssuchender</option>
                         </select>
