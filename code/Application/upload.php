@@ -16,7 +16,7 @@ $target_dir = "uploads/";
 $path = $_FILES["fileToUpload"]["name"];
 $ext = pathinfo($path, PATHINFO_EXTENSION);
 echo $ext;
-$target_file = $target_dir . generateRandomString() . $ext;
+$target_file = $target_dir . generateRandomString() . "." . $ext;
 $uploadOk = 1;
 $imageFileType = strtolower(pathinfo($target_file,PATHINFO_EXTENSION));
 echo basename($_FILES["fileToUpload"]["name"]);
