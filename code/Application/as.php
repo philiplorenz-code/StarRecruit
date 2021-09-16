@@ -184,7 +184,7 @@ session_start();
                     <tbody>
                     <th><form action="upload.php" method="post" enctype="multipart/form-data">
                     </br> Profilbild hochladen: </br>
-                    <input type="file" name="fileToUpload" id="fileToUpload" data-buttonText="Your label here.">
+                    <input type="file" name="fileToUpload" id="fileToUpload">
                     <input type="submit" value="Upload Image" name="submit"></form></th>
                     </tr>
                     </tbody>
