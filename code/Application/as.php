@@ -104,19 +104,7 @@ session_start();
                 <table>
                     <tbody>
                     <th><form action="upload.php" method="post" enctype="multipart/form-data">
-                            Zeugnisse:
-                    <input type="file" name="fileToUpload" id="fileToUpload">
-                    <input type="submit" value="Upload Image" name="submit"></form></th>
-                    </tr>
-                    <tr>
-                    <th><form action="upload.php" method="post" enctype="multipart/form-data">
-                    Zeugnisse:
-                    <input type="file" name="fileToUpload" id="fileToUpload">
-                    <input type="submit" value="Upload Image" name="submit"></form></th>
-                    </tr>
-                    <tr>
-                    <th><form action="upload.php" method="post" enctype="multipart/form-data">
-                    Zeugnisse:
+                            Profilbild:
                     <input type="file" name="fileToUpload" id="fileToUpload">
                     <input type="submit" value="Upload Image" name="submit"></form></th>
                     </tr>
