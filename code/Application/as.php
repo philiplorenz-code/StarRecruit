@@ -168,7 +168,7 @@ session_start();
                 <div class="col-xl-6 col-lg-6 col-md-6 col-sm-6 col-12">
                     <div class="form-group">
                         <label for="beruf">Beruf</label>
-                        <input type="text" class="form-control" id="beruf" placeholder="">
+                        <input type="text" class="form-control" name="beruf" placeholder="">
                     </div>
                 </div>
             </div>
