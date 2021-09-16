@@ -44,7 +44,7 @@ session_start();
                 <div class="text-center d-none d-md-inline"><button class="btn rounded-circle border-0" id="sidebarToggle" type="button"></button></div>
             </div>
         </nav>
-        <div class="container">
+    <div class="container">
     <div class="row gutters">
     <div class="col-xl-3 col-lg-3 col-md-12 col-sm-12 col-12">
     <div class="card h-100">
@@ -65,6 +65,7 @@ session_start();
         </div>
     </div>
     </div>
+
     <div class="col-xl-9 col-lg-9 col-md-12 col-sm-12 col-12">
     <div class="card h-100">
         <div class="card-body">
@@ -150,6 +151,9 @@ session_start();
     </div>
     </div>
     </div>
+
+
+    
     </div>
 
             <div></div>
