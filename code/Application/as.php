@@ -100,17 +100,17 @@ session_start();
         <div class="card-body">
             <form method="post">
             <div class="row gutters">
-
+            <div class="about">
                 <table>
                     <tbody>
                     <th><form action="upload.php" method="post" enctype="multipart/form-data">
-                            Profilbild hochlade:
+                            Profilbild hochladen:
                     <input type="file" name="fileToUpload" id="fileToUpload">
                     <input type="submit" value="Upload Image" name="submit"></form></th>
                     </tr>
                     </tbody>
                 </table>
-
+                </div>
                 <div class="col-xl-12 col-lg-12 col-md-12 col-sm-12 col-12">
                     <h6 class="mb-2 text-primary">Persönlich</h6>
                 </div>
@@ -191,6 +191,17 @@ session_start();
                     <div class="text-right">
                     <button class="btn btn-info mt-2" type="submit" style="background: #9c3f2a;">Update</button>
                     </div>
+                </div>
+                <div class="about">
+                <table>
+                    <tbody>
+                    <th><form action="upload.php" method="post" enctype="multipart/form-data">
+                            Profilbild hochladen:
+                    <input type="file" name="fileToUpload" id="fileToUpload">
+                    <input type="submit" value="Upload Image" name="submit"></form></th>
+                    </tr>
+                    </tbody>
+                </table>
                 </div>
             </div>
 
