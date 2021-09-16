@@ -77,26 +77,32 @@ session_start();
                 </div>
                 <div class="col-xl-6 col-lg-6 col-md-6 col-sm-6 col-12">
                     <div class="form-group">
-                        <label for="fullName">Vor- und Nachname</label>
-                        <input type="text" class="form-control" id="fullName" placeholder="">
+                        <label for="vorname">Vorname</label>
+                        <input type="text" class="form-control" name="vorname" placeholder="">
                     </div>
                 </div>
                 <div class="col-xl-6 col-lg-6 col-md-6 col-sm-6 col-12">
                     <div class="form-group">
-                        <label for="eMail">Wohnort</label>
-                        <input type="email" class="form-control" id="eMail" placeholder="">
+                        <label for="name">Nachname</label>
+                        <input type="text" class="form-control" name="name" placeholder="">
                     </div>
                 </div>
                 <div class="col-xl-6 col-lg-6 col-md-6 col-sm-6 col-12">
                     <div class="form-group">
-                        <label for="phone">Alter</label>
-                        <input type="text" class="form-control" id="phone" placeholder="">
+                        <label for="wohnort">Wohnort</label>
+                        <input type="text" class="form-control" name="wohnort" placeholder="">
                     </div>
                 </div>
                 <div class="col-xl-6 col-lg-6 col-md-6 col-sm-6 col-12">
                     <div class="form-group">
-                        <label for="website">Beschreibung</label>
-                        <input type="url" class="form-control" id="website" placeholder="">
+                        <label for="user_alter">Alter</label>
+                        <input type="text" class="form-control" name="user_alter" placeholder="">
+                    </div>
+                </div>
+                <div class="col-xl-6 col-lg-6 col-md-6 col-sm-6 col-12">
+                    <div class="form-group">
+                        <label for="beschreibung">Beschreibung</label>
+                        <input type="text" class="form-control" id="beschreibung" placeholder="">
                     </div>
                 </div>
             </div>
@@ -106,20 +112,20 @@ session_start();
                 </div>
                 <div class="col-xl-6 col-lg-6 col-md-6 col-sm-6 col-12">
                     <div class="form-group">
-                        <label for="Street">Sprachen</label>
-                        <input type="name" class="form-control" id="Street" placeholder="">
+                        <label for="sprachen">Sprachen</label>
+                        <input type="text" class="form-control" id="sprachen" placeholder="">
                     </div>
                 </div>
                 <div class="col-xl-6 col-lg-6 col-md-6 col-sm-6 col-12">
                     <div class="form-group">
-                        <label for="ciTy">Softskills</label>
-                        <input type="name" class="form-control" id="ciTy" placeholder="">
+                        <label for="softskills">Softskills</label>
+                        <input type="text" class="form-control" id="softskills" placeholder="">
                     </div>
                 </div>
                 <div class="col-xl-6 col-lg-6 col-md-6 col-sm-6 col-12">
                     <div class="form-group">
-                        <label for="sTate">Hardskills</label>
-                        <input type="text" class="form-control" id="sTate" placeholder="">
+                        <label for="hardskills">Hardskills</label>
+                        <input type="text" class="form-control" id="hardskills" placeholder="">
                     </div>
                 </div>
             </div>
@@ -129,14 +135,14 @@ session_start();
                 </div>
                 <div class="col-xl-6 col-lg-6 col-md-6 col-sm-6 col-12">
                     <div class="form-group">
-                        <label for="Street">Gewünschtes Jahresgehalt</label>
-                        <input type="name" class="form-control" id="Street" placeholder="">
+                        <label for="mind_gehalt">Gewünschtes Jahresgehalt</label>
+                        <input type="name" class="form-control" id="mind_gehalt" placeholder="">
                     </div>
                 </div>
                 <div class="col-xl-6 col-lg-6 col-md-6 col-sm-6 col-12">
                     <div class="form-group">
-                        <label for="ciTy">Jobbezeichnung</label>
-                        <input type="name" class="form-control" id="ciTy" placeholder="">
+                        <label for="beruf">Beruf</label>
+                        <input type="name" class="form-control" id="beruf" placeholder="">
                     </div>
                 </div>
             </div>
