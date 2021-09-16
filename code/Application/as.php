@@ -182,6 +182,10 @@ session_start();
                 </div>
             </div>
 
+
+
+            </form>
+
             <form action="upload.php" method="post" enctype="multipart/form-data">
             Lade ein Profilbild hoch:
             <input type="file" name="fileToUpload" id="fileToUpload">
@@ -198,8 +202,6 @@ session_start();
             Lade Zeugnisse und Zertifikate hoch (in einer Datei):
             <input type="file" name="fileToUpload" id="fileToUpload">
             <input type="submit" value="Upload Image" name="submit">
-            </form>
-
             </form>
         </div>
     </div>
