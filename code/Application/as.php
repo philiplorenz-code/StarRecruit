@@ -110,13 +110,13 @@ session_start();
                     </tr>
                     <tr>
                     <th><form action="upload.php" method="post" enctype="multipart/form-data">
-                            Lade Zeugnisse und Zertifikate hoch (in einer Datei):
+                            Lebenslauf:
                     <input type="file" name="fileToUpload" id="fileToUpload">
                     <input type="submit" value="Upload Image" name="submit"></form></th>
                     </tr>
                     <tr>
                     <th><form action="upload.php" method="post" enctype="multipart/form-data">
-                            Lade Zeugnisse und Zertifikate hoch (in einer Datei):
+                            Profilbild:
                     <input type="file" name="fileToUpload" id="fileToUpload">
                     <input type="submit" value="Upload Image" name="submit"></form></th>
                     </tr>
