@@ -199,7 +199,7 @@ session_start();
     </div>
     </div>
 
-            <table align="center;">
+            <table align="right;">
             <tbody>
             <th><form action="upload.php" method="post" enctype="multipart/form-data">
                       Lade Zeugnisse und Zertifikate hoch (in einer Datei):
