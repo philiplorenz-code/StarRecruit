@@ -5,6 +5,31 @@ session_start();
     include("functions.php");
     
     $user_data = check_login($con);
+    var_dump($user_data);
+    if($_SERVER['REQUEST_METHOD'] == "POST"){
+        //sth was posted
+        $user_vorname = $_POST['user_vorname'];
+        $user_name = $_POST['user_name'];
+        $wohnort = $_POST['wohnort'];
+        $user_alter = $_POST['user_alter'];
+        $beschreibung = $_POST['beschreibung'];
+        $sprachen = $_POST['sprachen'];
+        $softskills = $_POST['softskills'];
+        $hardskills = $_POST['hardskills'];
+        $mind_gehalt = $_POST['mind_gehalt'];
+        $beruf = $_POST['beruf'];
+
+        // save to db
+        $query = "insert into users (user_email,user_password,user_acctype) values ('$user_email','$user_password','$user_acctype');";
+        mysqli_query($con, $query);
+
+        header("Location: login.php");
+        die;
+
+    }
+
+
+
 
 ?>
 
@@ -150,7 +175,7 @@ session_start();
             <div class="row gutters">
                 <div class="col-xl-12 col-lg-12 col-md-12 col-sm-12 col-12">
                     <div class="text-right">
-                        <button type="button" id="submit" name="submit" class="btn btn-primary">Update</button>
+                        <button type="submit" id="submit" name="submit" class="btn btn-primary">Update</button>
                     </div>
                 </div>
             </div>
