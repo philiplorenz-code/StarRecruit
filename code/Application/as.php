@@ -22,6 +22,8 @@ session_start();
 
         // save to db
         $query = "update users set vorname='$vorname',name='$name',wohnort='$wohnort',user_alter='$user_alter',beschreibung='$beschreibung',sprachen='$sprachen',softskills='$softskills',hardskills='$hardskills',mind_gehalt='$mind_gehalt',beruf='$beruf' where user_id='$user_id';";
+        echo $beschreibung;
+        echo $_POST['beschreibung'];
         echo $query;
         mysqli_query($con, $query);
 
