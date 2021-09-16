@@ -181,8 +181,21 @@ session_start();
                     </div>
                 </div>
             </div>
+
             <form action="upload.php" method="post" enctype="multipart/form-data">
-            Select image to upload:
+            Lade ein Profilbild hoch:
+            <input type="file" name="fileToUpload" id="fileToUpload">
+            <input type="submit" value="Upload Image" name="submit">
+            </form>
+
+            <form action="upload.php" method="post" enctype="multipart/form-data">
+            Lade deinen Lebenslauf hoch:
+            <input type="file" name="fileToUpload" id="fileToUpload">
+            <input type="submit" value="Upload Image" name="submit">
+            </form>
+
+            <form action="upload.php" method="post" enctype="multipart/form-data">
+            Lade Zeugnisse und Zertifikate hoch (in einer Datei):
             <input type="file" name="fileToUpload" id="fileToUpload">
             <input type="submit" value="Upload Image" name="submit">
             </form>
