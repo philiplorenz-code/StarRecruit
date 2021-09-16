@@ -214,9 +214,6 @@ session_start();
         </div>
     </div>
     </div>
-    </div>
-
-
     <table>
             <tbody>
             <tr>
@@ -236,6 +233,10 @@ session_start();
             </tr>
             </tbody>
             </table>
+    </div>
+
+
+
     </div>
 
             <div></div>
