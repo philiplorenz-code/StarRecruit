@@ -187,40 +187,10 @@ session_start();
             </form>
 
 
-            <div class="row gutters">
-                <div class="col-xl-12 col-lg-12 col-md-12 col-sm-12 col-12">
-                    <h6 class="mt-3 mb-2 text-primary">Datei-Upload</h6>
-                </div>
-                <div class="col-xl-6 col-lg-6 col-md-6 col-sm-6 col-12">
-                    <div class="form-group">
-                        <label for="mind_gehalt">Profilbild</label>
-                        <form action="upload.php" method="post" enctype="multipart/form-data">
-                        <input type="file" name="fileToUpload" id="fileToUpload">
-                        <input type="submit" value="Upload Image" name="submit">
-                        </form>
-                    </div>
-                </div>
-                <div class="col-xl-6 col-lg-6 col-md-6 col-sm-6 col-12">
-                    <div class="form-group">
-                        <label for="beruf">Lebenslauf</label>
-                        <input type="text" class="form-control" name="beruf" placeholder="">
-                    </div>
-                </div>
-                <div class="col-xl-6 col-lg-6 col-md-6 col-sm-6 col-12">
-                    <div class="form-group">
-                        <label for="beruf">Zeugnisse und Zertifikate</label>
-                        <input type="text" class="form-control" name="beruf" placeholder="">
-                    </div>
-                </div>
-            </div>
 
-            <div id="wrapper">
-                <div id="text" class="item">TEXT BLA BLA</div>
-                <div id="module" class="item">MODULE BLA BLA</div>
-                <div id="image" class="item">Image BLA BLA</div>
-            </div>
 
-            
+
+
 
             <form action="upload.php" method="post" enctype="multipart/form-data">
             Lade ein Profilbild hoch:
