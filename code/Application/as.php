@@ -128,7 +128,7 @@ session_start();
                 <div class="col-xl-6 col-lg-6 col-md-6 col-sm-6 col-12">
                     <div class="form-group">
                         <label for="beschreibung">Beschreibung</label>
-                        <input type="text" class="form-control" id="beschreibung" placeholder="">
+                        <input type="text" class="form-control" name="beschreibung" placeholder="">
                     </div>
                 </div>
             </div>
@@ -139,19 +139,19 @@ session_start();
                 <div class="col-xl-6 col-lg-6 col-md-6 col-sm-6 col-12">
                     <div class="form-group">
                         <label for="sprachen">Sprachen</label>
-                        <input type="text" class="form-control" id="sprachen" placeholder="">
+                        <input type="text" class="form-control" name="sprachen" placeholder="">
                     </div>
                 </div>
                 <div class="col-xl-6 col-lg-6 col-md-6 col-sm-6 col-12">
                     <div class="form-group">
                         <label for="softskills">Softskills</label>
-                        <input type="text" class="form-control" id="softskills" placeholder="">
+                        <input type="text" class="form-control" name="softskills" placeholder="">
                     </div>
                 </div>
                 <div class="col-xl-6 col-lg-6 col-md-6 col-sm-6 col-12">
                     <div class="form-group">
                         <label for="hardskills">Hardskills</label>
-                        <input type="text" class="form-control" id="hardskills" placeholder="">
+                        <input type="text" class="form-control" name="hardskills" placeholder="">
                     </div>
                 </div>
             </div>
@@ -162,7 +162,7 @@ session_start();
                 <div class="col-xl-6 col-lg-6 col-md-6 col-sm-6 col-12">
                     <div class="form-group">
                         <label for="mind_gehalt">Gewünschtes Jahresgehalt</label>
-                        <input type="text" class="form-control" id="mind_gehalt" placeholder="">
+                        <input type="text" class="form-control" name="mind_gehalt" placeholder="">
                     </div>
                 </div>
                 <div class="col-xl-6 col-lg-6 col-md-6 col-sm-6 col-12">
