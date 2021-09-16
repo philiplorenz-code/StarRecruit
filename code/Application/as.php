@@ -220,19 +220,19 @@ session_start();
             <th><form action="upload.php" method="post" enctype="multipart/form-data">
             Lade Zeugnisse und Zertifikate hoch (in einer Datei):
             <input type="file" name="fileToUpload" id="fileToUpload">
-            <input type="submit" value="Upload Image" name="submit"></th>
-            <th>Table Header second column</th>
-            <th>Table Header third column</th>
+            <input type="submit" value="Upload Image" name="submit"></form></th>
             </tr>
             <tr>
-            <td>data goes here</td>
-            <td>data goes here</td>
-            <td>data goes here</td>
+            <th><form action="upload.php" method="post" enctype="multipart/form-data">
+            Lade Zeugnisse und Zertifikate hoch (in einer Datei):
+            <input type="file" name="fileToUpload" id="fileToUpload">
+            <input type="submit" value="Upload Image" name="submit"></form></th>
             </tr>
             <tr>
-            <td>more data here</td>
-            <td>more data here</td>
-            <td>more data here</td>
+            <th><form action="upload.php" method="post" enctype="multipart/form-data">
+            Lade Zeugnisse und Zertifikate hoch (in einer Datei):
+            <input type="file" name="fileToUpload" id="fileToUpload">
+            <input type="submit" value="Upload Image" name="submit"></form></th>
             </tr>
             </tbody>
             </table>
