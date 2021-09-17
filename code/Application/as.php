@@ -38,6 +38,8 @@ session_start();
     $entry = $result->fetch_assoc();
 
 
+    var_dump($entry);
+    echo $entry['user_email'];
 
 
 ?>
