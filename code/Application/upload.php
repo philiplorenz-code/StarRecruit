@@ -62,6 +62,19 @@ if ($uploadOk == 0) {
     //echo "Sorry, there was an error uploading your file.";
   }
 }
+
+    // save to db
+    $query = "update users set profilbild='$target_file;";
+
+    echo $query;
+    mysqli_query($con, $query);
+
+
+
+
+
+
+
 header("Location: as.php");
 die;
 
