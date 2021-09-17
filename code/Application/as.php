@@ -39,7 +39,7 @@ session_start();
 
 
     var_dump($entry);
-    echo $entry['user_id'];
+    echo $entry['user_email'];
 
 
 ?>
