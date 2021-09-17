@@ -36,7 +36,7 @@ session_start();
 
     $result = mysqli_query($con, $query);
     $entry = $result->fetch_assoc();
-    echo $entry["user_id"];
+
 
 
 
@@ -132,7 +132,7 @@ session_start();
                 <div class="col-xl-6 col-lg-6 col-md-6 col-sm-6 col-12">
                     <div class="form-group">
                         <label for="user_alter">Alter</label>
-                        <input type="text" class="form-control" name="user_alter" placeholder="<?php echo $entry["user_alter"];?>">
+                        <input type="text" class="form-control" name="user_alter" placeholder="TEST">
                     </div>
                 </div>
                 <div class="col-xl-6 col-lg-6 col-md-6 col-sm-6 col-12">
