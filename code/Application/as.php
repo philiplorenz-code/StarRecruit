@@ -5,6 +5,7 @@ session_start();
     include("functions.php");
     
     $user_data = check_login($con);
+    $user_id = $user_data["user_id"];
 
     // Hier noch ein Select * auf users machen und die aktuellen Werte in die Felder unten schreiben
 
@@ -29,6 +30,14 @@ session_start();
         mysqli_query($con, $query);
 
     }
+
+
+    $query = "select * from users where user_id='$user_id';";
+
+    echo $query;
+    $result = mysqli_query($con, $query);
+    $entry = $result->fetch_assoc();
+    echo $entry["user_id"];
 
 
 
