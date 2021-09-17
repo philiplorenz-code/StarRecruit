@@ -35,7 +35,7 @@ session_start();
     $query = "select * from users where user_id='$user_id';";
 
     $result = mysqli_query($con, $query);
-    $entry = $result->fetch_assoc();
+    //$entry = $result->fetch_assoc();
 
 
 ?>
@@ -183,7 +183,7 @@ session_start();
             <div class="row gutters">
                 <div class="col-xl-12 col-lg-12 col-md-12 col-sm-12 col-12">
                     <div class="text-right">
-                    
+                    <button class="btn btn-info mt-2" type="submit" style="background: #9c3f2a;">Update</button>
 </div>
                     <div class="about">
                 <table>
@@ -235,3 +235,5 @@ session_start();
 </body>
 
 </html>
+
+
