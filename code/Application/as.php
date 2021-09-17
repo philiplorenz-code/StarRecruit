@@ -183,7 +183,7 @@ session_start();
             <div class="row gutters">
                 <div class="col-xl-12 col-lg-12 col-md-12 col-sm-12 col-12">
                     <div class="text-right">
-                    <button class="btn btn-info mt-2" type="submit" style="background: #9c3f2a;">Update</button>
+                    
 </div>
                     <div class="about">
                 <table>
