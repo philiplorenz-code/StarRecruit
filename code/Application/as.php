@@ -115,31 +115,31 @@ session_start();
                 <div class="col-xl-6 col-lg-6 col-md-6 col-sm-6 col-12">
                     <div class="form-group">
                         <label for="vorname">Vorname</label>
-                        <input type="text" class="form-control" name="vorname" placeholder="">
+                        <input type="text" class="form-control" name="vorname" value='<?php echo $entry['vorname'];?>'>
                     </div>
                 </div>
                 <div class="col-xl-6 col-lg-6 col-md-6 col-sm-6 col-12">
                     <div class="form-group">
                         <label for="name">Nachname</label>
-                        <input type="text" class="form-control" name="name" placeholder="">
+                        <input type="text" class="form-control" name="name" value='<?php echo $entry['name'];?>'>
                     </div>
                 </div>
                 <div class="col-xl-6 col-lg-6 col-md-6 col-sm-6 col-12">
                     <div class="form-group">
                         <label for="wohnort">Wohnort</label>
-                        <input type="text" class="form-control" name="wohnort" placeholder="">
+                        <input type="text" class="form-control" name="wohnort" value='<?php echo $entry['wohnort'];?>'>
                     </div>
                 </div>
                 <div class="col-xl-6 col-lg-6 col-md-6 col-sm-6 col-12">
                     <div class="form-group">
                         <label for="user_alter">Alter</label>
-                        <input type="text" class="form-control" name="user_alter" value='<?php echo $entry['user_email'];?>'>
+                        <input type="text" class="form-control" name="user_alter" value='<?php echo $entry['user_alter'];?>'>
                     </div>
                 </div>
                 <div class="col-xl-6 col-lg-6 col-md-6 col-sm-6 col-12">
                     <div class="form-group">
                         <label for="beschreibung">Beschreibung</label>
-                        <input type="text" class="form-control" name="beschreibung" placeholder="">
+                        <input type="text" class="form-control" name="beschreibung" value='<?php echo $entry['beschreibung'];?>'>
                     </div>
                 </div>
             </div>
@@ -150,19 +150,19 @@ session_start();
                 <div class="col-xl-6 col-lg-6 col-md-6 col-sm-6 col-12">
                     <div class="form-group">
                         <label for="sprachen">Sprachen</label>
-                        <input type="text" class="form-control" name="sprachen" placeholder="">
+                        <input type="text" class="form-control" name="sprachen" value='<?php echo $entry['sprachen'];?>'>
                     </div>
                 </div>
                 <div class="col-xl-6 col-lg-6 col-md-6 col-sm-6 col-12">
                     <div class="form-group">
                         <label for="softskills">Softskills</label>
-                        <input type="text" class="form-control" name="softskills" placeholder="">
+                        <input type="text" class="form-control" name="softskills" value='<?php echo $entry['softskills'];?>'>
                     </div>
                 </div>
                 <div class="col-xl-6 col-lg-6 col-md-6 col-sm-6 col-12">
                     <div class="form-group">
                         <label for="hardskills">Hardskills</label>
-                        <input type="text" class="form-control" name="hardskills" placeholder="">
+                        <input type="text" class="form-control" name="hardskills" value='<?php echo $entry['hardskills'];?>'>
                     </div>
                 </div>
             </div>
@@ -173,13 +173,13 @@ session_start();
                 <div class="col-xl-6 col-lg-6 col-md-6 col-sm-6 col-12">
                     <div class="form-group">
                         <label for="mind_gehalt">Gewünschtes Jahresgehalt</label>
-                        <input type="text" class="form-control" name="mind_gehalt" placeholder="">
+                        <input type="text" class="form-control" name="mind_gehalt" value='<?php echo $entry['mind_gehalt'];?>'>
                     </div>
                 </div>
                 <div class="col-xl-6 col-lg-6 col-md-6 col-sm-6 col-12">
                     <div class="form-group">
                         <label for="beruf">Beruf</label>
-                        <input type="text" class="form-control" name="beruf" placeholder="">
+                        <input type="text" class="form-control" name="beruf" value='<?php echo $entry['beruf'];?>'>
                     </div>
                 </div>
             </div>
