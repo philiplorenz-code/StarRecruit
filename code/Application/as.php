@@ -38,7 +38,7 @@ session_start();
     $entry = $result->fetch_assoc();
 
 
-    echo $entry["vorname"];
+    var_dump($entry);
 
 
 ?>
