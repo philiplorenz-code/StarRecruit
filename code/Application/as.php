@@ -133,7 +133,7 @@ session_start();
                 <div class="col-xl-6 col-lg-6 col-md-6 col-sm-6 col-12">
                     <div class="form-group">
                         <label for="user_alter">Alter</label>
-                        <input type="text" class="form-control" name="user_alter" placeholder='<?php echo $entry['user_email'];?>'>
+                        <input type="text" class="form-control" name="user_alter" value='<?php echo $entry['user_email'];?>'>
                     </div>
                 </div>
                 <div class="col-xl-6 col-lg-6 col-md-6 col-sm-6 col-12">
