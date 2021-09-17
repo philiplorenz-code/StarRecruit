@@ -38,7 +38,7 @@ session_start();
     $entry = $result->fetch_assoc();
 
 
-
+    echo $entry["user_alter"];
 
 
 ?>
@@ -132,7 +132,7 @@ session_start();
                 <div class="col-xl-6 col-lg-6 col-md-6 col-sm-6 col-12">
                     <div class="form-group">
                         <label for="user_alter">Alter</label>
-                        <input type="text" class="form-control" name="user_alter" placeholder="TEST">
+                        <input type="text" class="form-control" name="user_alter" placeholder='<?php echo $entry["user_alter"];?>'>
                     </div>
                 </div>
                 <div class="col-xl-6 col-lg-6 col-md-6 col-sm-6 col-12">
