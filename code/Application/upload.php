@@ -64,11 +64,11 @@ if ($uploadOk == 0) {
   }
 }
 
-    // save to db
-    $query = "update users set profilbild='$target_file;";
+// save to db
+$query = "update users set profilbild='$target_file;";
 
-    echo $query;
-    mysqli_query($con, $query);
+echo $query;
+mysqli_query($con, $query);
 
 
 
