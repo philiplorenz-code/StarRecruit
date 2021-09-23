@@ -17,11 +17,22 @@ session_start();
 
         // save to db
         //$query = "update users set vorname='$vorname',name='$name',wohnort='$wohnort',user_alter='$user_alter',beschreibung='$beschreibung',sprachen='$sprachen',softskills='$softskills',hardskills='$hardskills',mind_gehalt='$mind_gehalt',beruf='$beruf' where user_id='$user_id';";
-        $nachricht_id = $_POST['submit'];
-        $query = "UPDATE nachrichten SET status='accepted' WHERE id='$nachricht_id';";
-        mysqli_query($con, $query);
-        header("Location: postfachan.php");
-        die;
+
+        if(isset($_POST['accept'])){
+            $nachricht_id = $_POST['accept'];
+            $query = "UPDATE nachrichten SET status='accepted' WHERE id='$nachricht_id';";
+            mysqli_query($con, $query);
+            header("Location: postfachan.php");
+            die;
+        }
+        elseif(isset($_POST['deny'])){
+            $nachricht_id = $_POST['deny'];
+            $query = "UPDATE nachrichten SET status='denied' WHERE id='$nachricht_id';";
+            mysqli_query($con, $query);
+            header("Location: postfachan.php");
+            die;
+        }
+        else{}
     }
 
 
@@ -86,8 +97,8 @@ session_start();
                                                     echo "<tr>";
                                                     echo "<td>" . $row['id'] . "</td>";
                                                     echo "<td>" . $row['status'] . "</td>";
-                                                    echo "<td> " . " <form method='post'> <button type='submit' name='submit' value=" . $row['id'] . "> Bestätigen </button> </form>" . "</td>";
-                                                    echo "<td> " . " <form method='post'> <button type='submit' name='submit' value=" . $row['id'] . "> Ablehnen </button> </form>" . "</td>";
+                                                    echo "<td> " . " <form method='post'> <button type='submit' name='accept' value=" . $row['id'] . "> Bestätigen </button> </form>" . "</td>";
+                                                    echo "<td> " . " <form method='post'> <button type='submit' name='deny' value=" . $row['id'] . "> Ablehnen </button> </form>" . "</td>";
                                                     echo "</tr>";
                                             }
                                         ?>
