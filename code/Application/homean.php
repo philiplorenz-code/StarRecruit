@@ -49,6 +49,7 @@ session_start();
                 </a>
                 <hr class="sidebar-divider my-0">
                 <ul class="navbar-nav text-light" id="accordionSidebar">
+                    <li class="nav-item"><a class="nav-link" href="https://webdev.learning-it.io/Application/homean.php"><i class="fas fa-table"></i><span>Home</span></a></li>
                     <li class="nav-item"><a class="nav-link" href="https://webdev.learning-it.io/Application/editprofilean.php"><i class="fas fa-table"></i><span>Profil Bearbeiten</span></a></li>
                     <li class="nav-item"><a class="nav-link" href="https://webdev.learning-it.io/Application/postfachan.php"><i class="fas fa-table"></i><span>Postfach</span></a></li>
                     <li class="nav-item"></li>
@@ -61,7 +62,7 @@ session_start();
                 <div class="container-fluid py-5">
                     <h1 class="display-5 fw-bold">Hallo <?php echo $entry['vorname']; ?>!</h1>
                     <p class="col-md-8 fs-4">"Meaning is something you build into your life. You build it out of your own past, out of your affections and loyalties, out of the experience of humankind as it is passed on to you... You are the only one who can put them together into that unique pattern that will be your life."</p>
-                    <h1>Du hast <?php echo $num_rows; ?> neue Nachrichten!</h1><a class="btn btn-primary btn-lg" role="button" href="#">Zum Postfach</a>
+                    <h1>Du hast <?php echo $num_rows; ?> neue Nachrichten!</h1><a class="btn btn-primary btn-lg" role="button" href="https://webdev.learning-it.io/Application/postfachan.php">Zum Postfach</a>
                 </div>
             </div>
             <div class="p-5 mb-4 bg-light round-3">
