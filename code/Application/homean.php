@@ -12,6 +12,20 @@ session_start();
     $result = mysqli_query($con, $query);
     $entry = $result->fetch_assoc();
 
+
+
+    //step1
+    $curl_session = curl_init(); 
+    //step2
+    curl_setopt($curl_session ,CURLOPT_URL,"https://quotes.rest/qod");
+    //step3
+    $result = curl_exec($curl_session );
+    //step4
+    curl_close($curl_session );
+    //step5
+    echo $result;
+
+
 ?>
 
 <!DOCTYPE html>
