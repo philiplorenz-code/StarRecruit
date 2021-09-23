@@ -8,8 +8,10 @@ session_start();
     $user_id = $user_data["user_id"];
 
     // Get all messages to user
-    $query = "select * from nachrichten where user_id='$user_id';";
+    $query = "select vorname from users where user_id='$user_id';";
     $result = mysqli_query($con, $query);
+    $vorname = $result->fetch_assoc();
+    echo $vorname;
 
 ?>
 
