@@ -17,7 +17,7 @@ session_start();
     $result = mysqli_query($con, $query);
     //var_dump($result);
     $nachrichtenanzahl = mysql_num_rows($result);
-    echo $nachrichtenanzahl;
+    //echo $nachrichtenanzahl;
 
 
 ?>
