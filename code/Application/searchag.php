@@ -93,6 +93,7 @@ session_start();
                                 </div>
                             </div>
                         </div>
+                        <button class="btn btn-light submit-button" type="button">Submit Form</button>
                     </form>
                 </div>
             </div>
