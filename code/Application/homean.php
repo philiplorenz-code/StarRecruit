@@ -11,7 +11,6 @@ session_start();
     $query = "select vorname from users where user_id='$user_id';";
     $result = mysqli_query($con, $query);
     $entry = $result->fetch_assoc();
-    echo $entry['vorname'];
 
 ?>
 
@@ -52,7 +51,7 @@ session_start();
         <div class="d-flex flex-column" id="content-wrapper">
             <div class="p-5 mb-4 bg-light round-3">
                 <div class="container-fluid py-5">
-                    <h1 class="display-5 fw-bold">Hallo John!</h1>
+                    <h1 class="display-5 fw-bold">Hallo <?php $entry['vorname'] ?>!</h1>
                     <p class="col-md-8 fs-4">Zitat</p>
                     <h1>Du hast X neue Nachrichten!</h1><a class="btn btn-primary btn-lg" role="button" href="#">Zum Postfach</a>
                 </div>
