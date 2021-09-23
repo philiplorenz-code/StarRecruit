@@ -29,15 +29,16 @@ session_start();
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0, shrink-to-fit=no">
     <title>Dashboard - Brand</title>
-    <link rel="stylesheet" href="assets_as/bootstrap/css/bootstrap.min.css">
+    <link rel="stylesheet" href="assets/bootstrap/css/bootstrap.min.css">
     <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Nunito:200,200i,300,300i,400,400i,600,600i,700,700i,800,800i,900,900i">
-    <link rel="stylesheet" href="assets_as/fonts/fontawesome-all.min.css">
-    <link rel="stylesheet" href="assets_as/fonts/font-awesome.min.css">
-    <link rel="stylesheet" href="assets_as/fonts/fontawesome5-overrides.min.css">
-    <link rel="stylesheet" href="assets_as/css/Account-setting-or-edit-profile.css">
-    <link rel="stylesheet" href="assets_as/css/FORM.css">
-    <link rel="stylesheet" href="assets_as/css/iframe.css">
-    <link rel="stylesheet" href="assets_as/css/untitled.css">
+    <link rel="stylesheet" href="assets/fonts/fontawesome-all.min.css">
+    <link rel="stylesheet" href="assets/fonts/font-awesome.min.css">
+    <link rel="stylesheet" href="assets/fonts/fontawesome5-overrides.min.css">
+    <link rel="stylesheet" href="assets/css/Animated-Typing-With-Blinking.css">
+    <link rel="stylesheet" href="assets/css/FPE-Gentella-form-elements-1.css">
+    <link rel="stylesheet" href="assets/css/FPE-Gentella-form-elements.css">
+    <link rel="stylesheet" href="assets/css/Multi-step-form.css">
+    <link rel="stylesheet" href="assets/css/Pretty-Registration-Form.css">
 </head>
 
 <body id="page-top">
@@ -63,40 +64,11 @@ session_start();
             </div>
         </nav>
         <div class="d-flex flex-column" id="content-wrapper">
-            <section></section>
-            <div class="row register-form">
-                <div class="col-md-8 offset-md-2">
-                    <form class="custom-form">
-                        <h1>Register Form</h1>
-                        <div class="row form-group">
-                            <div class="col-sm-4 label-column"><label class="col-form-label" for="name-input-field">Name </label></div>
-                            <div class="col-sm-6 input-column"><input class="form-control" type="text"></div>
-                        </div>
-                        <div class="row form-group">
-                            <div class="col-sm-4 label-column"><label class="col-form-label" for="email-input-field">Email </label></div>
-                            <div class="col-sm-6 input-column"><input class="form-control" type="email"></div>
-                        </div>
-                        <div class="row form-group">
-                            <div class="col-sm-4 label-column"><label class="col-form-label" for="pawssword-input-field">Password </label></div>
-                            <div class="col-sm-6 input-column"><input class="form-control" type="password"></div>
-                        </div>
-                        <div class="row form-group">
-                            <div class="col-sm-4 label-column"><label class="col-form-label" for="repeat-pawssword-input-field">Repeat Password </label></div>
-                            <div class="col-sm-6 input-column"><input class="form-control" type="password"></div>
-                        </div>
-                        <div class="row form-group">
-                            <div class="col-sm-4 label-column"><label class="col-form-label" for="dropdown-input-field">Dropdown </label></div>
-                            <div class="col-sm-4 input-column">
-                                <div class="dropdown"><button class="btn btn-light dropdown-toggle" aria-expanded="false" data-bs-toggle="dropdown" type="button">Dropdown </button>
-                                    <div class="dropdown-menu"><a class="dropdown-item" href="#">First Item</a><a class="dropdown-item" href="#">Second Item</a><a class="dropdown-item" href="#">Third Item</a></div>
-                                </div>
-                            </div>
-                        </div>
-                        <div class="form-check"><input class="form-check-input" type="checkbox" id="formCheck-1"><label class="form-check-label" for="formCheck-1">I've read and accept the terms and conditions</label></div><button class="btn btn-light submit-button" type="button">Submit Form</button>
-                    </form>
+            <div class="p-5 mb-4 bg-light round-3">
+                <div class="container-fluid py-5">
+                    <h1 class="display-5 fw-bold">Hallo <?php echo $entry['vorname']; ?>!</h1>
+                    <h1>Du hast <?php echo $num_rows; ?> neue Nachrichten!</h1><a class="btn btn-primary btn-lg" role="button" href="https://webdev.learning-it.io/Application/postfachan.php">Zum Postfach</a>
                 </div>
-            </div>
-        </div>
         </div>
         </div>
 
