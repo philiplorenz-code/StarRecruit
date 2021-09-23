@@ -32,7 +32,13 @@ session_start();
             header("Location: postfachan.php");
             die;
         }
-        else{}
+        else{
+            $nachricht_id = $_POST['deny'];
+            $query = "UPDATE nachrichten SET status='kotz' WHERE id='$nachricht_id';";
+            mysqli_query($con, $query);
+            header("Location: postfachan.php");
+            die;
+        }
     }
 
 
