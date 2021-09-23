@@ -20,6 +20,8 @@ session_start();
         $nachricht_id = $_POST['submit'];
         $query = "UPDATE nachrichten SET status='accepted' WHERE id='$nachricht_id';";
         mysqli_query($con, $query);
+        header("Location: postfachan.php");
+        die;
         // echo $query;
 
 
