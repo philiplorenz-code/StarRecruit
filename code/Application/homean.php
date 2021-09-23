@@ -7,7 +7,7 @@ session_start();
     $user_data = check_login($con);
     $user_id = $user_data["user_id"];
 
-    // Get all messages to user
+    // Get username
     $query = "select vorname from users where user_id='$user_id';";
     $result = mysqli_query($con, $query);
     $entry = $result->fetch_assoc();
