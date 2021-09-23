@@ -35,7 +35,7 @@ session_start();
     $query = "select * from users where user_id='$user_id';";
 
     $result = mysqli_query($con, $query);
-    //$entry = $result->fetch_assoc();
+    $entry = $result->fetch_assoc();
 
 
 ?>
