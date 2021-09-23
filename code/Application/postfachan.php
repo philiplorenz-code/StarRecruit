@@ -10,8 +10,7 @@ session_start();
     // Get all messages to user
     $query = "select * from nachrichten where user_id='$user_id';";
     $result = mysqli_query($con, $query);
-    $entries = $result->fetch_assoc();
-    var_dump($result);
+
 
 ?>
 
@@ -77,6 +76,14 @@ session_start();
                                         </tr>
 
                                         <?php
+                                            while ($row = mysql_fetch_assoc($result)) {
+                                                echo ($row);
+                                            }
+                                            $entries = $result->fetch_assoc();
+                                            //var_dump($result);
+
+
+
                                             foreach ($entries as $entry) {
                                                 echo "TEST";
                                                 echo "<tr>";
