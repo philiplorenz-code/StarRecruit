@@ -77,7 +77,7 @@ session_start();
 
                                         <?php
                                             while ($row = $result->fetch_assoc()) {
-                                                echo ($row);
+                                                echo ($row['id']);
                                             }
                                             $entries = $result->fetch_assoc();
                                             //var_dump($result);
