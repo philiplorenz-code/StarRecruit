@@ -19,7 +19,7 @@ session_start();
                     $user_data = mysqli_fetch_assoc($result);
                     if($user_data['user_password'] === $user_password){
                         $_SESSION['user_id'] = $user_data['user_id'];
-                        header("Location: index.php");
+                        header("Location: homean.php");
                         die;
                     }
                 }
