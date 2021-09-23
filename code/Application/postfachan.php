@@ -77,21 +77,17 @@ session_start();
 
                                         <?php
                                             while ($row = $result->fetch_assoc()) {
-                                                echo ($row['id']);
+
+                                                    echo "TEST";
+                                                    echo "<tr>";
+                                                    echo "<td>" . $row['id'] . "</td>";
+                                                    echo "<td>" . $row['status'] . "</td>";
+                                                    //echo "<td>" . "<form method='post'> <input type='submit' name='accept' value='" . $entry['id'] . "'> </form>" . "</td>";
+                                                    echo "</tr>";
+
                                             }
-                                            $entries = $result->fetch_assoc();
-                                            //var_dump($result);
 
 
-
-                                            foreach ($entries as $entry) {
-                                                echo "TEST";
-                                                echo "<tr>";
-                                                echo "<td>" . $entry['id'] . "</td>";
-                                                echo "<td>" . $entry['status'] . "</td>";
-                                                echo "<td>" . "<form method='post'> <input type='submit' name='accept' value='" . $entry['id'] . "'> </form>" . "</td>";
-                                                echo "</tr>";
-                                            }
                                         ?>
 
                                         <tr>
