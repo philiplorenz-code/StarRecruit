@@ -23,7 +23,13 @@ session_start();
     //step4
     curl_close($curl_session );
     //step5
-    echo $result;
+
+    $jsonIterator = new RecursiveIteratorIterator(
+        new RecursiveArrayIterator(json_decode($result, TRUE)),
+        RecursiveIteratorIterator::SELF_FIRST);
+
+    echo $jsonIterator;
+    //echo $result;
 
 
 ?>
