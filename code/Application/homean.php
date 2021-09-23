@@ -25,7 +25,7 @@ session_start();
     //step5
 
     $arrayy = json_decode($result, true);
-    var_dump($arrayy);
+    //var_dump($arrayy);
     //echo $result;
 
 
