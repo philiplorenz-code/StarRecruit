@@ -77,6 +77,7 @@ session_start();
 
                                         <?php
                                             foreach ($entries as $entry) {
+                                                echo "TEST";
                                                 echo "<tr>";
                                                 echo "<td>" . $entry['id'] . "</td>";
                                                 echo "<td>" . $entry['status'] . "</td>";
