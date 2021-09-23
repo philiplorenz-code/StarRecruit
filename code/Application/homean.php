@@ -26,7 +26,7 @@ session_start();
         // save to db
         $query = "update users set vorname='$vorname',name='$name',wohnort='$wohnort',user_alter='$user_alter',beschreibung='$beschreibung',sprachen='$sprachen',softskills='$softskills',hardskills='$hardskills',mind_gehalt='$mind_gehalt',beruf='$beruf' where user_id='$user_id';";
 
-        echo $query;
+        // echo $query;
         mysqli_query($con, $query);
 
     }
@@ -185,17 +185,7 @@ session_start();
                     <div class="text-right">
                     <button class="btn btn-info mt-2" type="submit" style="background: #9c3f2a;">Update</button>
 </div>
-                    <div class="about">
-                <table>
-                    <tbody>
-                    <th><form action="upload.php" method="post" enctype="multipart/form-data">
-                    </br> Profilbild hochladen: </br>
-                    <input type="file" name="fileToUpload" id="fileToUpload">
-                    <input type="submit" value="Upload Image" name="submit"></form></th>
-                    </tr>
-                    </tbody>
-                </table>
-                    </div>
+
                 </div>
 
                 </div>
