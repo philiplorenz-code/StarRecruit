@@ -76,7 +76,7 @@ session_start();
                                         </tr>
 
                                         <?php
-                                            while ($row = mysql_fetch_assoc($result)) {
+                                            while ($row = $result->fetch_assoc()) {
                                                 echo ($row);
                                             }
                                             $entries = $result->fetch_assoc();
