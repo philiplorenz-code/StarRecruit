@@ -24,7 +24,8 @@ session_start();
     curl_close($curl_session );
     //step5
 
-
+    $arrayy = json_decode($result, true);
+    var_dump($arrayy);
     //echo $result;
 
 
