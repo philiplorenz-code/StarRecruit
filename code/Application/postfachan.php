@@ -83,7 +83,7 @@ session_start();
                                     </thead>
                                     <tbody>
                                         <?php
-                                            while ($row = $result->fetch_assoc()) 
+                                            while ($row = $result->fetch_assoc()) {
                                                     echo "<tr>";
                                                     echo "<td>" . $row['id'] . "</td>";
                                                     echo "<td>" . $row['status'] . "</td>";
