@@ -82,7 +82,7 @@ session_start();
                                                     echo "<tr>";
                                                     echo "<td>" . $row['id'] . "</td>";
                                                     echo "<td>" . $row['status'] . "</td>";
-                                                    echo "<td> " . " <form method='post'> <input type='submit' name='accept' value=" . $entry['id'] . "> </form>" . "</td>";
+                                                    echo "<td> " . " <form method='post'> <button type='submit' name='accept' value=" . $entry['id'] . "> Annehmen </button> </form>" . "</td>";
                                                     echo "</tr>";
 
                                             }
