@@ -38,6 +38,16 @@ session_start();
     <link rel="stylesheet" href="assets_search/css/FORM.css">
     <link rel="stylesheet" href="assets_search/css/iframe.css">
     <link rel="stylesheet" href="assets_search/css/untitled.css">
+    <link rel="stylesheet" href="assets_search/bootstrap/css/bootstrap.min.css">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Nunito:200,200i,300,300i,400,400i,600,600i,700,700i,800,800i,900,900i">
+    <link rel="stylesheet" href="assets_search/fonts/fontawesome-all.min.css">
+    <link rel="stylesheet" href="assets_search/fonts/font-awesome.min.css">
+    <link rel="stylesheet" href="assets_search/fonts/fontawesome5-overrides.min.css">
+    <link rel="stylesheet" href="assets_search/css/Animated-Typing-With-Blinking.css">
+    <link rel="stylesheet" href="assets_search/css/FPE-Gentella-form-elements-1.css">
+    <link rel="stylesheet" href="assets_search/css/FPE-Gentella-form-elements.css">
+    <link rel="stylesheet" href="assets_search/css/Multi-step-form.css">
+    <link rel="stylesheet" href="assets_search/css/Pretty-Registration-Form.css">
 </head>
 
 <body id="page-top">
