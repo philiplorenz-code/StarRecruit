@@ -11,7 +11,7 @@ session_start();
     $query = "select * from nachrichten where user_id='$user_id';";
     $result = mysqli_query($con, $query);
     $entries = $result->fetch_assoc();
-    echo $entries;
+    var_dump($entries);
 
 ?>
 
