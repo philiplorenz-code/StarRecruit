@@ -7,6 +7,10 @@ session_start();
     $user_data = check_login($con);
     $user_id = $user_data["user_id"];
 
+    // Get all messages to user
+    $query = "select vorname from users where user_id='$user_id';";
+    $result = mysqli_query($con, $query);
+    $entry = $result->fetch_assoc();
 
     // Get count of messages
     $query = "select * from nachrichten where user_id='$user_id' and not status='accepted' and not status='denied';";
@@ -49,6 +53,10 @@ session_start();
                     <li class="nav-item"><a class="nav-link" href="https://webdev.learning-it.io/Application/sucheag.php"><i class="fas fa-table"></i><span>Suchen bearbeiten</span></a></li>
                     <li class="nav-item"><a class="nav-link" href="https://webdev.learning-it.io/Application/editprofileag.php"><i class="fas fa-table"></i><span>Profil Bearbeiten</span></a></li>
                     <li class="nav-item"><a class="nav-link" href="https://webdev.learning-it.io/Application/postfachag.php"><i class="fas fa-table"></i><span>Postfach</span></a></li>
+                    <li class="nav-item"><a class="nav-link" href="https://webdev.learning-it.io/Application/postfachag.php"><i class="fas fa-table"></i><span>Einstellungen</span></a></li>
+                    <li class="nav-item"><a class="nav-link" href="https://webdev.learning-it.io/Application/postfachag.php"><i class="fas fa-table"></i><span>Logout</span></a></li>
+
+
                     <li class="nav-item"></li>
                     <li class="nav-item"></li>
                 </ul>
