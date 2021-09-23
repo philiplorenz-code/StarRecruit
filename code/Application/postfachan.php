@@ -13,7 +13,7 @@ session_start();
 
     if($_SERVER['REQUEST_METHOD'] == "POST"){
         //sth was posted
-        echo AUA;
+        echo "AUA";
 
         // save to db
         //$query = "update users set vorname='$vorname',name='$name',wohnort='$wohnort',user_alter='$user_alter',beschreibung='$beschreibung',sprachen='$sprachen',softskills='$softskills',hardskills='$hardskills',mind_gehalt='$mind_gehalt',beruf='$beruf' where user_id='$user_id';";
