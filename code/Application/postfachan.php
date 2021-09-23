@@ -121,7 +121,7 @@ session_start();
                                             <td><img class="rounded-circle me-2" width="30" height="30" src="assets/img/avatars/avatar5.jpeg">Cedric Kelly</td>
                                             <td>Senior JavaScript Developer</td>
                                             <td>Edinburgh</td>
-                                            <td>22</td>
+                                            <td><button>TEST</button></td>
                                         </tr>
                                     </tbody>
                                     <tfoot>
