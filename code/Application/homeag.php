@@ -63,12 +63,14 @@ session_start();
                 </ul>
             </div>
         </nav>
+
         <div class="d-flex flex-column" id="content-wrapper">
             <div class="p-5 mb-4 bg-light round-3">
                 <div class="container-fluid py-5">
                     <h1 class="display-5 fw-bold">Hallo <?php echo $entry['vorname']; ?>!</h1>
                     <h1>Du hast <?php echo $num_rows; ?> neue Nachrichten!</h1><a class="btn btn-primary btn-lg" role="button" href="https://webdev.learning-it.io/Application/postfachan.php">Zum Postfach</a>
                 </div>
+        </div>
         </div>
         </div>
 
