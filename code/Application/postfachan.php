@@ -7,6 +7,11 @@ session_start();
     $user_data = check_login($con);
     $user_id = $user_data["user_id"];
 
+    // Get all messages to user
+    $query = "select * from nachrichten where user_id='$user_id';";
+    $result = mysqli_query($con, $query);
+    $entries = $result->fetch_assoc();
+
 ?>
 
 <!DOCTYPE html>
@@ -56,7 +61,7 @@ session_start();
                                 <table class="table my-0" id="dataTable">
                                     <thead>
                                         <tr>
-                                            <th>Titel</th>
+                                            <th>Nummer</th>
                                             <th>Status</th>
                                             <th>Bestätigen</th>
                                             <th>Ablehnen</th>
@@ -69,6 +74,17 @@ session_start();
                                             <td>Tokyo</td>
                                             <td>33</td>
                                         </tr>
+
+                                        <?php
+                                            foreach ($entries as $entry) {
+                                                echo "<tr>";
+                                                echo "<td>" . $entry['id'] . "</td>";
+                                                echo "<td>" . $entry['status'] . "</td>";
+                                                echo "<td>" . "<form method='post'> <input type='submit' name='accept' value='" . $entry['id'] . "'> </form>" . "</td>";
+                                                echo "</tr>";
+                                            }
+                                        ?>
+
                                         <tr>
                                             <td><img class="rounded-circle me-2" width="30" height="30" src="assets/img/avatars/avatar2.jpeg">Angelica Ramos</td>
                                             <td>Chief Executive Officer(CEO)</td>
@@ -126,7 +142,7 @@ session_start();
                                     </tbody>
                                     <tfoot>
                                         <tr>
-                                            <td><strong>Titel</strong></td>
+                                            <td><strong>Nummer</strong></td>
                                             <td><strong>Status</strong></td>
                                             <td><strong>Bestätigen</strong></td>
                                             <td><strong>Ablehnen</strong></td>
