@@ -56,12 +56,10 @@ session_start();
                                 <table class="table my-0" id="dataTable">
                                     <thead>
                                         <tr>
-                                            <th>Name</th>
-                                            <th>Position</th>
-                                            <th>Office</th>
-                                            <th>Age</th>
-                                            <th>Start date</th>
-                                            <th>Salary</th>
+                                            <th>Titel</th>
+                                            <th>Status</th>
+                                            <th>Bestätigen</th>
+                                            <th>Ablehnen</th>
                                         </tr>
                                     </thead>
                                     <tbody>
