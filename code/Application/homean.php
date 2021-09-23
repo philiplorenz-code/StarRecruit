@@ -17,7 +17,7 @@ session_start();
     $result = mysqli_query($con, $query);
     //var_dump($result);
     $num_rows = mysqli_fetch_row($result)[0];
-    echo $num_rows;
+
 
 
 ?>
@@ -61,7 +61,7 @@ session_start();
                 <div class="container-fluid py-5">
                     <h1 class="display-5 fw-bold">Hallo <?php echo $entry['vorname']; ?>!</h1>
                     <p class="col-md-8 fs-4">"Meaning is something you build into your life. You build it out of your own past, out of your affections and loyalties, out of the experience of humankind as it is passed on to you... You are the only one who can put them together into that unique pattern that will be your life."</p>
-                    <h1>Du hast X neue Nachrichten!</h1><a class="btn btn-primary btn-lg" role="button" href="#">Zum Postfach</a>
+                    <h1>Du hast <?php echo $num_rows; ?> neue Nachrichten!</h1><a class="btn btn-primary btn-lg" role="button" href="#">Zum Postfach</a>
                 </div>
             </div>
             <div class="p-5 mb-4 bg-light round-3">
