@@ -83,15 +83,12 @@ session_start();
                                     </thead>
                                     <tbody>
                                         <?php
-                                            while ($row = $result->fetch_assoc()) {
-                                                    echo "1";
-                                                    echo $entry['id'];
-                                                    echo "2";
+                                            while ($row = $result->fetch_assoc()) 
                                                     echo "<tr>";
                                                     echo "<td>" . $row['id'] . "</td>";
                                                     echo "<td>" . $row['status'] . "</td>";
-                                                    echo "<td> " . " <form method='post'> <button type='submit' name='submit' value=" . $entry['id'] . "> Bestätigen </button> </form>" . "</td>";
-                                                    echo "<td> " . " <form method='post'> <button type='submit' name='submit' value=" . $entry['id'] . "> Ablehnen </button> </form>" . "</td>";
+                                                    echo "<td> " . " <form method='post'> <button type='submit' name='submit' value=" . $row['id'] . "> Bestätigen </button> </form>" . "</td>";
+                                                    echo "<td> " . " <form method='post'> <button type='submit' name='submit' value=" . $row['id'] . "> Ablehnen </button> </form>" . "</td>";
                                                     echo "</tr>";
                                             }
                                         ?>
