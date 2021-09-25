@@ -68,105 +68,33 @@
          <div class="container">
 
 
-
-         <div class="row gutters">
-               <div class="col-xl-9 col-lg-9 col-md-12 col-sm-12 col-12">
-                  <div class="card h-100">
-                     <div class="card-body">
-                        <form method="post">
-                           <div class="row gutters">
-                              <div class="col-xl-12 col-lg-12 col-md-12 col-sm-12 col-12">
-                                 <h6 class="mb-2 text-primary">Persönlich</h6>
-                              </div>
-                              <div class="col-xl-6 col-lg-6 col-md-6 col-sm-6 col-12">
-                                 <div class="form-group">
-                                    <label for="vorname">Vorname</label>
-                                    <input type="text" class="form-control" name="vorname" value='<?php echo $entry['vorname'];?>'>
-                                 </div>
-                              </div>
-                              <div class="col-xl-6 col-lg-6 col-md-6 col-sm-6 col-12">
-                                 <div class="form-group">
-                                    <label for="name">Nachname</label>
-                                    <input type="text" class="form-control" name="name" value='<?php echo $entry['name'];?>'>
-                                 </div>
-                              </div>
-                              <div class="col-xl-6 col-lg-6 col-md-6 col-sm-6 col-12">
-                                 <div class="form-group">
-                                    <label for="wohnort">Wohnort</label>
-                                    <input type="text" class="form-control" name="wohnort" value='<?php echo $entry['wohnort'];?>'>
-                                 </div>
-                              </div>
-                              <div class="col-xl-6 col-lg-6 col-md-6 col-sm-6 col-12">
-                                 <div class="form-group">
-                                    <label for="user_alter">Alter</label>
-                                    <input type="text" class="form-control" name="user_alter" value='<?php echo $entry['user_alter'];?>'>
-                                 </div>
-                              </div>
-                              <div class="col-xl-6 col-lg-6 col-md-6 col-sm-6 col-12">
-                                 <div class="form-group">
-                                    <label for="beschreibung">Beschreibung</label>
-                                    <input type="text" class="form-control" name="beschreibung" value='<?php echo $entry['beschreibung'];?>'>
-                                 </div>
-                              </div>
-                           </div>
-                           <div class="row gutters">
-                              <div class="col-xl-12 col-lg-12 col-md-12 col-sm-12 col-12">
-                                 <h6 class="mt-3 mb-2 text-primary">Fähigkeiten (komma-getrennt)</h6>
-                              </div>
-                              <div class="col-xl-6 col-lg-6 col-md-6 col-sm-6 col-12">
-                                 <div class="form-group">
-                                    <label for="sprachen">Sprachen</label>
-                                    <input type="text" class="form-control" name="sprachen" value='<?php echo $entry['sprachen'];?>'>
-                                 </div>
-                              </div>
-                              <div class="col-xl-6 col-lg-6 col-md-6 col-sm-6 col-12">
-                                 <div class="form-group">
-                                    <label for="softskills">Softskills</label>
-                                    <input type="text" class="form-control" name="softskills" value='<?php echo $entry['softskills'];?>'>
-                                 </div>
-                              </div>
-                              <div class="col-xl-6 col-lg-6 col-md-6 col-sm-6 col-12">
-                                 <div class="form-group">
-                                    <label for="hardskills">Hardskills</label>
-                                    <input type="text" class="form-control" name="hardskills" value='<?php echo $entry['hardskills'];?>'>
-                                 </div>
-                              </div>
-                           </div>
-                           <div class="row gutters">
-                              <div class="col-xl-12 col-lg-12 col-md-12 col-sm-12 col-12">
-                                 <h6 class="mt-3 mb-2 text-primary">Beruf</h6>
-                              </div>
-                              <div class="col-xl-6 col-lg-6 col-md-6 col-sm-6 col-12">
-                                 <div class="form-group">
-                                    <label for="mind_gehalt">Gewünschtes Jahresgehalt</label>
-                                    <input type="text" class="form-control" name="mind_gehalt" value='<?php echo $entry['mind_gehalt'];?>'>
-                                 </div>
-                              </div>
-                              <div class="col-xl-6 col-lg-6 col-md-6 col-sm-6 col-12">
-                                 <div class="form-group">
-                                    <label for="beruf">Beruf</label>
-                                    <input type="text" class="form-control" name="beruf" value='<?php echo $entry['beruf'];?>'>
-                                 </div>
-                              </div>
-                           </div>
-                           <div class="row gutters">
-                              <div class="col-xl-12 col-lg-12 col-md-12 col-sm-12 col-12">
-                                 <div class="text-right">
-                                    <button class="btn btn-info mt-2" type="submit" style="background: #9c3f2a;">Update</button>
-                                 </div>
-                              </div>
-                           </div>
-                     </div>
-                     </form>
-                  </div>
-               </div>
-            </div>
+         <hgroup>
+  <h1>Material Design Form</h1>
+  <h3>By Josh Adamous</h3>
+</hgroup>
+<form>
+  <div class="group">
+    <input type="text"><span class="highlight"></span><span class="bar"></span>
+    <label>Name</label>
+  </div>
+  <div class="group">
+    <input type="email"><span class="highlight"></span><span class="bar"></span>
+    <label>Email</label>
+  </div>
+  <button type="button" class="button buttonBlue">Subscribe
+    <div class="ripples buttonRipples"><span class="ripplesCircle"></span></div>
+  </button>
+</form>
+<footer><a href="http://www.polymer-project.org/" target="_blank"><img src="https://www.polymer-project.org/images/logos/p-logo.svg"></a>
+  <p>You Gotta Love <a href="http://www.polymer-project.org/" target="_blank">Google</a></p>
+</footer>
 
 
 
 
-         </div>
-      </div>
+
+        </div>
+    </div>
 
       <script src="assets/bootstrap/js/bootstrap.min.js"></script>
       <script src="assets/js/theme.js"></script>
