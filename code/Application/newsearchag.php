@@ -61,20 +61,20 @@ session_start();
                             <div class="col-sm-6 input-column"><input class="form-control" type="text"></div>
                         </div>
                         <div class="row form-group">
-                            <div class="col-sm-4 label-column"><label class="col-form-label" for="email-input-field">HardSkills </label></div>
-                            <div class="col-sm-6 input-column"><input class="form-control" type="email"></div>
+                            <div class="col-sm-4 label-column"><label class="col-form-label" for="name-input-field">Hardskills </label></div>
+                            <div class="col-sm-6 input-column"><input class="form-control" type="text"></div>
                         </div>
                         <div class="row form-group">
-                            <div class="col-sm-4 label-column"><label class="col-form-label" for="pawssword-input-field">Softskills </label></div>
-                            <div class="col-sm-6 input-column"><input class="form-control" type="password"></div>
+                            <div class="col-sm-4 label-column"><label class="col-form-label" for="name-input-field">Softskills </label></div>
+                            <div class="col-sm-6 input-column"><input class="form-control" type="text"></div>
                         </div>
                         <div class="row form-group">
-                            <div class="col-sm-4 label-column"><label class="col-form-label" for="repeat-pawssword-input-field">Gehalt (max) </label></div>
-                            <div class="col-sm-6 input-column"><input class="form-control" type="password"></div>
+                            <div class="col-sm-4 label-column"><label class="col-form-label" for="name-input-field">Gehalt (max) </label></div>
+                            <div class="col-sm-6 input-column"><input class="form-control" type="text"></div>
                         </div>
                         <div class="row form-group">
-                            <div class="col-sm-4 label-column"><label class="col-form-label" for="repeat-pawssword-input-field">Gehalt (max) </label></div>
-                            <div class="col-sm-6 input-column"><input class="form-control" type="password"></div>
+                            <div class="col-sm-4 label-column"><label class="col-form-label" for="name-input-field">Wochenstunden </label></div>
+                            <div class="col-sm-6 input-column"><input class="form-control" type="text"></div>
                         </div>
                         <button class="btn btn-light submit-button" type="button">Suche starten</button>
                     </form>
