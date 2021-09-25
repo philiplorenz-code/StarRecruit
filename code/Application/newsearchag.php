@@ -7,19 +7,6 @@ session_start();
     $user_data = check_login($con);
     $user_id = $user_data["user_id"];
 
-    // Get all messages to user
-    $query = "select vorname from users where user_id='$user_id';";
-    $result = mysqli_query($con, $query);
-    $entry = $result->fetch_assoc();
-
-    // Get count of messages
-    $query = "select * from nachrichten where user_id='$user_id' and not status='accepted' and not status='denied';";
-    $result = mysqli_query($con, $query);
-    //var_dump($result);
-    $num_rows = mysqli_fetch_row($result)[0];
-
-
-
 ?>
 
 <!DOCTYPE html>
@@ -86,12 +73,8 @@ session_start();
                             <div class="col-sm-6 input-column"><input class="form-control" type="password"></div>
                         </div>
                         <div class="row form-group">
-                            <div class="col-sm-4 label-column"><label class="col-form-label" for="dropdown-input-field">Wochenstunden </label></div>
-                            <div class="col-sm-4 input-column">
-                                <div class="dropdown"><button class="btn btn-light dropdown-toggle" aria-expanded="false" data-bs-toggle="dropdown" type="button">Dropdown </button>
-                                    <div class="dropdown-menu"><a class="dropdown-item" href="#">First Item</a><a class="dropdown-item" href="#">Second Item</a><a class="dropdown-item" href="#">Third Item</a></div>
-                                </div>
-                            </div>
+                            <div class="col-sm-4 label-column"><label class="col-form-label" for="repeat-pawssword-input-field">Gehalt (max) </label></div>
+                            <div class="col-sm-6 input-column"><input class="form-control" type="password"></div>
                         </div>
                         <button class="btn btn-light submit-button" type="button">Suche starten</button>
                     </form>
