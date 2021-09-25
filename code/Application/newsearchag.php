@@ -79,7 +79,32 @@ session_start();
 
 
 
-        <div class="card h-100">
+        <div class="container">
+    <div class="row gutters">
+    <div class="col-xl-3 col-lg-3 col-md-12 col-sm-12 col-12">
+    <div class="card h-100">
+        <div class="card-body">
+            <div class="account-settings">
+                <div class="user-profile">
+                    <div class="user-avatar">
+                        <img src="https://bootdey.com/img/Content/avatar/avatar7.png" alt="Maxwell Admin">
+                    </div>
+                    <h5 class="user-name">Philip Lorenz</h5>
+                    <h6 class="user-email">philip@learning-it.io</h6>
+                </div>
+                <div class="about">
+                    <h5>About</h5>
+                    <p>BlaBlaBla</p>
+                </div>
+
+            </div>
+        </div>
+    </div>
+    </div>
+
+    
+    <div class="col-xl-9 col-lg-9 col-md-12 col-sm-12 col-12">
+    <div class="card h-100">
         <div class="card-body">
             <form method="post">
             <div class="row gutters">
@@ -163,8 +188,6 @@ session_start();
                     <div class="text-right">
                     <button class="btn btn-info mt-2" type="submit" style="background: #9c3f2a;">Update</button>
 </div>
-
-
 
 
 
