@@ -21,8 +21,11 @@
                $recruiterid = $user_id;
        
                // save to db
-               $query = "update search set stadt='$stadt',softskills='$softskills',hardskills='$hardskills',sprachen='$sprachen',max_gehalt='$gehalt',sprachen='$sprachen',wochenstunden='$wochenstunden',recruiter_id='$recruiterid';";
-                echo $query;
+           
+               $query = "INSERT INTO search (stadt, softskills, hardskills, sprachen, max_gehalt, wochenstunden,recruiter_id) VALUES ($stadt, $softskills, $hardskills, $sprachen, $gehalt, $wochenstunden, $recruiterid);";
+
+            
+               echo $query;
                // echo $query;
                mysqli_query($con, $query);
        
