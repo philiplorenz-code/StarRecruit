@@ -93,7 +93,7 @@ session_start();
                                 </div>
                             </div>
                         </div>
-                        <button class="btn btn-light submit-button" type="button">Submit Form</button>
+                        <button class="btn btn-light submit-button" type="button">Suche starten</button>
                     </form>
                 </div>
             </div>
