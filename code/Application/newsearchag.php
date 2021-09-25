@@ -78,7 +78,7 @@
                         <form method="post">
                            <div class="row gutters">
                               <div class="col-xl-12 col-lg-12 col-md-12 col-sm-12 col-12">
-                                 <h6 class="mb-2 text-primary">Skills</h6>
+                                 <h6 class="mb-2 text-primary">Fähigkeiten (komma-getrennt)</h6>
                               </div>
                               <div class="col-xl-6 col-lg-6 col-md-6 col-sm-6 col-12">
                                  <div class="form-group">
@@ -101,48 +101,31 @@
                            </div>
                            <div class="row gutters">
                               <div class="col-xl-12 col-lg-12 col-md-12 col-sm-12 col-12">
-                                 <h6 class="mt-3 mb-2 text-primary">Fähigkeiten (komma-getrennt)</h6>
+                                 <h6 class="mt-3 mb-2 text-primary">Allgemein</h6>
                               </div>
                               <div class="col-xl-6 col-lg-6 col-md-6 col-sm-6 col-12">
                                  <div class="form-group">
-                                    <label for="sprachen">Sprachen</label>
-                                    <input type="text" class="form-control" name="sprachen" value='<?php echo $entry['sprachen'];?>'>
+                                    <label for="sprachen">Stadt</label>
+                                    <input type="text" class="form-control" name="stadt">
                                  </div>
                               </div>
                               <div class="col-xl-6 col-lg-6 col-md-6 col-sm-6 col-12">
                                  <div class="form-group">
-                                    <label for="softskills">Softskills</label>
-                                    <input type="text" class="form-control" name="softskills" value='<?php echo $entry['softskills'];?>'>
+                                    <label for="softskills">Max. Gehalt</label>
+                                    <input type="text" class="form-control" name="gehalt">
                                  </div>
                               </div>
                               <div class="col-xl-6 col-lg-6 col-md-6 col-sm-6 col-12">
                                  <div class="form-group">
-                                    <label for="hardskills">Hardskills</label>
-                                    <input type="text" class="form-control" name="hardskills" value='<?php echo $entry['hardskills'];?>'>
-                                 </div>
-                              </div>
-                           </div>
-                           <div class="row gutters">
-                              <div class="col-xl-12 col-lg-12 col-md-12 col-sm-12 col-12">
-                                 <h6 class="mt-3 mb-2 text-primary">Beruf</h6>
-                              </div>
-                              <div class="col-xl-6 col-lg-6 col-md-6 col-sm-6 col-12">
-                                 <div class="form-group">
-                                    <label for="mind_gehalt">Gewünschtes Jahresgehalt</label>
-                                    <input type="text" class="form-control" name="mind_gehalt" value='<?php echo $entry['mind_gehalt'];?>'>
-                                 </div>
-                              </div>
-                              <div class="col-xl-6 col-lg-6 col-md-6 col-sm-6 col-12">
-                                 <div class="form-group">
-                                    <label for="beruf">Beruf</label>
-                                    <input type="text" class="form-control" name="beruf" value='<?php echo $entry['beruf'];?>'>
+                                    <label for="hardskills">Wochenstunden</label>
+                                    <input type="text" class="form-control" name="wochenstunden">
                                  </div>
                               </div>
                            </div>
                            <div class="row gutters">
                               <div class="col-xl-12 col-lg-12 col-md-12 col-sm-12 col-12">
                                  <div class="text-right">
-                                    <button class="btn btn-info mt-2" type="submit" style="background: #9c3f2a;">Update</button>
+                                    <button class="btn btn-info mt-2" type="submit" style="background: #9c3f2a;">Suche starten</button>
                                  </div>
                               </div>
                            </div>
