@@ -102,7 +102,7 @@ session_start();
                             <div class="col-sm-4 label-column"><label class="col-form-label" for="name-input-field">Sprachen </label></div>
                             <div class="col-sm-6 input-column"><input class="form-control" type="text" name="wochenstunden"></div>
                         </div>
-                        <button class="btn btn-light submit-button" type="button">Suche starten</button>
+                        <button class="btn btn-light submit-button" type="submit">Suche starten</button>
                     </form>
                 </div>
             </div>
