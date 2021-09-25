@@ -69,11 +69,9 @@
          <div class="container">
 
 
-         <hgroup>
-  <h1>Material Design Form</h1>
-  <h3>By Josh Adamous</h3>
-</hgroup>
+
 <form>
+<h1>TEST</h1>
   <div class="group">
     <input type="text"><span class="highlight"></span><span class="bar"></span>
     <label>Name</label>
