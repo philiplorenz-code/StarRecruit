@@ -78,36 +78,24 @@
                         <form method="post">
                            <div class="row gutters">
                               <div class="col-xl-12 col-lg-12 col-md-12 col-sm-12 col-12">
-                                 <h6 class="mb-2 text-primary">Persönlich</h6>
+                                 <h6 class="mb-2 text-primary">Skills</h6>
                               </div>
                               <div class="col-xl-6 col-lg-6 col-md-6 col-sm-6 col-12">
                                  <div class="form-group">
-                                    <label for="vorname">Vorname</label>
-                                    <input type="text" class="form-control" name="vorname" value='<?php echo $entry['vorname'];?>'>
+                                    <label for="vorname">Hardskills</label>
+                                    <input type="text" class="form-control" name="hardskills">
                                  </div>
                               </div>
                               <div class="col-xl-6 col-lg-6 col-md-6 col-sm-6 col-12">
                                  <div class="form-group">
-                                    <label for="name">Nachname</label>
-                                    <input type="text" class="form-control" name="name" value='<?php echo $entry['name'];?>'>
+                                    <label for="name">Softskills</label>
+                                    <input type="text" class="form-control" name="softskills">
                                  </div>
                               </div>
                               <div class="col-xl-6 col-lg-6 col-md-6 col-sm-6 col-12">
                                  <div class="form-group">
-                                    <label for="wohnort">Wohnort</label>
-                                    <input type="text" class="form-control" name="wohnort" value='<?php echo $entry['wohnort'];?>'>
-                                 </div>
-                              </div>
-                              <div class="col-xl-6 col-lg-6 col-md-6 col-sm-6 col-12">
-                                 <div class="form-group">
-                                    <label for="user_alter">Alter</label>
-                                    <input type="text" class="form-control" name="user_alter" value='<?php echo $entry['user_alter'];?>'>
-                                 </div>
-                              </div>
-                              <div class="col-xl-6 col-lg-6 col-md-6 col-sm-6 col-12">
-                                 <div class="form-group">
-                                    <label for="beschreibung">Beschreibung</label>
-                                    <input type="text" class="form-control" name="beschreibung" value='<?php echo $entry['beschreibung'];?>'>
+                                    <label for="wohnort">Sprachen</label>
+                                    <input type="text" class="form-control" name="sprachen">
                                  </div>
                               </div>
                            </div>
