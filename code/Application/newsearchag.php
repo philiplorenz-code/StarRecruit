@@ -71,43 +71,105 @@ session_start();
                 </ul>
             </div>
         </nav>
-        <div class="d-flex flex-column" id="content-wrapper">
-            <section></section>
+
+
+
+
+
+
+
+
+        <div class="card h-100">
+        <div class="card-body">
             <form method="post">
-            <div class="row register-form">
-                <div class="col-md-8 offset-md-2">
-                    <form class="custom-form">
-                        <h1>Neue Suche</h1>
-                        <div class="row form-group">
-                            <div class="col-sm-4 label-column"><label class="col-form-label" for="name-input-field">Stadt </label></div>
-                            <div class="col-sm-6 input-column"><input class="form-control" type="text" name="stadt"></div>
-                        </div>
-                        <div class="row form-group">
-                            <div class="col-sm-4 label-column"><label class="col-form-label" for="name-input-field">Hardskills </label></div>
-                            <div class="col-sm-6 input-column"><input class="form-control" type="text" name="softskills"></div>
-                        </div>
-                        <div class="row form-group">
-                            <div class="col-sm-4 label-column"><label class="col-form-label" for="name-input-field">Softskills </label></div>
-                            <div class="col-sm-6 input-column"><input class="form-control" type="text" name="hardskills"></div>
-                        </div>
-                        <div class="row form-group">
-                            <div class="col-sm-4 label-column"><label class="col-form-label" for="name-input-field">Gehalt (max) </label></div>
-                            <div class="col-sm-6 input-column"><input class="form-control" type="text" name="sprachen"></div>
-                        </div>
-                        <div class="row form-group">
-                            <div class="col-sm-4 label-column"><label class="col-form-label" for="name-input-field">Wochenstunden </label></div>
-                            <div class="col-sm-6 input-column"><input class="form-control" type="text" name="gehalt"></div>
-                        </div>
-                        <div class="row form-group">
-                            <div class="col-sm-4 label-column"><label class="col-form-label" for="name-input-field">Sprachen </label></div>
-                            <div class="col-sm-6 input-column"><input class="form-control" type="text" name="wochenstunden"></div>
-                        </div>
-                        <button class="btn btn-light submit-button" type="submit">Suche starten</button>
-                    </form>
+            <div class="row gutters">
+                <div class="col-xl-12 col-lg-12 col-md-12 col-sm-12 col-12">
+                    <h6 class="mb-2 text-primary">Persönlich</h6>
+                </div>
+                <div class="col-xl-6 col-lg-6 col-md-6 col-sm-6 col-12">
+                    <div class="form-group">
+                        <label for="vorname">Vorname</label>
+                        <input type="text" class="form-control" name="vorname" value='<?php echo $entry['vorname'];?>'>
+                    </div>
+                </div>
+                <div class="col-xl-6 col-lg-6 col-md-6 col-sm-6 col-12">
+                    <div class="form-group">
+                        <label for="name">Nachname</label>
+                        <input type="text" class="form-control" name="name" value='<?php echo $entry['name'];?>'>
+                    </div>
+                </div>
+                <div class="col-xl-6 col-lg-6 col-md-6 col-sm-6 col-12">
+                    <div class="form-group">
+                        <label for="wohnort">Wohnort</label>
+                        <input type="text" class="form-control" name="wohnort" value='<?php echo $entry['wohnort'];?>'>
+                    </div>
+                </div>
+                <div class="col-xl-6 col-lg-6 col-md-6 col-sm-6 col-12">
+                    <div class="form-group">
+                        <label for="user_alter">Alter</label>
+                        <input type="text" class="form-control" name="user_alter" value='<?php echo $entry['user_alter'];?>'>
+                    </div>
+                </div>
+                <div class="col-xl-6 col-lg-6 col-md-6 col-sm-6 col-12">
+                    <div class="form-group">
+                        <label for="beschreibung">Beschreibung</label>
+                        <input type="text" class="form-control" name="beschreibung" value='<?php echo $entry['beschreibung'];?>'>
+                    </div>
                 </div>
             </div>
-    </form>
-        </div>
+            <div class="row gutters">
+                <div class="col-xl-12 col-lg-12 col-md-12 col-sm-12 col-12">
+                    <h6 class="mt-3 mb-2 text-primary">Fähigkeiten (komma-getrennt)</h6>
+                </div>
+                <div class="col-xl-6 col-lg-6 col-md-6 col-sm-6 col-12">
+                    <div class="form-group">
+                        <label for="sprachen">Sprachen</label>
+                        <input type="text" class="form-control" name="sprachen" value='<?php echo $entry['sprachen'];?>'>
+                    </div>
+                </div>
+                <div class="col-xl-6 col-lg-6 col-md-6 col-sm-6 col-12">
+                    <div class="form-group">
+                        <label for="softskills">Softskills</label>
+                        <input type="text" class="form-control" name="softskills" value='<?php echo $entry['softskills'];?>'>
+                    </div>
+                </div>
+                <div class="col-xl-6 col-lg-6 col-md-6 col-sm-6 col-12">
+                    <div class="form-group">
+                        <label for="hardskills">Hardskills</label>
+                        <input type="text" class="form-control" name="hardskills" value='<?php echo $entry['hardskills'];?>'>
+                    </div>
+                </div>
+            </div>
+            <div class="row gutters">
+                <div class="col-xl-12 col-lg-12 col-md-12 col-sm-12 col-12">
+                    <h6 class="mt-3 mb-2 text-primary">Beruf</h6>
+                </div>
+                <div class="col-xl-6 col-lg-6 col-md-6 col-sm-6 col-12">
+                    <div class="form-group">
+                        <label for="mind_gehalt">Gewünschtes Jahresgehalt</label>
+                        <input type="text" class="form-control" name="mind_gehalt" value='<?php echo $entry['mind_gehalt'];?>'>
+                    </div>
+                </div>
+                <div class="col-xl-6 col-lg-6 col-md-6 col-sm-6 col-12">
+                    <div class="form-group">
+                        <label for="beruf">Beruf</label>
+                        <input type="text" class="form-control" name="beruf" value='<?php echo $entry['beruf'];?>'>
+                    </div>
+                </div>
+            </div>
+
+            <div class="row gutters">
+                <div class="col-xl-12 col-lg-12 col-md-12 col-sm-12 col-12">
+                    <div class="text-right">
+                    <button class="btn btn-info mt-2" type="submit" style="background: #9c3f2a;">Update</button>
+</div>
+
+
+
+
+
+
+
         </div>
 
 
