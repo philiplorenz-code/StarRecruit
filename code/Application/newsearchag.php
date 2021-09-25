@@ -69,6 +69,7 @@
             </div>
          </nav>
          <div class="container">
+             <h1>Neue Suche </h1>
             <div class="row gutters">
                <div class="col-xl-9 col-lg-9 col-md-12 col-sm-12 col-12">
                   <div class="card h-100">
