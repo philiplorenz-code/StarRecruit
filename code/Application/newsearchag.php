@@ -29,6 +29,9 @@
            }
    
    ?>
+
+
+
 <!DOCTYPE html>
 <html>
    <head>
@@ -44,7 +47,6 @@
       <link rel="stylesheet" href="assets_as/css/FORM.css">
       <link rel="stylesheet" href="assets_as/css/iframe.css">
       <link rel="stylesheet" href="assets_as/css/untitled.css">
-      <link rel="stylesheet" href="./searchag.css">
    </head>
    <body id="page-top">
       <div id="wrapper">
@@ -67,11 +69,26 @@
             </div>
          </nav>
          <div class="container">
-
-
-
-         <div class="container">
             <div class="row gutters">
+               <div class="col-xl-3 col-lg-3 col-md-12 col-sm-12 col-12">
+                  <div class="card h-100">
+                     <div class="card-body">
+                        <div class="account-settings">
+                           <div class="user-profile">
+                              <div class="user-avatar">
+                                 <img src="https://bootdey.com/img/Content/avatar/avatar7.png" alt="Maxwell Admin">
+                              </div>
+                              <h5 class="user-name">Philip Lorenz</h5>
+                              <h6 class="user-email">philip@learning-it.io</h6>
+                           </div>
+                           <div class="about">
+                              <h5>About</h5>
+                              <p>BlaBlaBla</p>
+                           </div>
+                        </div>
+                     </div>
+                  </div>
+               </div>
                <div class="col-xl-9 col-lg-9 col-md-12 col-sm-12 col-12">
                   <div class="card h-100">
                      <div class="card-body">
@@ -164,13 +181,7 @@
                </div>
             </div>
          </div>
-
-
-
-
-
-        </div>
-    </div>
+      </div>
 
       <script src="assets/bootstrap/js/bootstrap.min.js"></script>
       <script src="assets/js/theme.js"></script>
