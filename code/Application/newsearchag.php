@@ -37,17 +37,19 @@ session_start();
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0, shrink-to-fit=no">
     <title>Dashboard - Brand</title>
-    <link rel="stylesheet" href="assets_search/bootstrap/css/bootstrap.min.css">
+    <link rel="stylesheet" href="assets_as/bootstrap/css/bootstrap.min.css">
     <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Nunito:200,200i,300,300i,400,400i,600,600i,700,700i,800,800i,900,900i">
-    <link rel="stylesheet" href="assets_search/fonts/fontawesome-all.min.css">
-    <link rel="stylesheet" href="assets_search/fonts/font-awesome.min.css">
-    <link rel="stylesheet" href="assets_search/fonts/fontawesome5-overrides.min.css">
-    <link rel="stylesheet" href="assets_search/css/Animated-Typing-With-Blinking.css">
-    <link rel="stylesheet" href="assets_search/css/FPE-Gentella-form-elements-1.css">
-    <link rel="stylesheet" href="assets_search/css/FPE-Gentella-form-elements.css">
-    <link rel="stylesheet" href="assets_search/css/Multi-step-form.css">
-    <link rel="stylesheet" href="assets_search/css/Pretty-Registration-Form.css">
+    <link rel="stylesheet" href="assets_as/fonts/fontawesome-all.min.css">
+    <link rel="stylesheet" href="assets_as/fonts/font-awesome.min.css">
+    <link rel="stylesheet" href="assets_as/fonts/fontawesome5-overrides.min.css">
+    <link rel="stylesheet" href="assets_as/css/Account-setting-or-edit-profile.css">
+    <link rel="stylesheet" href="assets_as/css/FORM.css">
+    <link rel="stylesheet" href="assets_as/css/iframe.css">
+    <link rel="stylesheet" href="assets_as/css/untitled.css">
 </head>
+
+
+
 
 <body id="page-top">
     <div id="wrapper">
@@ -58,22 +60,17 @@ session_start();
                 </a>
                 <hr class="sidebar-divider my-0">
                 <ul class="navbar-nav text-light" id="accordionSidebar">
-                    <li class="nav-item"><a class="nav-link" href="https://webdev.learning-it.io/Application/homeag.php"><i class="fas fa-table"></i><span>Home</span></a></li>
-                    <li class="nav-item"><a class="nav-link" href="https://webdev.learning-it.io/Application/sucheag.php"><i class="fas fa-table"></i><span>Suchen bearbeiten</span></a></li>
-                    <li class="nav-item"><a class="nav-link" href="https://webdev.learning-it.io/Application/editprofileag.php"><i class="fas fa-table"></i><span>Profil Bearbeiten</span></a></li>
-                    <li class="nav-item"><a class="nav-link" href="https://webdev.learning-it.io/Application/postfachag.php"><i class="fas fa-table"></i><span>Postfach</span></a></li>
-                    <li class="nav-item"><a class="nav-link" href="https://webdev.learning-it.io/Application/postfachag.php"><i class="fas fa-table"></i><span>Einstellungen</span></a></li>
-                    <li class="nav-item"><a class="nav-link" href="https://webdev.learning-it.io/Application/postfachag.php"><i class="fas fa-table"></i><span>Logout</span></a></li>
-
-
+                    <li class="nav-item"></li>
+                    <li class="nav-item"></li>
+                    <li class="nav-item"><a class="nav-link" href="https://webdev.learning-it.io/Application/homean.php"><i class="fas fa-table"></i><span>Home</span></a></li>
+                    <li class="nav-item"><a class="nav-link" href="https://webdev.learning-it.io/Application/editprofilean.php"><i class="fas fa-table"></i><span>Profil Bearbeiten</span></a></li>
+                    <li class="nav-item"><a class="nav-link" href="https://webdev.learning-it.io/Application/postfachan.php"><i class="fas fa-table"></i><span>Postfach</span></a></li>
                     <li class="nav-item"></li>
                     <li class="nav-item"></li>
                 </ul>
             </div>
         </nav>
-        
-
-        <div class="container">
+    <div class="container">
     <div class="row gutters">
     <div class="col-xl-3 col-lg-3 col-md-12 col-sm-12 col-12">
     <div class="card h-100">
@@ -96,6 +93,101 @@ session_start();
     </div>
     </div>
 
+    
+    <div class="col-xl-9 col-lg-9 col-md-12 col-sm-12 col-12">
+    <div class="card h-100">
+        <div class="card-body">
+            <form method="post">
+            <div class="row gutters">
+                <div class="col-xl-12 col-lg-12 col-md-12 col-sm-12 col-12">
+                    <h6 class="mb-2 text-primary">Persönlich</h6>
+                </div>
+                <div class="col-xl-6 col-lg-6 col-md-6 col-sm-6 col-12">
+                    <div class="form-group">
+                        <label for="vorname">Vorname</label>
+                        <input type="text" class="form-control" name="vorname" value='<?php echo $entry['vorname'];?>'>
+                    </div>
+                </div>
+                <div class="col-xl-6 col-lg-6 col-md-6 col-sm-6 col-12">
+                    <div class="form-group">
+                        <label for="name">Nachname</label>
+                        <input type="text" class="form-control" name="name" value='<?php echo $entry['name'];?>'>
+                    </div>
+                </div>
+                <div class="col-xl-6 col-lg-6 col-md-6 col-sm-6 col-12">
+                    <div class="form-group">
+                        <label for="wohnort">Wohnort</label>
+                        <input type="text" class="form-control" name="wohnort" value='<?php echo $entry['wohnort'];?>'>
+                    </div>
+                </div>
+                <div class="col-xl-6 col-lg-6 col-md-6 col-sm-6 col-12">
+                    <div class="form-group">
+                        <label for="user_alter">Alter</label>
+                        <input type="text" class="form-control" name="user_alter" value='<?php echo $entry['user_alter'];?>'>
+                    </div>
+                </div>
+                <div class="col-xl-6 col-lg-6 col-md-6 col-sm-6 col-12">
+                    <div class="form-group">
+                        <label for="beschreibung">Beschreibung</label>
+                        <input type="text" class="form-control" name="beschreibung" value='<?php echo $entry['beschreibung'];?>'>
+                    </div>
+                </div>
+            </div>
+            <div class="row gutters">
+                <div class="col-xl-12 col-lg-12 col-md-12 col-sm-12 col-12">
+                    <h6 class="mt-3 mb-2 text-primary">Fähigkeiten (komma-getrennt)</h6>
+                </div>
+                <div class="col-xl-6 col-lg-6 col-md-6 col-sm-6 col-12">
+                    <div class="form-group">
+                        <label for="sprachen">Sprachen</label>
+                        <input type="text" class="form-control" name="sprachen" value='<?php echo $entry['sprachen'];?>'>
+                    </div>
+                </div>
+                <div class="col-xl-6 col-lg-6 col-md-6 col-sm-6 col-12">
+                    <div class="form-group">
+                        <label for="softskills">Softskills</label>
+                        <input type="text" class="form-control" name="softskills" value='<?php echo $entry['softskills'];?>'>
+                    </div>
+                </div>
+                <div class="col-xl-6 col-lg-6 col-md-6 col-sm-6 col-12">
+                    <div class="form-group">
+                        <label for="hardskills">Hardskills</label>
+                        <input type="text" class="form-control" name="hardskills" value='<?php echo $entry['hardskills'];?>'>
+                    </div>
+                </div>
+            </div>
+            <div class="row gutters">
+                <div class="col-xl-12 col-lg-12 col-md-12 col-sm-12 col-12">
+                    <h6 class="mt-3 mb-2 text-primary">Beruf</h6>
+                </div>
+                <div class="col-xl-6 col-lg-6 col-md-6 col-sm-6 col-12">
+                    <div class="form-group">
+                        <label for="mind_gehalt">Gewünschtes Jahresgehalt</label>
+                        <input type="text" class="form-control" name="mind_gehalt" value='<?php echo $entry['mind_gehalt'];?>'>
+                    </div>
+                </div>
+                <div class="col-xl-6 col-lg-6 col-md-6 col-sm-6 col-12">
+                    <div class="form-group">
+                        <label for="beruf">Beruf</label>
+                        <input type="text" class="form-control" name="beruf" value='<?php echo $entry['beruf'];?>'>
+                    </div>
+                </div>
+            </div>
+
+            <div class="row gutters">
+                <div class="col-xl-12 col-lg-12 col-md-12 col-sm-12 col-12">
+                    <div class="text-right">
+                    <button class="btn btn-info mt-2" type="submit" style="background: #9c3f2a;">Update</button>
+</div>
+
+                </div>
+
+                </div>
+            </div>
+
+
+
+            </form>
 
 
 
@@ -105,6 +197,10 @@ session_start();
 
 
 
+
+        </div>
+    </div>
+    </div>
 
 
 
@@ -112,9 +208,11 @@ session_start();
 
 
 
+    </div>
 
-
-
+            <div></div>
+        </div>
+    </div>
 
     <script src="assets/bootstrap/js/bootstrap.min.js"></script>
     <script src="assets/js/theme.js"></script>
