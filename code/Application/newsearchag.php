@@ -73,7 +73,7 @@
 <form>
 <h3>TEST</h3>
   <div class="group">
-    <input type="text"><span class="highlight"></span><span class="bar"></span>
+    <input type="text"><span ></span><span ></span>
     <label>Name</label>
   </div>
   <div class="group">
