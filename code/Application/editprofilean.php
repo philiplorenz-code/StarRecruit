@@ -7,8 +7,8 @@ session_start();
     $user_data = check_login($con);
     $user_id = $user_data["user_id"];
 
-    // Hier noch ein Select * auf users machen und die aktuellen Werte in die Felder unten schreiben
 
+    // Post der Form
     if($_SERVER['REQUEST_METHOD'] == "POST"){
         //sth was posted
         $user_id = $user_data["user_id"];
@@ -31,7 +31,7 @@ session_start();
 
     }
 
-
+    // Aktuelle Userangaben laden (wird dann unten automatisch in Felder geschrieben)
     $query = "select * from users where user_id='$user_id';";
 
     $result = mysqli_query($con, $query);
@@ -100,7 +100,7 @@ session_start();
     </div>
     </div>
 
-
+    
     <div class="col-xl-9 col-lg-9 col-md-12 col-sm-12 col-12">
     <div class="card h-100">
         <div class="card-body">

@@ -7,6 +7,27 @@ session_start();
     $user_data = check_login($con);
     $user_id = $user_data["user_id"];
 
+
+
+        // Post der Form
+        if($_SERVER['REQUEST_METHOD'] == "POST"){
+            //sth was posted
+            $stadt = $_POST['stadt'];
+            $softskills = $_POST['softskills'] . ",";
+            $hardskills = $_POST['hardskills'] . ",";
+            $sprachen = $_POST['sprachen'] . ",";
+            $gehalt = $_POST['gehalt'];
+            $wochenstunden = $_POST['wochenstunden'];
+            $recruiterid = $user_id;
+    
+            // save to db
+            $query = "update nachrichten set stadt='$stadt',softskills='$softskills',hardskills='$hardskills',sprachen='$sprachen',gehalt='$gehalt',sprachen='$sprachen',wochenstunden='$wochenstunden',recruiter_id='$recruiterid;";
+    
+            // echo $query;
+            mysqli_query($con, $query);
+    
+        }
+
 ?>
 
 <!DOCTYPE html>
@@ -52,34 +73,40 @@ session_start();
         </nav>
         <div class="d-flex flex-column" id="content-wrapper">
             <section></section>
+            <form method="post">
             <div class="row register-form">
                 <div class="col-md-8 offset-md-2">
                     <form class="custom-form">
                         <h1>Neue Suche</h1>
                         <div class="row form-group">
                             <div class="col-sm-4 label-column"><label class="col-form-label" for="name-input-field">Stadt </label></div>
-                            <div class="col-sm-6 input-column"><input class="form-control" type="text"></div>
+                            <div class="col-sm-6 input-column"><input class="form-control" type="text" name="stadt"></div>
                         </div>
                         <div class="row form-group">
                             <div class="col-sm-4 label-column"><label class="col-form-label" for="name-input-field">Hardskills </label></div>
-                            <div class="col-sm-6 input-column"><input class="form-control" type="text"></div>
+                            <div class="col-sm-6 input-column"><input class="form-control" type="text" name="softskills"></div>
                         </div>
                         <div class="row form-group">
                             <div class="col-sm-4 label-column"><label class="col-form-label" for="name-input-field">Softskills </label></div>
-                            <div class="col-sm-6 input-column"><input class="form-control" type="text"></div>
+                            <div class="col-sm-6 input-column"><input class="form-control" type="text" name="hardskills"></div>
                         </div>
                         <div class="row form-group">
                             <div class="col-sm-4 label-column"><label class="col-form-label" for="name-input-field">Gehalt (max) </label></div>
-                            <div class="col-sm-6 input-column"><input class="form-control" type="text"></div>
+                            <div class="col-sm-6 input-column"><input class="form-control" type="text" name="sprachen"></div>
                         </div>
                         <div class="row form-group">
                             <div class="col-sm-4 label-column"><label class="col-form-label" for="name-input-field">Wochenstunden </label></div>
-                            <div class="col-sm-6 input-column"><input class="form-control" type="text"></div>
+                            <div class="col-sm-6 input-column"><input class="form-control" type="text" name="gehalt"></div>
+                        </div>
+                        <div class="row form-group">
+                            <div class="col-sm-4 label-column"><label class="col-form-label" for="name-input-field">Sprachen </label></div>
+                            <div class="col-sm-6 input-column"><input class="form-control" type="text" name="wochenstunden"></div>
                         </div>
                         <button class="btn btn-light submit-button" type="button">Suche starten</button>
                     </form>
                 </div>
             </div>
+    </form>
         </div>
         </div>
 
