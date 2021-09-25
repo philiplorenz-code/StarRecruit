@@ -44,6 +44,7 @@
       <link rel="stylesheet" href="assets_as/css/FORM.css">
       <link rel="stylesheet" href="assets_as/css/iframe.css">
       <link rel="stylesheet" href="assets_as/css/untitled.css">
+      <link rel="stylesheet" href="./searchag.css">
    </head>
    <body id="page-top">
       <div id="wrapper">
@@ -85,9 +86,7 @@
     <div class="ripples buttonRipples"><span class="ripplesCircle"></span></div>
   </button>
 </form>
-<footer><a href="http://www.polymer-project.org/" target="_blank"><img src="https://www.polymer-project.org/images/logos/p-logo.svg"></a>
-  <p>You Gotta Love <a href="http://www.polymer-project.org/" target="_blank">Google</a></p>
-</footer>
+
 
 
 
