@@ -21,7 +21,7 @@
                $recruiterid = $user_id;
        
                // save to db
-               $query = "update nachrichten set stadt='$stadt',softskills='$softskills',hardskills='$hardskills',sprachen='$sprachen',gehalt='$gehalt',sprachen='$sprachen',wochenstunden='$wochenstunden',recruiter_id='$recruiterid';";
+               $query = "update search set stadt='$stadt',softskills='$softskills',hardskills='$hardskills',sprachen='$sprachen',gehalt='$gehalt',sprachen='$sprachen',wochenstunden='$wochenstunden',recruiter_id='$recruiterid';";
                 echo $query;
                // echo $query;
                mysqli_query($con, $query);
