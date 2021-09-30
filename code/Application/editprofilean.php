@@ -32,7 +32,7 @@
 
            $result = mysqli_query($con, $query);
            $entry = $result->fetch_assoc();
-           var_dump($entry);
+           echo $entry['name'];
 ?>
 <!DOCTYPE html>
 <html>
@@ -137,7 +137,7 @@
                               <div class="col-xl-6 col-lg-6 col-md-6 col-sm-6 col-12">
                                  <div class="form-group">
                                     <label for="sprachen">Sprachen</label>
-                                    <input type="text" class="form-control" name="sprachen" value='AHHHH'>
+                                    <input type="text" class="form-control" name="sprachen" value='<?php echo $entry['sprachen'];?>'>
                                  </div>
                               </div>
                               <div class="col-xl-6 col-lg-6 col-md-6 col-sm-6 col-12">
