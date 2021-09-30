@@ -11,3 +11,4 @@ while ($row = $result->fetch_assoc()) {
     array_push($Users,$row);
 }
 
+print_r($Users);
