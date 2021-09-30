@@ -118,7 +118,7 @@ foreach ($Searches as $search){
     }
 }
 
-print_r($PreMatches)
+var_dump($PreMatches);
 
 /*
 
