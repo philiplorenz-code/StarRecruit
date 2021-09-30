@@ -11,24 +11,26 @@
    
            // Post der Form
            if($_SERVER['REQUEST_METHOD'] == "POST"){
-               //sth was posted
-               $stadt = $_POST['stadt'];
-               $softskills = $_POST['softskills'] . ",";
-               $hardskills = $_POST['hardskills'] . ",";
-               $sprachen = $_POST['sprachen'] . ",";
-               $gehalt = $_POST['gehalt'];
-               $wochenstunden = $_POST['wochenstunden'];
-               $recruiterid = $user_id;
-       
-               // save to db
-               $query = "update nachrichten set stadt='$stadt',softskills='$softskills',hardskills='$hardskills',sprachen='$sprachen',gehalt='$gehalt',sprachen='$sprachen',wochenstunden='$wochenstunden',recruiter_id='$recruiterid;";
-       
-               // echo $query;
-               mysqli_query($con, $query);
-
-               echo $query;
-       
-           }
+            //sth was posted
+            $user_id = $user_data["user_id"];
+            $vorname = $_POST['vorname'];
+            $name = $_POST['name'];
+            $wohnort = $_POST['wohnort'];
+            $user_alter = $_POST['user_alter'];
+            $beschreibung = $_POST['beschreibung'];
+            $sprachen = $_POST['sprachen'] . ",";
+            $softskills = $_POST['softskills'] . ",";
+            $hardskills = $_POST['hardskills'] . ",";
+            $mind_gehalt = $_POST['mind_gehalt'];
+            $beruf = $_POST['beruf'];
+    
+            // save to db
+            $query = "update users set vorname='$vorname',name='$name',wohnort='$wohnort',user_alter='$user_alter',beschreibung='$beschreibung',sprachen='$sprachen',softskills='$softskills',hardskills='$hardskills',mind_gehalt='$mind_gehalt',beruf='$beruf' where user_id='$user_id';";
+    
+            // echo $query;
+            mysqli_query($con, $query);
+    
+        }
    
            //$query = "select * from users where user_id='$user_id';";
 
