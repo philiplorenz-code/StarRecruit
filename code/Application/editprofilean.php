@@ -32,6 +32,7 @@
 
            $result = mysqli_query($con, $query);
            $entry = $result->fetch_assoc();
+           var_dump($entry);
            echo $entry['name'];
 ?>
 <!DOCTYPE html>
