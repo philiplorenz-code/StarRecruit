@@ -25,6 +25,8 @@
        
                // echo $query;
                mysqli_query($con, $query);
+
+               echo $query;
        
            }
    
@@ -35,6 +37,7 @@
            //printf ("%s (%s)\n", $row["Lastname"], $row["Age"]);
            var_dump($entry);
            echo $entry['user_email'];
+
 ?>
 <!DOCTYPE html>
 <html>
