@@ -28,16 +28,16 @@
             $query = "update users set vorname='$vorname',name='$name',wohnort='$wohnort',user_alter='$user_alter',beschreibung='$beschreibung',sprachen='$sprachen',softskills='$softskills',hardskills='$hardskills',mind_gehalt='$mind_gehalt',beruf='$beruf' where user_id='$user_id';";
             
             echo $query;
-            
+
             // echo $query;
             mysqli_query($con, $query);
     
         }
    
-           //$query = "select * from users where user_id='$user_id';";
+           $query = "select * from users where user_id='$user_id';";
 
-           //$result = mysqli_query($con, $query);
-           //$entry = $result->fetch_assoc();
+           $result = mysqli_query($con, $query);
+           $entry = $result->fetch_assoc();
            //var_dump($entry);
            //echo $entry['user_email'];
 
