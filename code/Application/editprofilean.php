@@ -18,9 +18,9 @@
             $wohnort = $_POST['wohnort'];
             $user_alter = $_POST['user_alter'];
             $beschreibung = $_POST['beschreibung'];
-            $sprachen = $_POST['sprachen'] . ",";
-            $softskills = $_POST['softskills'] . ",";
-            $hardskills = $_POST['hardskills'] . ",";
+            $sprachen = $_POST['sprachen'];
+            $softskills = $_POST['softskills'];
+            $hardskills = $_POST['hardskills'];
             $mind_gehalt = $_POST['mind_gehalt'];
             $beruf = $_POST['beruf'];
     
