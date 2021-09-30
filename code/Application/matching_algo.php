@@ -39,13 +39,29 @@ $PreMatches = [];
 foreach ($Searches as $search){
     foreach ($Users as $user){
         $PreMatch = [];
+
+        // IDs
         $PreMatch["SearchID"] = $search["id"];
         $PreMatch["UserID"] = $user["user_id"];
+
+        // GEHALT
+        if ($user["mind_gehalt"] <= $search["max_gehalt"]){
+            $PreMatch["Gehalt"] = 1;
+        }
+        else {
+            $PreMatch["Gehalt"] = 0;
+        }
+
+        
+
+
+
+
 
         array_push($PreMatches, $PreMatch);
     }
 }
-echo "TEST";
+
 print_r($PreMatches)
 
 /*
