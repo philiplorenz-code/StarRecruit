@@ -33,7 +33,7 @@
            $result = mysqli_query($con, $query);
            $entry = $result->fetch_assoc();
            //printf ("%s (%s)\n", $row["Lastname"], $row["Age"]);
-           //var_dump($entry);
+           var_dump($entry);
            echo $entry['user_email'];
 ?>
 <!DOCTYPE html>
