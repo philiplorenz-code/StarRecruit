@@ -13,9 +13,9 @@
            if($_SERVER['REQUEST_METHOD'] == "POST"){
                //sth was posted
                $stadt = $_POST['stadt'];
-               $softskills = $_POST['softskills'] . ",";
-               $hardskills = $_POST['hardskills'] . ",";
-               $sprachen = $_POST['sprachen'] . ",";
+               $softskills = $_POST['softskills'];
+               $hardskills = $_POST['hardskills'];
+               $sprachen = $_POST['sprachen'];
                $gehalt = $_POST['gehalt'];
                $wochenstunden = $_POST['wochenstunden'];
                $recruiterid = $user_id;
