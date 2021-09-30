@@ -22,7 +22,7 @@
        
                // save to db
            
-               $query = "INSERT INTO search (stadt, softskills, hardskills, sprachen, max_gehalt, wochenstunden,recruiter_id) VALUES ($stadt, $softskills, $hardskills, $sprachen, $gehalt, $wochenstunden, $recruiterid);";
+               $query = "INSERT INTO search (stadt, softskills, hardskills, sprachen, max_gehalt, wochenstunden,recruiter_id) VALUES ('$stadt', '$softskills', '$hardskills', '$sprachen', '$gehalt', '$wochenstunden', '$recruiterid');";
 
             
                echo $query;
