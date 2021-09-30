@@ -30,13 +30,12 @@
        
            }
    
-           $query = "select * from users where user_id='$user_id';";
+           //$query = "select * from users where user_id='$user_id';";
 
-           $result = mysqli_query($con, $query);
-           $entry = $result->fetch_assoc();
-           //printf ("%s (%s)\n", $row["Lastname"], $row["Age"]);
-           var_dump($entry);
-           echo $entry['user_email'];
+           //$result = mysqli_query($con, $query);
+           //$entry = $result->fetch_assoc();
+           //var_dump($entry);
+           //echo $entry['user_email'];
 
 ?>
 <!DOCTYPE html>
