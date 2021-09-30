@@ -124,6 +124,17 @@ foreach ($Searches as $search){
 
 var_dump($PreMatches);
 
+
+// PREMATCHES TO MATCHES 
+foreach ($PreMatches as $premat){
+    $sum = $premat["Gehalt"] + $premat["PLZ"] + $premat["Hardskills"] + $premat["Softskills"] + $premat["Sprachen"];
+    if ($sum >= $ReqPointsAll){
+
+    }
+}
+
+
+
 /*
 
 // MATCHES RAW - Just for orientation
