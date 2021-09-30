@@ -2,7 +2,26 @@
 include("connection.php");
 include("functions.php");
 
-$ReqPoints = 3;
+$ReqPointsAll = 3;
+$ReqPointsHard = 4;
+$ReqPointsSoft = 4;
+$ReqPointsLang = 1;
+
+// Check Arrays for equal values
+function checkArray($array1, $array2){
+    $count = 0;
+    foreach ($array1 as $arr1){
+        foreach ($array2 as $arr2){
+            if ($arr1 == $arr2){
+                $count++;
+            }
+            else {
+
+            }
+        }
+    }
+    return $count;
+}
 
 // GET ALL USERS
 $Users = [];
@@ -52,10 +71,47 @@ foreach ($Searches as $search){
             $PreMatch["Gehalt"] = 0;
         }
 
-        
+        // PLZ TODO (https://mizine.de/html/mit-google-maps-api-entfernungen-berechnen/)
+        $PreMatch["PLZ"] = 1;
 
+        // Softskills        
+        $SearchSkills = explode(',', $search["softskills"]);
+        $UserSkills = explode(',', $search["softskills"]);
+        if (checkArray($SearchSkills,$UserSkills) >= $ReqPointsSoft){
+            $PreMatch["Softskills"] = 1;
+        }
+        elseif(checkArray($SearchSkills,$UserSkills) < $ReqPointsSoft){
+            $PreMatch["Softskills"] = 0;
+        }
+        else{
+            $PreMatch["Softskills"] = 2;
+        }
 
+        // Hardskills        
+        $SearchSkills = explode(',', $search["hardskills"]);
+        $UserSkills = explode(',', $search["hardskills"]);
+        if (checkArray($SearchSkills,$UserSkills) >= $ReqPointsHard){
+            $PreMatch["Hardskills"] = 1;
+        }
+        elseif(checkArray($SearchSkills,$UserSkills) < $ReqPointsHard){
+            $PreMatch["Hardskills"] = 0;
+        }
+        else{
+            $PreMatch["Hardskills"] = 2;
+        }
 
+        // Language        
+        $SearchSkills = explode(',', $search["sprachen"]);
+        $UserSkills = explode(',', $search["sprachen"]);
+        if (checkArray($SearchSkills,$UserSkills) >= $ReqPointsLang){
+            $PreMatch["Sprachen"] = 1;
+        }
+        elseif(checkArray($SearchSkills,$UserSkills) < $ReqPointsLang){
+            $PreMatch["Sprachen"] = 0;
+        }
+        else{
+            $PreMatch["Sprachen"] = 2;
+        }
 
 
         array_push($PreMatches, $PreMatch);
