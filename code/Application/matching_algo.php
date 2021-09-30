@@ -45,7 +45,7 @@ foreach ($Searches as $search){
         array_push($PreMatches, $PreMatch);
     }
 }
-
+echo "TEST";
 print_r($PreMatches)
 
 /*
