@@ -10,7 +10,7 @@ $result = mysqli_query($con, $query);
 while ($row = $result->fetch_assoc()) {
     array_push($Users,$row);
 }
-print_r($Users);
+//print_r($Users);
 
 
 
@@ -21,4 +21,21 @@ $result = mysqli_query($con, $query);
 while ($row = $result->fetch_assoc()) {
     array_push($Searches,$row);
 }
-print_r($Searches);
+//print_r($Searches);
+
+
+// MATCHES RAW
+$PreMatches = [];
+
+// CFG
+$PreMatch = [
+    "Gehalt" => "0";
+    "PLZ" => "0";
+    "Hardskills" => "0";
+    "Softskills" => "0";
+    "Sprachen" => "0";
+]
+
+array_push($PreMatches,$PreMatch);
+
+echo "0" + "0";
