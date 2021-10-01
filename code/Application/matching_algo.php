@@ -144,6 +144,10 @@ foreach ($PreMatches as $premat){
                 $sprachen = $premat["Sprachen"];
 
                 $query = "insert into matches (searchid,userid,gehalt,plz,hardskills,softskills,sprachen) values ('$searchid','$userid','$gehalt','$plz','$hardskills','$softskills','$sprachen');";
+                echo "</br>";
+                echo "</br>";
+                echo "</br>";
+                echo $query;
                 mysqli_query($con, $query);
             }
     
