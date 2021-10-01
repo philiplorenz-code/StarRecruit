@@ -130,10 +130,8 @@ var_dump($PreMatches);
 
 foreach ($PreMatches as $premat){
 
-
         $sum = $premat["Gehalt"] + $premat["PLZ"] + $premat["Hardskills"] + $premat["Softskills"] + $premat["Sprachen"];
         if ($sum >= $ReqPointsAll){
-            //if ($premat["SearchID"] != $dbmatch["searchid"] and $premat["UserID"] != $dbmatch["userid"]){
 
                 $searchid = $premat["SearchID"];
                 $userid = $premat["UserID"];
@@ -143,7 +141,6 @@ foreach ($PreMatches as $premat){
                 $softskills = $premat["Softskills"];
                 $sprachen = $premat["Sprachen"];
 
-                $query = "insert into matches (searchid,userid,gehalt,plz,hardskills,softskills,sprachen) values ('$searchid','$userid','$gehalt','$plz','$hardskills','$softskills','$sprachen');";
 
                 // Check if entry already exists!!
                 $query_check = "select * from matches where (searchid='$searchid' and userid='$userid');";
@@ -154,17 +151,21 @@ foreach ($PreMatches as $premat){
 
                 }
                 else {
+                    // Create new Match in DB
+                    $query = "insert into matches (searchid,userid,gehalt,plz,hardskills,softskills,sprachen) values ('$searchid','$userid','$gehalt','$plz','$hardskills','$softskills','$sprachen');";
                     mysqli_query($con, $query);
-                }
-                
 
-                echo "</br>";
-                echo "</br>";
-                echo "</br>";
-                echo $query_check;
-                
-            //}
-    
+                    // Create new Message
+                    $query_getunternehmenid = "select recruiter_id from search where id='$searchid';";
+                    $resultunternehmensid = mysqli_query($con, $query_getunternehmenid);
+                    $row = $resultunternehmensid->fetch_assoc()
+                    $rec_id = $row["recruiter_id"];
+
+                    $query_message = "insert into nachrichten (user_id,unternehmen_id,status) values ('$searchid','$userid','$gehalt','$plz','$hardskills','$softskills','$sprachen');";
+                    mysqli_query($con, $query_message);
+
+                }
+                    
     
         }
 
