@@ -2,6 +2,7 @@
 include("connection.php");
 include("functions.php");
 
+// Custom Reqs
 $ReqPointsAll = 3;
 $ReqPointsHard = 4;
 $ReqPointsSoft = 4;
@@ -24,37 +25,34 @@ function checkArray($array1, $array2){
 }
 
 
-// GET ALL USERS
+// Receive all users from db
 $Users = [];
 $query = "select * from users where user_acctype='Arbeitssuchender';";
 $result = mysqli_query($con, $query);
 while ($row = $result->fetch_assoc()) {
     array_push($Users,$row);
 }
-//print_r($Users);
 
 
-// GET ALL MATCHES
+// Receive all matches from db
 $DBMatches = [];
 $query = "select * from users where user_acctype='Arbeitssuchender';";
 $result = mysqli_query($con, $query);
 while ($row = $result->fetch_assoc()) {
     array_push($DBMatches,$row);
 }
-//print_r($Users);
 
 
-// GET ALL SEARCHES
+// Receive all searches from db
 $Searches = [];
 $query = "select * from search;";
 $result = mysqli_query($con, $query);
 while ($row = $result->fetch_assoc()) {
     array_push($Searches,$row);
 }
-//print_r($Searches);
 
 
-// Set PreMatch Values
+// Create PreMatches (Any constellation will be mapped and rated afterwards by its attributes (Gehalt, Sprachen, etc.))
 $PreMatches = [];
 foreach ($Searches as $search){
     foreach ($Users as $user){
@@ -104,9 +102,6 @@ foreach ($Searches as $search){
         // Language        
         $SearchSkills = explode(',', $search["sprachen"]);
         $UserSkills = explode(',', $search["sprachen"]);
-        echo "Search:" . "</br>";
-        var_dump($SearchSkills);
-        echo "User:" . "</br>";
         var_dump($UserSkills);
         if (checkArray($SearchSkills,$UserSkills) >= $ReqPointsLang){
             $PreMatch["Sprachen"] = 1;
@@ -118,21 +113,16 @@ foreach ($Searches as $search){
             $PreMatch["Sprachen"] = 2;
         }
 
-
+        // Merge to PreMatches Array
         array_push($PreMatches, $PreMatch);
     }
 }
 
-var_dump($PreMatches);
-
-
-// PREMATCHES TO MATCHES 
-
+// PREMATCHES TO MATCHES (By Setting a rating minimum and checking db (to avoid duplicates))
 foreach ($PreMatches as $premat){
-
+        // sum for rating:
         $sum = $premat["Gehalt"] + $premat["PLZ"] + $premat["Hardskills"] + $premat["Softskills"] + $premat["Sprachen"];
         if ($sum >= $ReqPointsAll){
-
                 $searchid = $premat["SearchID"];
                 $userid = $premat["UserID"];
                 $gehalt = $premat["Gehalt"];
@@ -141,26 +131,25 @@ foreach ($PreMatches as $premat){
                 $softskills = $premat["Softskills"];
                 $sprachen = $premat["Sprachen"];
 
-
-                // Check if entry already exists!!
+                // Check if entry already exists:
                 $query_check = "select * from matches where (searchid='$searchid' and userid='$userid');";
                 $checkresult = mysqli_query($con, $query_check);
                 $rowcount=mysqli_num_rows($checkresult);
 
-                if ($rowcount > 0){
 
+                if ($rowcount > 0){
+                    // entry already exists
                 }
                 else {
                     // Create new Match in DB
                     $query = "insert into matches (searchid,userid,gehalt,plz,hardskills,softskills,sprachen) values ('$searchid','$userid','$gehalt','$plz','$hardskills','$softskills','$sprachen');";
                     mysqli_query($con, $query);
 
-                    // Create new Message
+                    // Create new Message by getting the recruiterid before
                     $query_getunternehmenid = "select recruiter_id from search where id='$searchid';";
                     $resultunternehmensid = mysqli_query($con, $query_getunternehmenid);
                     $row = $resultunternehmensid->fetch_assoc();
                     $rec_id = $row["recruiter_id"];
-                    echo $rec_id;
 
                     $query_message = "insert into nachrichten (user_id,unternehmen_id,status) values ('$userid','$rec_id','offen');";
                     mysqli_query($con, $query_message);
@@ -174,36 +163,4 @@ foreach ($PreMatches as $premat){
     
 
 }
-
-
-
-/*
-
-// MATCHES RAW - Just for orientation
-//$PreMatches = [];
-// CFG
-$PreMatch34 = array(
-    "SearchID" => 1,
-    "UserID" => 1,
-    "Gehalt" => 0,
-    "PLZ" => 0,
-    "Hardskills" => 0,
-    "Softskills" => 0,
-    "Sprachen" => 0,
-);
-array_push($PreMatches34,$PreMatch34);
-
-
-// Matches (Fitting SUM and not existing already)
-$Matches = [];
-
-// IF SUM >= 3
-// AND
-// IF (! DBSearch==Search && DBUser == User)
-// ----> $PreMatch -> $Match
-
-
-// All Matches To DB And Transform to Message (Status open from searchid->recruiterid to userid)
-
-*/
 ?>
