@@ -102,7 +102,6 @@ foreach ($Searches as $search){
         // Language        
         $SearchSkills = explode(',', $search["sprachen"]);
         $UserSkills = explode(',', $search["sprachen"]);
-        var_dump($UserSkills);
         if (checkArray($SearchSkills,$UserSkills) >= $ReqPointsLang){
             $PreMatch["Sprachen"] = 1;
         }
