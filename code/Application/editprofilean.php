@@ -30,7 +30,7 @@
             // echo $query;
             mysqli_query($con, $query);
 
-            include("matching_algo.php")
+            include("matching_algo.php");
     
         }
    
