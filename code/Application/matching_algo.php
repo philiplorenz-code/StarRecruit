@@ -153,7 +153,7 @@ foreach ($PreMatches as $premat){
                 echo "</br>";
                 echo "</br>";
                 echo $query_check;
-                //mysqli_query($con, $query);
+                mysqli_query($con, $query);
             //}
     
     
