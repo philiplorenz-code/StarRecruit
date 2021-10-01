@@ -147,13 +147,22 @@ foreach ($PreMatches as $premat){
 
                 // Check if entry already exists!!
                 $query_check = "select * from matches where (searchid='$searchid' and userid='$userid');";
+                $checkresult = mysqli_query($con, $query_check);
+                $rowcount=mysqli_num_rows($checkresult);
+
+                if ($rowcount > 0){
+
+                }
+                else {
+                    mysqli_query($con, $query);
+                }
                 
 
                 echo "</br>";
                 echo "</br>";
                 echo "</br>";
                 echo $query_check;
-                mysqli_query($con, $query);
+                
             //}
     
     
