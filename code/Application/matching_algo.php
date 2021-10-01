@@ -129,11 +129,11 @@ var_dump($PreMatches);
 // PREMATCHES TO MATCHES 
 
 foreach ($PreMatches as $premat){
-    foreach($DBMatches as $dbmatch){
+
 
         $sum = $premat["Gehalt"] + $premat["PLZ"] + $premat["Hardskills"] + $premat["Softskills"] + $premat["Sprachen"];
         if ($sum >= $ReqPointsAll){
-            if ($premat["SearchID"] != $dbmatch["searchid"] and $premat["UserID"] != $dbmatch["userid"]){
+            //if ($premat["SearchID"] != $dbmatch["searchid"] and $premat["UserID"] != $dbmatch["userid"]){
 
                 $searchid = $premat["SearchID"];
                 $userid = $premat["UserID"];
@@ -149,13 +149,13 @@ foreach ($PreMatches as $premat){
                 echo "</br>";
                 echo $query;
                 mysqli_query($con, $query);
-            }
+            //}
     
     
         }
 
 
-    }
+    
 
 }
 
