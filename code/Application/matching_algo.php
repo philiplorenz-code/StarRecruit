@@ -144,11 +144,16 @@ foreach ($PreMatches as $premat){
                 $sprachen = $premat["Sprachen"];
 
                 $query = "insert into matches (searchid,userid,gehalt,plz,hardskills,softskills,sprachen) values ('$searchid','$userid','$gehalt','$plz','$hardskills','$softskills','$sprachen');";
+
+                // Check if entry already exists!!
+                $query_check = "select * from matches where (searchid='$searchid' and userid='$userid');";
+                
+
                 echo "</br>";
                 echo "</br>";
                 echo "</br>";
-                echo $query;
-                mysqli_query($con, $query);
+                echo $query_check;
+                //mysqli_query($con, $query);
             //}
     
     
