@@ -23,6 +23,7 @@ function checkArray($array1, $array2){
     return $count;
 }
 
+
 // GET ALL USERS
 $Users = [];
 $query = "select * from users where user_acctype='Arbeitssuchender';";
@@ -126,11 +127,32 @@ var_dump($PreMatches);
 
 
 // PREMATCHES TO MATCHES 
+
 foreach ($PreMatches as $premat){
-    $sum = $premat["Gehalt"] + $premat["PLZ"] + $premat["Hardskills"] + $premat["Softskills"] + $premat["Sprachen"];
-    if ($sum >= $ReqPointsAll){
+    foreach($DBMatches as $dbmatch){
+
+        $sum = $premat["Gehalt"] + $premat["PLZ"] + $premat["Hardskills"] + $premat["Softskills"] + $premat["Sprachen"];
+        if ($sum >= $ReqPointsAll){
+            if ($premat["SearchID"] != $dbmatch["searchid"] and $premat["UserID"] != $dbmatch["userid"]){
+
+                $searchid = $premat["SearchID"];
+                $userid = $premat["UserID"];
+                $gehalt = $premat["Gehalt"];
+                $plz = $premat["PLZ"];
+                $hardskills = $premat["Hardskills"];
+                $softskills = $premat["Softskills"];
+                $sprachen = $premat["Sprachen"];
+
+                $query = "insert into matches (searchid,userid,gehalt,plz,hardskills,softskills,sprachen) values ('$searchid','$userid','$gehalt','$plz','$hardskills','$softskills','$sprachen');";
+                mysqli_query($con, $query);
+            }
+    
+    
+        }
+
 
     }
+
 }
 
 
