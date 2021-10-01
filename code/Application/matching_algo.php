@@ -158,10 +158,11 @@ foreach ($PreMatches as $premat){
                     // Create new Message
                     $query_getunternehmenid = "select recruiter_id from search where id='$searchid';";
                     $resultunternehmensid = mysqli_query($con, $query_getunternehmenid);
-                    $row = $resultunternehmensid->fetch_assoc()
+                    $row = $resultunternehmensid->fetch_assoc();
                     $rec_id = $row["recruiter_id"];
+                    echo $rec_id;
 
-                    $query_message = "insert into nachrichten (user_id,unternehmen_id,status) values ('$searchid','$userid','$gehalt','$plz','$hardskills','$softskills','$sprachen');";
+                    $query_message = "insert into nachrichten (user_id,unternehmen_id,status) values ('$userid','$rec_id','offen');";
                     mysqli_query($con, $query_message);
 
                 }
