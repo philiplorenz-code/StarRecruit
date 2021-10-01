@@ -2,8 +2,6 @@
 include("connection.php");
 include("functions.php");
 
-echo "TEST";
-
 // Custom Reqs
 $ReqPointsAll = 3;
 $ReqPointsHard = 4;
@@ -165,4 +163,11 @@ foreach ($PreMatches as $premat){
     
 
 }
+
+    // redirect to login
+
+    header("Location: editprofilean.php");
+    die;
+    
+
 ?>
