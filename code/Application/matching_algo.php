@@ -2,6 +2,8 @@
 include("connection.php");
 include("functions.php");
 
+echo "TEST";
+
 // Custom Reqs
 $ReqPointsAll = 3;
 $ReqPointsHard = 4;
