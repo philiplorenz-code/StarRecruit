@@ -85,7 +85,7 @@ session_start();
                                             <th>Nummer</th>
                                             <th>Status</th>
                                             <th>Bewerbungsgespräch</th>
-                                            <th>Assesmentcenter</th>
+                                            <th>sAssesmentcenter</th>
                                         </tr>
                                     </thead>
                                     <tbody>
@@ -105,7 +105,7 @@ session_start();
                                             <td><strong>Nummer</strong></td>
                                             <td><strong>Status</strong></td>
                                             <td><strong>Bewerbungsgespräch</strong></td>
-                                            <td><strong>Assesmentcenter</strong></td>
+                                            <td><strong>Assessmentcenter</strong></td>
                                         </tr>
                                     </tfoot>
                                 </table>
