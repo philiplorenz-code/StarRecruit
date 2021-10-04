@@ -15,7 +15,7 @@ session_start();
 
         if(isset($_POST['edit'])){
             $nachricht_id = $_POST['edit'];
-            header( "Location: http://webdev.learning-it.io/Application/editsearch.php?data=<?=$nachricht_id?>" );
+            header( "Location: http://webdev.learning-it.io/Application/editsearch.php?data=$nachricht_id" );
         }
         elseif(isset($_POST['del'])){
             $nachricht_id = $_POST['edit'];
