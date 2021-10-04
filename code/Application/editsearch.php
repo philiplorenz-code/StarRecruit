@@ -34,6 +34,9 @@
                // echo $query;
                mysqli_query($con, $query);
                exec("php matching_algo.php");
+
+               header("Location: editsearches.php");
+               die;
        
            }
    
