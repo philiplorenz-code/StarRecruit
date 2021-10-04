@@ -82,7 +82,7 @@ session_start();
                                     <thead>
                                         <tr>
                                             <th>Nummer</th>
-                                            <th>Name</th>
+                                            <th>Name der Suche</th>
                                             <th>Bearbeiten</th>
                                             <th>Löschen</th>
                                         </tr>
@@ -92,6 +92,7 @@ session_start();
                                             while ($row = $result->fetch_assoc()) {
                                                     echo "<tr>";
                                                     echo "<td>" . $row['id'] . "</td>";
+                                                    echo "<td>" . $row['name'] . "</td>";
                                                     echo "<td> " . " <form method='post'> <button type='submit' name='edit' value=" . $row['id'] . ">Suche Bearbeiten</button> </form>" . "</td>";
                                                     echo "<td> " . " <form method='post'> <button type='submit' name='del' value=" . $row['id'] . ">Suche Löschen</button> </form>" . "</td>";
                                                     echo "</tr>";
@@ -101,7 +102,7 @@ session_start();
                                     <tfoot>
                                         <tr>
                                             <td><strong>Nummer</strong></td>
-                                            <td><strong>Name</strong></td>
+                                            <td><strong>Name der Suche</strong></td>
                                             <td><strong>Bearbeiten</strong></td>
                                             <td><strong>Löschen</strong></td>
                                         </tr>
