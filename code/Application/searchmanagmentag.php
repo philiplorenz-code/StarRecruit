@@ -13,22 +13,14 @@ session_start();
 
     if($_SERVER['REQUEST_METHOD'] == "POST"){
 
-        if(isset($_POST['invite'])){
-            $nachricht_id = $_POST['accept'];
-            $query = "UPDATE nachrichten SET status='eingeladen' WHERE id='$nachricht_id';";
+        if(isset($_POST['cancel'])){
+            $nachricht_id = $_POST['cancel'];
+            $query = "DELETE FROM nachrichten WHERE id='$nachricht_id';";
             mysqli_query($con, $query);
-            header("Location: postfachag.php");
+            header("Location: searchmanagementag.php");
             die;
         }
-        elseif(isset($_POST['assess'])){
-            $nachricht_id = $_POST['deny'];
-            $query = "UPDATE nachrichten SET status='eingeladenAssess' WHERE id='$nachricht_id';";
-            mysqli_query($con, $query);
-            header("Location: postfachag.php");
-            die;
-        }
-        else{
-        }
+
     }
 
 
@@ -84,8 +76,7 @@ session_start();
                                         <tr>
                                             <th>Nummer</th>
                                             <th>Status</th>
-                                            <th>Bewerbungsgespräch</th>
-                                            <th>Assessmentcenter</th>
+                                            <th>Anfrage Löschen</th>
                                         </tr>
                                     </thead>
                                     <tbody>
@@ -94,8 +85,7 @@ session_start();
                                                     echo "<tr>";
                                                     echo "<td>" . $row['id'] . "</td>";
                                                     echo "<td>" . $row['status'] . "</td>";
-                                                    echo "<td> " . " <form method='post'> <button type='submit' name='invited' value=" . $row['id'] . "> Einladung zu Gespräch </button> </form>" . "</td>";
-                                                    echo "<td> " . " <form method='post'> <button type='submit' name='assess' value=" . $row['id'] . "> Einladung zu AssessmentCenter </button> </form>" . "</td>";
+                                                    echo "<td> " . " <form method='post'> <button type='submit' name='cancel' value=" . $row['id'] . ">Anfrage Löschen</button> </form>" . "</td>";
                                                     echo "</tr>";
                                             }
                                         ?>
@@ -104,8 +94,7 @@ session_start();
                                         <tr>
                                             <td><strong>Nummer</strong></td>
                                             <td><strong>Status</strong></td>
-                                            <td><strong>Bewerbungsgespräch</strong></td>
-                                            <td><strong>Assessmentcenter</strong></td>
+                                            <td><strong>Anfrage Löschen</strong></td>
                                         </tr>
                                     </tfoot>
                                 </table>
