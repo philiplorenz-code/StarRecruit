@@ -1,2 +1,2 @@
 <?php
-curl_init("https://quotes.rest/qod.json");
+echo curl_init("https://quotes.rest/qod.json");
