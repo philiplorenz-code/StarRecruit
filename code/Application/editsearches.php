@@ -18,9 +18,8 @@ session_start();
             header( "Location: http://webdev.learning-it.io/Application/editsearch.php?data=$id" );
         }
         elseif(isset($_POST['del'])){
-            $id = $_POST['edit'];
+            $id = $_POST['del'];
             $query = "DELETE FROM search WHERE id='$id';";
-            echo $query;
             mysqli_query($con, $query);
             header("Location: editsearches.php");
             die; 
