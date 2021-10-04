@@ -8,7 +8,7 @@ session_start();
     $user_id = $user_data["user_id"];
 
     // Get all searches
-    $query = "select * from search where user_id='$user_id';";
+    $query = "select * from search where recruiter_id='$user_id';";
     $result = mysqli_query($con, $query);
 
     if($_SERVER['REQUEST_METHOD'] == "POST"){
@@ -25,7 +25,7 @@ session_start();
             die; 
         }
         else{
-            
+
         }
 
     }
