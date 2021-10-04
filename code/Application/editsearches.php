@@ -14,14 +14,14 @@ session_start();
     if($_SERVER['REQUEST_METHOD'] == "POST"){
 
         if(isset($_POST['edit'])){
-            $nachricht_id = $_POST['edit'];
-            header( "Location: http://webdev.learning-it.io/Application/editsearch.php?data=$nachricht_id" );
+            $id = $_POST['edit'];
+            header( "Location: http://webdev.learning-it.io/Application/editsearch.php?data=$id" );
         }
         elseif(isset($_POST['del'])){
-            $nachricht_id = $_POST['edit'];
-            $query = "DELETE FROM search WHERE id='$nachricht_id';";
+            $id = $_POST['edit'];
+            $query = "DELETE FROM search WHERE id='$id';";
             mysqli_query($con, $query);
-            header("Location: editsearches.php");
+            header("Location: www.google.de");
             die; 
         }
         else{
