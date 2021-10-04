@@ -20,8 +20,9 @@ session_start();
         elseif(isset($_POST['del'])){
             $id = $_POST['edit'];
             $query = "DELETE FROM search WHERE id='$id';";
+            echo $query;
             mysqli_query($con, $query);
-            header("Location: www.google.de");
+            header("Location: editsearches.php");
             die; 
         }
         else{
