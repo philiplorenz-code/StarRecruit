@@ -102,76 +102,36 @@
                         <form method="post">
                            <div class="row gutters">
                               <div class="col-xl-12 col-lg-12 col-md-12 col-sm-12 col-12">
-                                 <h6 class="mb-2 text-primary">Persönlich</h6>
+                                 <h6 class="mb-2 text-primary">Unternehmensinfos</h6>
                               </div>
                               <div class="col-xl-6 col-lg-6 col-md-6 col-sm-6 col-12">
                                  <div class="form-group">
-                                    <label for="vorname">Vorname</label>
-                                    <input type="text" class="form-control" name="vorname" value='<?php echo $entry['vorname'];?>'>
+                                    <label for="unternehmensname">Unternehmensname</label>
+                                    <input type="text" class="form-control" name="unternehmensname" value='<?php echo $entry['unternehmensname'];?>'>
                                  </div>
                               </div>
                               <div class="col-xl-6 col-lg-6 col-md-6 col-sm-6 col-12">
                                  <div class="form-group">
-                                    <label for="name">Nachname</label>
-                                    <input type="text" class="form-control" name="name" value='<?php echo $entry['name'];?>'>
+                                    <label for="mitarbeiteranzahl">Mitarbeiteranzahl</label>
+                                    <input type="text" class="form-control" name="mitarbeiteranzahl" value='<?php echo $entry['mitarbeiteranzahl'];?>'>
                                  </div>
                               </div>
                               <div class="col-xl-6 col-lg-6 col-md-6 col-sm-6 col-12">
                                  <div class="form-group">
-                                    <label for="wohnort">Wohnort</label>
-                                    <input type="text" class="form-control" name="wohnort" value='<?php echo $entry['wohnort'];?>'>
+                                    <label for="branche">Branche</label>
+                                    <input type="text" class="form-control" name="branche" value='<?php echo $entry['branche'];?>'>
                                  </div>
                               </div>
                               <div class="col-xl-6 col-lg-6 col-md-6 col-sm-6 col-12">
                                  <div class="form-group">
-                                    <label for="user_alter">Alter</label>
-                                    <input type="text" class="form-control" name="user_alter" value='<?php echo $entry['user_alter'];?>'>
+                                    <label for="website">Link zur Website</label>
+                                    <input type="text" class="form-control" name="website" value='<?php echo $entry['website'];?>'>
                                  </div>
                               </div>
                               <div class="col-xl-6 col-lg-6 col-md-6 col-sm-6 col-12">
                                  <div class="form-group">
-                                    <label for="beschreibung">Beschreibung</label>
-                                    <input type="text" class="form-control" name="beschreibung" value='<?php echo $entry['beschreibung'];?>'>
-                                 </div>
-                              </div>
-                           </div>
-                           <div class="row gutters">
-                              <div class="col-xl-12 col-lg-12 col-md-12 col-sm-12 col-12">
-                                 <h6 class="mt-3 mb-2 text-primary">Fähigkeiten (komma-getrennt)</h6>
-                              </div>
-                              <div class="col-xl-6 col-lg-6 col-md-6 col-sm-6 col-12">
-                                 <div class="form-group">
-                                    <label for="sprachen">Sprachen</label>
-                                    <input type="text" class="form-control" name="sprachen" value='<?php echo $entry['sprachen'];?>'>
-                                 </div>
-                              </div>
-                              <div class="col-xl-6 col-lg-6 col-md-6 col-sm-6 col-12">
-                                 <div class="form-group">
-                                    <label for="softskills">Softskills</label>
-                                    <input type="text" class="form-control" name="softskills" value='<?php echo $entry['softskills'];?>'>
-                                 </div>
-                              </div>
-                              <div class="col-xl-6 col-lg-6 col-md-6 col-sm-6 col-12">
-                                 <div class="form-group">
-                                    <label for="hardskills">Hardskills</label>
-                                    <input type="text" class="form-control" name="hardskills" value='<?php echo $entry['hardskills'];?>'>
-                                 </div>
-                              </div>
-                           </div>
-                           <div class="row gutters">
-                              <div class="col-xl-12 col-lg-12 col-md-12 col-sm-12 col-12">
-                                 <h6 class="mt-3 mb-2 text-primary">Beruf</h6>
-                              </div>
-                              <div class="col-xl-6 col-lg-6 col-md-6 col-sm-6 col-12">
-                                 <div class="form-group">
-                                    <label for="mind_gehalt">Gewünschtes Jahresgehalt</label>
-                                    <input type="text" class="form-control" name="mind_gehalt" value='<?php echo $entry['mind_gehalt'];?>'>
-                                 </div>
-                              </div>
-                              <div class="col-xl-6 col-lg-6 col-md-6 col-sm-6 col-12">
-                                 <div class="form-group">
-                                    <label for="beruf">Beruf</label>
-                                    <input type="text" class="form-control" name="beruf" value='<?php echo $entry['beruf'];?>'>
+                                    <label for="verantwortlicher">Verantwortlicher</label>
+                                    <input type="text" class="form-control" name="verantwortlicher" value='<?php echo $entry['verantwortlicher'];?>'>
                                  </div>
                               </div>
                            </div>
