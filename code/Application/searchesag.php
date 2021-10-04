@@ -8,28 +8,23 @@ session_start();
     $user_id = $user_data["user_id"];
 
     // Get all messages to user
-    $query = "select * from nachrichten where user_id='$user_id';";
+    $query = "select * from nachrichten where user_id='$user_id' and status='accepted';";
     $result = mysqli_query($con, $query);
 
     if($_SERVER['REQUEST_METHOD'] == "POST"){
-        //sth was posted
-        //echo "AUA";
 
-        // save to db
-        //$query = "update users set vorname='$vorname',name='$name',wohnort='$wohnort',user_alter='$user_alter',beschreibung='$beschreibung',sprachen='$sprachen',softskills='$softskills',hardskills='$hardskills',mind_gehalt='$mind_gehalt',beruf='$beruf' where user_id='$user_id';";
-
-        if(isset($_POST['accept'])){
+        if(isset($_POST['invite'])){
             $nachricht_id = $_POST['accept'];
-            $query = "UPDATE nachrichten SET status='accepted' WHERE id='$nachricht_id';";
+            $query = "UPDATE nachrichten SET status='eingeladen' WHERE id='$nachricht_id';";
             mysqli_query($con, $query);
-            header("Location: postfachan.php");
+            header("Location: postfachag.php");
             die;
         }
-        elseif(isset($_POST['deny'])){
+        elseif(isset($_POST['assess'])){
             $nachricht_id = $_POST['deny'];
-            $query = "UPDATE nachrichten SET status='denied' WHERE id='$nachricht_id';";
+            $query = "UPDATE nachrichten SET status='eingeladenAssess' WHERE id='$nachricht_id';";
             mysqli_query($con, $query);
-            header("Location: postfachan.php");
+            header("Location: postfachag.php");
             die;
         }
         else{
@@ -89,8 +84,8 @@ session_start();
                                         <tr>
                                             <th>Nummer</th>
                                             <th>Status</th>
-                                            <th>Bestätigen</th>
-                                            <th>Ablehnen</th>
+                                            <th>Bewerbungsgespräch</th>
+                                            <th>Assesmentcenter</th>
                                         </tr>
                                     </thead>
                                     <tbody>
@@ -99,8 +94,8 @@ session_start();
                                                     echo "<tr>";
                                                     echo "<td>" . $row['id'] . "</td>";
                                                     echo "<td>" . $row['status'] . "</td>";
-                                                    echo "<td> " . " <form method='post'> <button type='submit' name='accept' value=" . $row['id'] . "> Bestätigen </button> </form>" . "</td>";
-                                                    echo "<td> " . " <form method='post'> <button type='submit' name='deny' value=" . $row['id'] . "> Ablehnen </button> </form>" . "</td>";
+                                                    echo "<td> " . " <form method='post'> <button type='submit' name='invited' value=" . $row['id'] . "> Einladung zu Gespräch </button> </form>" . "</td>";
+                                                    echo "<td> " . " <form method='post'> <button type='submit' name='assess' value=" . $row['id'] . "> Einladung zu AssessmentCenter </button> </form>" . "</td>";
                                                     echo "</tr>";
                                             }
                                         ?>
@@ -109,8 +104,8 @@ session_start();
                                         <tr>
                                             <td><strong>Nummer</strong></td>
                                             <td><strong>Status</strong></td>
-                                            <td><strong>Bestätigen</strong></td>
-                                            <td><strong>Ablehnen</strong></td>
+                                            <td><strong>Bewerbungsgespräch</strong></td>
+                                            <td><strong>Assesmentcenter</strong></td>
                                         </tr>
                                     </tfoot>
                                 </table>
