@@ -1,5 +1,5 @@
 <?php
-$jsonurl = "https://quotes.rest/qod";
+$jsonurl = "https://quotes.rest/qod.json";
 echo $jsonurl;
 $json = file_get_contents($jsonurl);
 echo $json;
