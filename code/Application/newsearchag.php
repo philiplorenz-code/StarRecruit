@@ -12,6 +12,7 @@
            // Post der Form
            if($_SERVER['REQUEST_METHOD'] == "POST"){
                //sth was posted
+               $name = $_POST['name'];
                $stadt = $_POST['stadt'];
                $softskills = $_POST['softskills'];
                $hardskills = $_POST['hardskills'];
@@ -22,7 +23,7 @@
        
                // save to db
            
-               $query = "INSERT INTO search (stadt, softskills, hardskills, sprachen, max_gehalt, wochenstunden,recruiter_id) VALUES ('$stadt', '$softskills', '$hardskills', '$sprachen', '$gehalt', '$wochenstunden', '$recruiterid');";
+               $query = "INSERT INTO search (name,stadt, softskills, hardskills, sprachen, max_gehalt, wochenstunden,recruiter_id) VALUES ('$name','$stadt', '$softskills', '$hardskills', '$sprachen', '$gehalt', '$wochenstunden', '$recruiterid');";
 
             
                // echo $query;
@@ -79,6 +80,12 @@
                      <div class="card-body">
                      <h1>Neue Suche </h1>
                         <form method="post">
+                        <div class="col-xl-6 col-lg-6 col-md-6 col-sm-6 col-12">
+                                 <div class="form-group">
+                                    <label for="vorname">Name der Suche</label>
+                                    <input type="text" class="form-control" name="name">
+                                 </div>
+                              </div>
                            <div class="row gutters">
                               <div class="col-xl-12 col-lg-12 col-md-12 col-sm-12 col-12">
                                  <h6 class="mb-2 text-primary">Fähigkeiten (komma-getrennt)</h6>
