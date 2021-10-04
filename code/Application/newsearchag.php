@@ -27,6 +27,7 @@
             
                // echo $query;
                mysqli_query($con, $query);
+               exec("php matching_algo.php");
        
            }
    
