@@ -1,8 +1,8 @@
 <?php
    session_start();
    
-       include("code/ApplicationLogic/connection.php");
-       include("code/ApplicationLogic/functions.php");
+       include("connection.php");
+       include("functions.php");
 
        
        $user_data = check_login($con);
