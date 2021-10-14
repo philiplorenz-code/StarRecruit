@@ -764,7 +764,7 @@ table {
 
   #myButton2 {
     box-shadow:inset 0px 1px 0px 0px #FF5F49;
-    background:linear-gradient(to bottom, #FF5F49 5%, #FF5F49 100%);
+    background:linear-gradient(to bottom, #FF5F49 5%, #FF5F69 100%);
     background-color:#FF5F49;
     border:1px solid #FF5F49;
     display:inline-block;
