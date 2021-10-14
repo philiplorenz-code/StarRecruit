@@ -1,3 +1,47 @@
+<?php
+session_start();
+
+    include("connection.php");
+    include("functions.php");
+    
+    $user_data = check_login($con);
+    $user_id = $user_data["user_id"];
+
+    // Get all messages to user
+    $query = "select * from nachrichten where user_id='$user_id' and status='accepted';";
+    $result = mysqli_query($con, $query);
+
+    if($_SERVER['REQUEST_METHOD'] == "POST"){
+
+        if(isset($_POST['invite'])){
+            $nachricht_id = $_POST['accept'];
+            $query = "UPDATE nachrichten SET status='eingeladen' WHERE id='$nachricht_id';";
+            mysqli_query($con, $query);
+            header("Location: postfachag.php");
+            die;
+        }
+        elseif(isset($_POST['assess'])){
+            $nachricht_id = $_POST['deny'];
+            $query = "UPDATE nachrichten SET status='eingeladenAssess' WHERE id='$nachricht_id';";
+            mysqli_query($con, $query);
+            header("Location: postfachag.php");
+            die;
+        }
+        elseif(isset($_POST['del'])){
+          $nachricht_id = $_POST['deny'];
+          $query = "DELETE FROM nachrichten WHERE id='$nachricht_id';";
+          mysqli_query($con, $query);
+          header("Location: postfachag.php");
+          die;
+      }
+        else{
+        }
+    }
+
+
+
+?>
+
 <!DOCTYPE html>
 <html lang="en" dir="ltr">
   <head>
@@ -75,8 +119,23 @@
                      <th>Status</th>
                      <th>Bewerbungsgespräch</th>
                      <th>Assessmentcenter</th>
+                     <th>Löschen</th>
                   </tr>
                </thead>
+
+               <?php
+                while ($row = $result->fetch_assoc()) {
+                        echo "<tr>";
+                        echo "<td>" . $row['id'] . "</td>";
+                        echo "<td>" . $row['status'] . "</td>";
+                        echo "<td> " . " <form method='post'> <button type='submit' name='invited' value=" . $row['id'] . "> Einladung zu Gespräch </button> </form>" . "</td>";
+                        echo "<td> " . " <form method='post'> <button type='submit' name='assess' value=" . $row['id'] . "> Einladung zu AssessmentCenter </button> </form>" . "</td>";
+                        echo "<td> " . " <form method='post'> <button type='submit' name='del' value=" . $row['id'] . "> Löschen </button> </form>" . "</td>";
+                        echo "</tr>";
+                }
+              ?>
+
+
                <tr>
                   <td><a href="#">INV1001</a></td>
                   <td>Paragon</td>
