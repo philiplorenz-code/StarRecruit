@@ -1,3 +1,47 @@
+<?php
+   session_start();
+
+       $search_id = $_GET['data'];
+   
+       include("connection.php");
+       include("functions.php");
+       
+       $user_data = check_login($con);
+       $user_id = $user_data["user_id"];
+
+       $query = "select * from search where recruiter_id='$user_id';";
+       $result = mysqli_query($con, $query);
+       $entry = $result->fetch_assoc();
+   
+   
+   
+           // Post der Form
+           if($_SERVER['REQUEST_METHOD'] == "POST"){
+               //sth was posted
+               $name = $_POST['name'];
+               $stadt = $_POST['stadt'];
+               $softskills = $_POST['softskills'];
+               $hardskills = $_POST['hardskills'];
+               $sprachen = $_POST['sprachen'];
+               $gehalt = $_POST['gehalt'];
+               $wochenstunden = $_POST['wochenstunden'];
+               $recruiterid = $user_id;
+       
+               // save to db
+               $query = "UPDATE search SET name='$name',stadt='$stadt',softskills='$softskills',hardskills='$hardskills',sprachen='$sprachen',max_gehalt='$gehalt',wochenstunden='$wochenstunden',recruiter_id='$recruiterid' WHERE id='$search_id';";
+
+            
+               // echo $query;
+               mysqli_query($con, $query);
+               exec("php matching_algo.php");
+
+               header("Location: editsearches.php");
+               die;
+       
+           }
+   
+   ?>
+
 <!DOCTYPE html>
 <html lang="en" dir="ltr">
   <head>
@@ -74,16 +118,16 @@
             <form id="fcf-form-id" class="fcf-form-class" method="post" action="contact-form-process.php">
                 
                 <div class="fcf-form-group">
-                    <label for="Name" class="fcf-label">Unternehmensname</label>
+                    <label for="Name" class="fcf-label">Name der Suche</label>
                     <div class="fcf-input-group">
-                        <input type="text" id="Name" name="Name" class="fcf-form-control" required>
+                        <input type="text" required class="fcf-form-control" name="name" value='<?php echo $entry['name'];?>'>
                     </div>
                 </div>
         
                 <div class="fcf-form-group">
-                    <label for="Email" class="fcf-label">Mitarbeiteranzahl</label>
+                    <label for="Email" class="fcf-label">Hardskills (komma-getrennt)</label>
                     <div class="fcf-input-group">
-                        <input type="email" id="Email" name="Email" class="fcf-form-control" required>
+                        <input type="text" class="fcf-form-control" name="hardskills" value='<?php echo $entry['hardskills'];?>'>
                     </div>
                 </div>
         
