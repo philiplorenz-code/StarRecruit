@@ -18,25 +18,19 @@
         <li>
           <a href="./home.html">
             <i class='bx bx-grid-alt' ></i>
-            <span class="links_name">Home</span>
+            <span class="links_name">Account-Start</span>
           </a>
         </li>
         <li>
           <a href="./editsearch.html">
             <i class='bx bx-box' ></i>
-            <span class="links_name">Suchen Bearbeiten</span>
+            <span class="links_name">Profil Bearbeiten</span>
           </a>
         </li>
         <li>
           <a href="./profile.html">
             <i class='bx bx-list-ul' ></i>
-            <span class="links_name">Profil Bearbeiten</span>
-          </a>
-        </li>
-        <li>
-          <a href="./postfachag.html" class="active">
-            <i class='bx bx-pie-chart-alt-2' ></i>
-            <span class="links_name">Postfach</span>
+            <span class="links_name">Posteingang</span>
           </a>
         </li>
         <li>
