@@ -93,7 +93,7 @@ session_start();
     <nav>
       <div class="sidebar-button">
         <i class='bx bx-menu sidebarBtn'></i>
-        <span class="dashboard">Postfach</span>
+        <span class="dashboard">Suchen</span>
       </div>
 
 

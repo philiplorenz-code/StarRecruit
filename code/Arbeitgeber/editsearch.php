@@ -62,7 +62,7 @@
         <li>
           <a href="./home.php">
             <i class='bx bx-grid-alt' ></i>
-            <span class="links_name">Home</span>
+            <span class="links_name">Account-Start</span>
           </a>
         </li>
         <li>
@@ -101,7 +101,7 @@
     <nav>
       <div class="sidebar-button">
         <i class='bx bx-menu sidebarBtn'></i>
-        <span class="dashboard">Postfach</span>
+        <span class="dashboard">Suche bearbeiten</span>
       </div>
 
 
