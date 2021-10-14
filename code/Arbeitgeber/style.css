@@ -744,3 +744,15 @@ table {
   a{
     color: #f05f40;
   }
+
+
+.Row {
+    display: table;
+    width: 100%; /*Optional*/
+    table-layout: fixed; /*Optional*/
+    border-spacing: 10px; /*Optional*/
+}
+.Column {
+    display: table-cell;
+    background-color: red; /*Optional*/
+}
