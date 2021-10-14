@@ -16,25 +16,25 @@
     </div>
       <ul class="nav-links">
         <li>
-          <a href="./home.html">
+          <a href="./home.php">
             <i class='bx bx-grid-alt' ></i>
             <span class="links_name">Account-Start</span>
           </a>
         </li>
         <li>
-          <a href="./editsearch.html">
+          <a href="./profile.php">
             <i class='bx bx-box' ></i>
             <span class="links_name">Profil Bearbeiten</span>
           </a>
         </li>
         <li>
-          <a href="./profile.html">
+          <a href="./postfachan.php">
             <i class='bx bx-list-ul' ></i>
             <span class="links_name">Posteingang</span>
           </a>
         </li>
         <li>
-          <a href="./settings.html">
+          <a href="./settings.php">
             <i class='bx bx-coin-stack' ></i>
             <span class="links_name">Einstellungen</span>
           </a>

@@ -16,6 +16,42 @@
     </div>
       <ul class="nav-links">
         <li>
+          <a href="./home.php">
+            <i class='bx bx-grid-alt' ></i>
+            <span class="links_name">Account-Start</span>
+          </a>
+        </li>
+        <li>
+          <a href="./profile.php">
+            <i class='bx bx-box' ></i>
+            <span class="links_name">Profil Bearbeiten</span>
+          </a>
+        </li>
+        <li>
+          <a href="./postfachan.php">
+            <i class='bx bx-list-ul' ></i>
+            <span class="links_name">Posteingang</span>
+          </a>
+        </li>
+        <li>
+          <a href="./settings.php">
+            <i class='bx bx-coin-stack' ></i>
+            <span class="links_name">Einstellungen</span>
+          </a>
+        </li>
+        <li class="log_out">
+          <a href="#">
+            <i class='bx bx-log-out'></i>
+            <span class="links_name">Log out</span>
+          </a>
+        </li>
+      </ul>
+  </div>    <div class="logo-details">
+      <i class='bx bxs-bulb bx-md'></i>
+      <span class="logo_name">StarRecruitment</span>
+    </div>
+      <ul class="nav-links">
+        <li>
           <a href="./home.html">
             <i class='bx bx-grid-alt' ></i>
             <span class="links_name">Account-Start</span>
