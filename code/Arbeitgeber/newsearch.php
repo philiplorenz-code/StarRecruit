@@ -1,18 +1,12 @@
 <?php
    session_start();
-
-       $search_id = $_GET['data'];
-   
+ 
        include("connection.php");
        include("functions.php");
        
        $user_data = check_login($con);
        $user_id = $user_data["user_id"];
 
-       $query = "select * from search where recruiter_id='$user_id';";
-       $result = mysqli_query($con, $query);
-       $entry = $result->fetch_assoc();
-   
    
    
            // Post der Form
@@ -28,7 +22,7 @@
                $recruiterid = $user_id;
        
                // save to db
-               $query = "UPDATE search SET name='$name',stadt='$stadt',softskills='$softskills',hardskills='$hardskills',sprachen='$sprachen',max_gehalt='$gehalt',wochenstunden='$wochenstunden',recruiter_id='$recruiterid' WHERE id='$search_id';";
+               $query = "INSERT INTO search (name,stadt, softskills, hardskills, sprachen, max_gehalt, wochenstunden,recruiter_id) VALUES ('$name','$stadt', '$softskills', '$hardskills', '$sprachen', '$gehalt', '$wochenstunden', '$recruiterid');";
 
             
                // echo $query;
@@ -120,42 +114,42 @@
                 <div class="fcf-form-group">
                     <label for="Name" class="fcf-label">Name der Suche</label>
                     <div class="fcf-input-group">
-                        <input type="text" required class="fcf-form-control" name="name" value='<?php echo $entry['name'];?>'>
+                        <input type="text" required class="fcf-form-control" name="name">
                     </div>
                 </div>
         
                 <div class="fcf-form-group">
                     <label for="Email" class="fcf-label">Hardskills (komma-getrennt)</label>
                     <div class="fcf-input-group">
-                        <input type="text" class="fcf-form-control" name="hardskills" value='<?php echo $entry['hardskills'];?>'>
+                        <input type="text" class="fcf-form-control" name="hardskills">
                     </div>
                 </div>
         
                 <div class="fcf-form-group">
                     <label for="Message" class="fcf-label">Softskills (komma-getrennt)</label>
                     <div class="fcf-input-group">
-                      <input type="text" class="fcf-form-control" name="softskills" value='<?php echo $entry['softskills'];?>'>
+                      <input type="text" class="fcf-form-control" name="softskills">
                     </div>
                 </div>
 
                 <div class="fcf-form-group">
                   <label for="Message" class="fcf-label">Sprachen</label>
                   <div class="fcf-input-group">
-                      <input type="text" class="fcf-form-control" name="sprachen" value='<?php echo $entry['sprachen'];?>'>
+                      <input type="text" class="fcf-form-control" name="sprachen">
                   </div>
               </div>
 
               <div class="fcf-form-group">
                 <label for="Message" class="fcf-label">Stadt</label>
                 <div class="fcf-input-group">
-                    <input type="text" class="fcf-form-control" name="stadt" value='<?php echo $entry['stadt'];?>'>
+                    <input type="text" class="fcf-form-control" name="stadt">
                 </div>
             </div>
 
             <div class="fcf-form-group">
                 <label for="Message" class="fcf-label">Max. Gehalt</label>
                 <div class="fcf-input-group">
-                    <input type="text" class="fcf-form-control" name="gehalt" value='<?php echo $entry['gehalt'];?>'>
+                    <input type="text" class="fcf-form-control" name="gehalt">
 
                 </div>
             </div>
@@ -163,7 +157,7 @@
             <div class="fcf-form-group">
                 <label for="Message" class="fcf-label">Wochenstunden</label>
                 <div class="fcf-input-group">
-                    <input type="text" class="fcf-form-control" name="wochenstunden" value='<?php echo $entry['wochenstunden'];?>'>
+                    <input type="text" class="fcf-form-control" name="wochenstunden">
 
                 </div>
             </div>
