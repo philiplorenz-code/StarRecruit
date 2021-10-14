@@ -34,10 +34,10 @@
             
                // echo $query;
                mysqli_query($con, $query);
-               //exec("php matching_algo.php");
+               exec("php matching_algo.php");
 
-               //header("Location: editsearches.php");
-               //die;
+               header("Location: editsearches.php");
+               die;
        
            }
    
@@ -116,7 +116,7 @@
 
             <div id="fcf-form">
         
-            <form id="fcf-form-id" class="fcf-form-class" method="post" action="contact-form-process.php">
+            <form id="fcf-form-id" class="fcf-form-class" method="post">
                 
                 <div class="fcf-form-group">
                     <label for="Name" class="fcf-label">Name der Suche</label>
