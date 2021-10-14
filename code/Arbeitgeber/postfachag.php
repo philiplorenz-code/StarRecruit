@@ -8,7 +8,7 @@ session_start();
     $user_id = $user_data["user_id"];
 
     // Get all messages to user
-    $query = "select * from nachrichten where user_id='$user_id' and status='accepted';";
+    $query = "select * from nachrichten where user_id='$user_id'"; // and status='accepted';
     $result = mysqli_query($con, $query);
 
     if($_SERVER['REQUEST_METHOD'] == "POST"){
@@ -135,48 +135,6 @@ session_start();
                 }
               ?>
 
-
-               <tr>
-                  <td><a href="#">INV1001</a></td>
-                  <td>Paragon</td>
-                  <td>1/5/2021</td>
-                  <td>
-                     <p class="status status-unpaid">Unpaid</p>
-                  </td>
-               </tr>
-               <tr>
-                  <td><a href="#">INV1002</a></td>
-                  <td>Sonic</td>
-                  <td>1/4/2021</td>
-                  <td>
-                     <p class="status status-paid">Paid</p>
-                  </td>
-               </tr>
-               <tr>
-                  <td><a href="#">INV1003</a></td>
-                  <td>Innercircle</td>
-                  <td>1/2/2021</td>
-                  <td>
-                     <p class="status status-pending">Pending</p>
-                  </td>
-               </tr>
-               <tr>
-                  <td><a href="#">INV1004</a></td>
-                  <td>Varsity Plus</td>
-                  <td>12/30/2020</td>
-                  <td>
-                     <p class="status status-pending">Pending</p>
-                  </td>
-               </tr>
-               <tr>
-                  <td><a href="#">INV1005</a></td>
-                  <td>Highlander</td>
-                  <td>12/18/2020</td>
-                  <td>
-                     <p class="status status-paid">Paid</p>
-                  </td>
-               </tr>
-               </tr>
             </table>
         </div>
 
