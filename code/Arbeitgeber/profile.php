@@ -81,9 +81,9 @@
                 </div>
         
                 <div class="fcf-form-group">
-                    <label for="Email" class="fcf-label">Mitarbeiteranzahl</label>
+                    <label for="Name" class="fcf-label">Mitarbeiteranzahl</label>
                     <div class="fcf-input-group">
-                        <input type="email" id="Email" name="Email" class="fcf-form-control" required>
+                        <input type="text" id="Name" name="Name" class="fcf-form-control" required>
                     </div>
                 </div>
         
