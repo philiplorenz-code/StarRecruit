@@ -132,9 +132,11 @@ session_start();
         </div>
       </div>
 
-      <form action="https://webdev.learning-it.io/Arbeitgeber/newsearch.php">
+      <form action=>
         <input type="submit" value="Neue Suche"/>
       </form>
+
+      <a href="https://webdev.learning-it.io/Arbeitgeber/newsearch.php" target="_parent"><button>Click me !</button></a>
 
 
     </div>
