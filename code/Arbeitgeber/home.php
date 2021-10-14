@@ -2,7 +2,7 @@
    session_start();
    
        include("code/ApplicationLogic/connection.php");
-       include("fcode/ApplicationLogic/functions.php");
+       include("code/ApplicationLogic/functions.php");
 
        
        $user_data = check_login($con);
