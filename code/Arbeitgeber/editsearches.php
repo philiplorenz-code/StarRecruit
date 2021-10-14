@@ -10,14 +10,8 @@ session_start();
     // Get all messages to user
     $query = "select * from nachrichten where user_id='$user_id';";
     $result = mysqli_query($con, $query);
-    echo $query;
 
     if($_SERVER['REQUEST_METHOD'] == "POST"){
-        //sth was posted
-        //echo "AUA";
-
-        // save to db
-        //$query = "update users set vorname='$vorname',name='$name',wohnort='$wohnort',user_alter='$user_alter',beschreibung='$beschreibung',sprachen='$sprachen',softskills='$softskills',hardskills='$hardskills',mind_gehalt='$mind_gehalt',beruf='$beruf' where user_id='$user_id';";
 
         if(isset($_POST['accept'])){
             $nachricht_id = $_POST['accept'];
@@ -112,57 +106,35 @@ session_start();
 
           <div class="body">
             <table>
-               <thead>
-                  <tr>
-                     <th>Nummer</th>
-                     <th>Status</th>
-                     <th>Bewerbungsgespräch</th>
-                     <th>Assessmentcenter</th>
-                  </tr>
-               </thead>
-               <tr>
-                  <td><a href="#">INV1001</a></td>
-                  <td>Paragon</td>
-                  <td>1/5/2021</td>
-                  <td>
-                     <p class="status status-unpaid">Unpaid</p>
-                  </td>
-               </tr>
-               <tr>
-                  <td><a href="#">INV1002</a></td>
-                  <td>Sonic</td>
-                  <td>1/4/2021</td>
-                  <td>
-                     <p class="status status-paid">Paid</p>
-                  </td>
-               </tr>
-               <tr>
-                  <td><a href="#">INV1003</a></td>
-                  <td>Innercircle</td>
-                  <td>1/2/2021</td>
-                  <td>
-                     <p class="status status-pending">Pending</p>
-                  </td>
-               </tr>
-               <tr>
-                  <td><a href="#">INV1004</a></td>
-                  <td>Varsity Plus</td>
-                  <td>12/30/2020</td>
-                  <td>
-                     <p class="status status-pending">Pending</p>
-                  </td>
-               </tr>
-               <tr>
-                  <td><a href="#">INV1005</a></td>
-                  <td>Highlander</td>
-                  <td>12/18/2020</td>
-                  <td>
-                     <p class="status status-paid">Paid</p>
-                  </td>
-               </tr>
-               </tr>
-            </table>
-        </div>
+            <thead>
+                                        <tr>
+                                            <th>Nummer</th>
+                                            <th>Status</th>
+                                            <th>Bestätigen</th>
+                                            <th>Ablehnen</th>
+                                        </tr>
+                                    </thead>
+                                    <tbody>
+                                        <?php
+                                            while ($row = $result->fetch_assoc()) {
+                                                    echo "<tr>";
+                                                    echo "<td>" . $row['id'] . "</td>";
+                                                    echo "<td>" . $row['status'] . "</td>";
+                                                    echo "<td> " . " <form method='post'> <button type='submit' name='accept' value=" . $row['id'] . "> Bestätigen </button> </form>" . "</td>";
+                                                    echo "<td> " . " <form method='post'> <button type='submit' name='deny' value=" . $row['id'] . "> Ablehnen </button> </form>" . "</td>";
+                                                    echo "</tr>";
+                                            }
+                                        ?>
+                                    </tbody>
+                                    <tfoot>
+                                        <tr>
+                                            <td><strong>Nummer</strong></td>
+                                            <td><strong>Status</strong></td>
+                                            <td><strong>Bestätigen</strong></td>
+                                            <td><strong>Ablehnen</strong></td>
+                                        </tr>
+                                    </tfoot>
+                                </table>        </div>
 
         </div>
       </div>
