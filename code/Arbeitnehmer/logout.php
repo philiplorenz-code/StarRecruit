@@ -5,5 +5,5 @@ if (isset($_SESSION['user_id'])){
     unset($_SESSION['user_id']);
 }
 
-header("Location: login.php");
+header("Location:  https://webdev.learning-it.io/ApplicationLogic/login.php");
 die;

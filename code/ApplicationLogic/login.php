@@ -19,8 +19,15 @@ session_start();
                     $user_data = mysqli_fetch_assoc($result);
                     if($user_data['user_password'] === $user_password){
                         $_SESSION['user_id'] = $user_data['user_id'];
-                        header("Location: editprofilean.php");
-                        die;
+                        if($user_data['user_acctype'] === "Arbeitssuchender"){
+                            header("Location: https://webdev.learning-it.io/Arbeitnehmer/home.php");
+                            die;
+                        }
+                        elseif($user_data['user_acctype'] === "Recruiter"){
+                            header("Location: https://webdev.learning-it.io/Arbeitgeber/home.php");
+                            die;
+                        }
+
                     }
                 }
             }
