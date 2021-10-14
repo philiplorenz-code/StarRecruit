@@ -28,31 +28,31 @@
     </div>
       <ul class="nav-links">
         <li>
-          <a href="./home.html" class="active">
+          <a href="./home.php" class="active">
             <i class='bx bx-grid-alt' ></i>
             <span class="links_name">Home</span>
           </a>
         </li>
         <li>
-          <a href="./editsearches.html">
+          <a href="./editsearches.php">
             <i class='bx bx-box' ></i>
             <span class="links_name">Suchen Bearbeiten</span>
           </a>
         </li>
         <li>
-          <a href="./profile.html">
+          <a href="./profile.php">
             <i class='bx bx-list-ul' ></i>
             <span class="links_name">Profil Bearbeiten</span>
           </a>
         </li>
         <li>
-          <a href="./postfachag.html">
+          <a href="./postfachag.php">
             <i class='bx bx-pie-chart-alt-2' ></i>
             <span class="links_name">Postfach</span>
           </a>
         </li>
         <li>
-          <a href="./settings.html">
+          <a href="./settings.php">
             <i class='bx bx-coin-stack' ></i>
             <span class="links_name">Einstellungen</span>
           </a>

@@ -53,31 +53,31 @@ session_start();
     </div>
       <ul class="nav-links">
         <li>
-          <a href="./home.html">
+          <a href="./home.php">
             <i class='bx bx-grid-alt' ></i>
             <span class="links_name">Home</span>
           </a>
         </li>
         <li>
-          <a href="./editsearches.html" class="active">
+          <a href="./editsearches.php" class="active">
             <i class='bx bx-box' ></i>
             <span class="links_name">Suchen Bearbeiten</span>
           </a>
         </li>
         <li>
-          <a href="./profile.html">
+          <a href="./profile.php">
             <i class='bx bx-list-ul' ></i>
             <span class="links_name">Profil Bearbeiten</span>
           </a>
         </li>
         <li>
-          <a href="./postfachag.html">
+          <a href="./postfachag.php">
             <i class='bx bx-pie-chart-alt-2' ></i>
             <span class="links_name">Postfach</span>
           </a>
         </li>
         <li>
-          <a href="./settings.html">
+          <a href="./settings.php">
             <i class='bx bx-coin-stack' ></i>
             <span class="links_name">Einstellungen</span>
           </a>
@@ -107,34 +107,35 @@ session_start();
           <div class="body">
             <table>
             <thead>
-                                        <tr>
-                                            <th>Nummer</th>
-                                            <th>Status</th>
-                                            <th>Bestätigen</th>
-                                            <th>Ablehnen</th>
-                                        </tr>
-                                    </thead>
-                                    <tbody>
-                                        <?php
-                                            while ($row = $result->fetch_assoc()) {
-                                                    echo "<tr>";
-                                                    echo "<td>" . $row['id'] . "</td>";
-                                                    echo "<td>" . $row['status'] . "</td>";
-                                                    echo "<td> " . " <form method='post'> <button type='submit' name='accept' value=" . $row['id'] . "> Bestätigen </button> </form>" . "</td>";
-                                                    echo "<td> " . " <form method='post'> <button type='submit' name='deny' value=" . $row['id'] . "> Ablehnen </button> </form>" . "</td>";
-                                                    echo "</tr>";
-                                            }
-                                        ?>
-                                    </tbody>
-                                    <tfoot>
-                                        <tr>
-                                            <td><strong>Nummer</strong></td>
-                                            <td><strong>Status</strong></td>
-                                            <td><strong>Bestätigen</strong></td>
-                                            <td><strong>Ablehnen</strong></td>
-                                        </tr>
-                                    </tfoot>
-                                </table>        </div>
+              <tr>
+                  <th>Nummer</th>
+                  <th>Status</th>
+                  <th>Bestätigen</th>
+                  <th>Ablehnen</th>
+              </tr>
+            </thead>
+              <tbody>
+                  <?php
+                      while ($row = $result->fetch_assoc()) {
+                              echo "<tr>";
+                              echo "<td>" . $row['id'] . "</td>";
+                              echo "<td>" . $row['status'] . "</td>";
+                              echo "<td> " . " <form method='post'> <button type='submit' name='accept' value=" . $row['id'] . "> Bestätigen </button> </form>" . "</td>";
+                              echo "<td> " . " <form method='post'> <button type='submit' name='deny' value=" . $row['id'] . "> Ablehnen </button> </form>" . "</td>";
+                              echo "</tr>";
+                      }
+                  ?>
+              </tbody>
+          <tfoot>
+              <tr>
+                  <td><strong>Nummer</strong></td>
+                  <td><strong>Status</strong></td>
+                  <td><strong>Bestätigen</strong></td>
+                  <td><strong>Ablehnen</strong></td>
+              </tr>
+          </tfoot>
+      </table>        
+    </div>
 
         </div>
       </div>
