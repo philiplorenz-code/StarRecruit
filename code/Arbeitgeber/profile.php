@@ -1,3 +1,45 @@
+<?php
+   session_start();
+   
+       include("connection.php");
+       include("functions.php");
+       
+       $user_data = check_login($con);
+       $user_id = $user_data["user_id"];
+   
+   
+   
+           // Post der Form
+           if($_SERVER['REQUEST_METHOD'] == "POST"){
+            //sth was posted
+            $user_id = $user_data["user_id"];
+            $unternehmensname = $_POST['unternehmensname'];
+            $mitarbeiteranzahl = $_POST['mitarbeiteranzahl'];
+            $branche = $_POST['branche'];
+            $website = $_POST['website'];
+            $verantwortlicher = $_POST['verantwortlicher'];
+    
+            // save to db
+            $query = "update users set unternehmensname='$unternehmensname',mitarbeiteranzahl='$mitarbeiteranzahl',branche='$branche',website='$website',verantwortlicher='$verantwortlicher' where user_id='$user_id';";
+
+            // echo $query;
+            mysqli_query($con, $query);
+
+
+            // exec("php matching_algo.php");
+
+    
+        }
+   
+           $query = "select * from users where user_id='$user_id';";
+
+           $result = mysqli_query($con, $query);
+           $entry = $result->fetch_assoc();
+           //var_dump($entry);
+           //echo $entry['user_email'];
+
+?>
+
 <!DOCTYPE html>
 <html lang="en" dir="ltr">
   <head>
