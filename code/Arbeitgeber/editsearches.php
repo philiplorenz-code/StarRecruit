@@ -10,6 +10,7 @@ session_start();
     // Get all messages to user
     $query = "select * from nachrichten where user_id='$user_id';";
     $result = mysqli_query($con, $query);
+    echo $query;
 
     if($_SERVER['REQUEST_METHOD'] == "POST"){
         //sth was posted
