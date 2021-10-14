@@ -71,7 +71,7 @@
 
             <div id="fcf-form">
         
-            <form id="fcf-form-id" class="fcf-form-class" method="post" action="contact-form-process.php">
+            <form id="fcf-form-id" class="fcf-form-class" method="post">
                 
                 <div class="fcf-form-group">
                     <label for="Name" class="fcf-label">Unternehmensname</label>
