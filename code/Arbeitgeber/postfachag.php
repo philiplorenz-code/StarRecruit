@@ -128,7 +128,7 @@ session_start();
                         echo "<tr>";
                         echo "<td>" . $row['id'] . "</td>";
                         echo "<td>" . $row['status'] . "</td>";
-                        echo "<td> " . " <form method='post'> <button type='submit' name='invited' value=" . $row['id'] . "> Einladung zu Gespräch </button> </form>" . "</td>";
+                        echo "<td> " . " <form method='post'> <button type='submit' name='invite' value=" . $row['id'] . "> Einladung zu Gespräch </button> </form>" . "</td>";
                         echo "<td> " . " <form method='post'> <button type='submit' name='assess' value=" . $row['id'] . "> Einladung zu AssessmentCenter </button> </form>" . "</td>";
                         echo "<td> " . " <form method='post'> <button type='submit' name='del' value=" . $row['id'] . "> Löschen </button> </form>" . "</td>";
                         echo "</tr>";
