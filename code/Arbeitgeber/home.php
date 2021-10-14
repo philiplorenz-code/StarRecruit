@@ -30,7 +30,7 @@
         <li>
           <a href="./home.php" class="active">
             <i class='bx bx-grid-alt' ></i>
-            <span class="links_name">Home</span>
+            <span class="links_name">Account Start</span>
           </a>
         </li>
         <li>
