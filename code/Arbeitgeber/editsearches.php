@@ -1,3 +1,45 @@
+<?php
+session_start();
+
+    include("connection.php");
+    include("functions.php");
+    
+    $user_data = check_login($con);
+    $user_id = $user_data["user_id"];
+
+    // Get all messages to user
+    $query = "select * from nachrichten where user_id='$user_id';";
+    $result = mysqli_query($con, $query);
+
+    if($_SERVER['REQUEST_METHOD'] == "POST"){
+        //sth was posted
+        //echo "AUA";
+
+        // save to db
+        //$query = "update users set vorname='$vorname',name='$name',wohnort='$wohnort',user_alter='$user_alter',beschreibung='$beschreibung',sprachen='$sprachen',softskills='$softskills',hardskills='$hardskills',mind_gehalt='$mind_gehalt',beruf='$beruf' where user_id='$user_id';";
+
+        if(isset($_POST['accept'])){
+            $nachricht_id = $_POST['accept'];
+            $query = "UPDATE nachrichten SET status='accepted' WHERE id='$nachricht_id';";
+            mysqli_query($con, $query);
+            header("Location: editsearches.php");
+            die;
+        }
+        elseif(isset($_POST['deny'])){
+            $nachricht_id = $_POST['deny'];
+            $query = "UPDATE nachrichten SET status='denied' WHERE id='$nachricht_id';";
+            mysqli_query($con, $query);
+            header("Location: editsearches.php");
+            die;
+        }
+        else{
+        }
+    }
+
+
+
+?>
+
 <!DOCTYPE html>
 <html lang="en" dir="ltr">
   <head>
