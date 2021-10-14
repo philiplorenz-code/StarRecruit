@@ -14,21 +14,21 @@ session_start();
     if($_SERVER['REQUEST_METHOD'] == "POST"){
 
         if(isset($_POST['invite'])){
-            $nachricht_id = $_POST['accept'];
+            $nachricht_id = $_POST['invite'];
             $query = "UPDATE nachrichten SET status='eingeladen' WHERE id='$nachricht_id';";
             mysqli_query($con, $query);
             header("Location: postfachag.php");
             die;
         }
         elseif(isset($_POST['assess'])){
-            $nachricht_id = $_POST['deny'];
+            $nachricht_id = $_POST['assess'];
             $query = "UPDATE nachrichten SET status='eingeladenAssess' WHERE id='$nachricht_id';";
             mysqli_query($con, $query);
             header("Location: postfachag.php");
             die;
         }
         elseif(isset($_POST['del'])){
-          $nachricht_id = $_POST['deny'];
+          $nachricht_id = $_POST['del'];
           $query = "DELETE FROM nachrichten WHERE id='$nachricht_id';";
           mysqli_query($con, $query);
           header("Location: postfachag.php");
