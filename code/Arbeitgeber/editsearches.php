@@ -7,28 +7,27 @@ session_start();
     $user_data = check_login($con);
     $user_id = $user_data["user_id"];
 
-    // Get all messages to user
-    $query = "select * from nachrichten where user_id='$user_id';";
+    // Get all searches
+    $query = "select * from search where recruiter_id='$user_id';";
     $result = mysqli_query($con, $query);
 
     if($_SERVER['REQUEST_METHOD'] == "POST"){
 
-        if(isset($_POST['accept'])){
-            $nachricht_id = $_POST['accept'];
-            $query = "UPDATE nachrichten SET status='accepted' WHERE id='$nachricht_id';";
-            mysqli_query($con, $query);
-            header("Location: editsearches.php");
-            die;
+        if(isset($_POST['edit'])){
+            $id = $_POST['edit'];
+            header( "Location: http://webdev.learning-it.io/Application/editsearch.php?data=$id" );
         }
-        elseif(isset($_POST['deny'])){
-            $nachricht_id = $_POST['deny'];
-            $query = "UPDATE nachrichten SET status='denied' WHERE id='$nachricht_id';";
+        elseif(isset($_POST['del'])){
+            $id = $_POST['del'];
+            $query = "DELETE FROM search WHERE id='$id';";
             mysqli_query($con, $query);
             header("Location: editsearches.php");
-            die;
+            die; 
         }
         else{
+
         }
+
     }
 
 
@@ -113,28 +112,36 @@ session_start();
                   <th>Bestätigen</th>
                   <th>Ablehnen</th>
               </tr>
-            </thead>
-              <tbody>
-                  <?php
-                      while ($row = $result->fetch_assoc()) {
-                              echo "<tr>";
-                              echo "<td>" . $row['id'] . "</td>";
-                              echo "<td>" . $row['status'] . "</td>";
-                              echo "<td> " . " <form method='post'> <button type='submit' name='accept' value=" . $row['id'] . "> Bestätigen </button> </form>" . "</td>";
-                              echo "<td> " . " <form method='post'> <button type='submit' name='deny' value=" . $row['id'] . "> Ablehnen </button> </form>" . "</td>";
-                              echo "</tr>";
-                      }
-                  ?>
-              </tbody>
-          <tfoot>
-              <tr>
-                  <td><strong>Nummer</strong></td>
-                  <td><strong>Status</strong></td>
-                  <td><strong>Bestätigen</strong></td>
-                  <td><strong>Ablehnen</strong></td>
-              </tr>
-          </tfoot>
-      </table>        
+              <thead>
+                                        <tr>
+                                            <th>Nummer</th>
+                                            <th>Name der Suche</th>
+                                            <th>Bearbeiten</th>
+                                            <th>Löschen</th>
+                                        </tr>
+                                    </thead>
+                                    <tbody>
+                                        <?php
+                                            while ($row = $result->fetch_assoc()) {
+                                                    echo "<tr>";
+                                                    echo "<td>" . $row['id'] . "</td>";
+                                                    echo "<td>" . $row['name'] . "</td>";
+                                                    echo "<td> " . " <form method='post'> <button type='submit' name='edit' value=" . $row['id'] . ">Suche Bearbeiten</button> </form>" . "</td>";
+                                                    echo "<td> " . " <form method='post'> <button type='submit' name='del' value=" . $row['id'] . ">Suche Löschen</button> </form>" . "</td>";
+                                                    echo "</tr>";
+                                            }
+                                        ?>
+                                    </tbody>
+                                    <tfoot>
+                                        <tr>
+                                            <td><strong>Nummer</strong></td>
+                                            <td><strong>Name der Suche</strong></td>
+                                            <td><strong>Bearbeiten</strong></td>
+                                            <td><strong>Löschen</strong></td>
+                                        </tr>
+                                    </tfoot>
+                                </table>
+      
     </div>
 
         </div>
