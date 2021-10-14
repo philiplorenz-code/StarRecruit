@@ -15,7 +15,7 @@ session_start();
 
         if(isset($_POST['invite'])){
             $nachricht_id = $_POST['invite'];
-            $query = "UPDATE nachrichten SET status='eingeladen' WHERE id='$nachricht_id';";
+            $query = "UPDATE nachrichten SET status='eingeladengespraech' WHERE id='$nachricht_id';";
             mysqli_query($con, $query);
             header("Location: postfachag.php");
             die;
