@@ -133,13 +133,9 @@ session_start();
       </div>
 
 
-      <a href="https://webdev.learning-it.io/Arbeitgeber/newsearch.php" target="_parent"><button>Click me !</button></a>
+      <a href="https://webdev.learning-it.io/Arbeitgeber/newsearch.php" target="_parent"><button id="newsearchbutton">Click me !</button></a>
 
-      <div class="Row">
-    <div class="Column">C1</div>
-    <div class="Column">C2</div>
-    <div class="Column">C3</div>
-</div>
+
     </div>
   </section>
 
