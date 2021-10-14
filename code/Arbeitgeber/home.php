@@ -3,7 +3,7 @@
    
        include("code/ApplicationLogic/connection.php");
        include("fcode/ApplicationLogic/functions.php");
-       echo "TEST";
+
        
        $user_data = check_login($con);
        $user_id = $user_data["user_id"];
