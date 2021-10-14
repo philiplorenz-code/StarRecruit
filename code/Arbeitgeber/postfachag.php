@@ -128,9 +128,9 @@ session_start();
                         echo "<tr>";
                         echo "<td>" . $row['id'] . "</td>";
                         echo "<td>" . $row['status'] . "</td>";
-                        echo "<td> " . " <form method='post'> <button type='submit' id='mybutton' name='invite' value=" . $row['id'] . "> Einladung zu Gespräch </button> </form>" . "</td>";
-                        echo "<td> " . " <form method='post'> <button type='submit' id='mybutton' name='assess' value=" . $row['id'] . "> Einladung zu AssessmentCenter </button> </form>" . "</td>";
-                        echo "<td> " . " <form method='post'> <button type='submit' id='mybutton' name='del' value=" . $row['id'] . "> Löschen </button> </form>" . "</td>";
+                        echo "<td> " . " <form method='post'> <button type='submit' id='myButton' name='invite' value=" . $row['id'] . "> Einladung zu Gespräch </button> </form>" . "</td>";
+                        echo "<td> " . " <form method='post'> <button type='submit' id='myButton' name='assess' value=" . $row['id'] . "> Einladung zu AssessmentCenter </button> </form>" . "</td>";
+                        echo "<td> " . " <form method='post'> <button type='submit' id='myButton' name='del' value=" . $row['id'] . "> Löschen </button> </form>" . "</td>";
                         echo "</tr>";
                 }
               ?>
