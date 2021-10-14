@@ -155,7 +155,7 @@
             <div class="fcf-form-group">
                 <label for="Message" class="fcf-label">Max. Gehalt</label>
                 <div class="fcf-input-group">
-                    <input type="text" class="fcf-form-control"" name="gehalt" value='<?php echo $entry['gehalt'];?>'>
+                    <input type="text" class="fcf-form-control" name="gehalt" value='<?php echo $entry['gehalt'];?>'>
 
                 </div>
             </div>
