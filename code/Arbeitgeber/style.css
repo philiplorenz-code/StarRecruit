@@ -503,6 +503,7 @@ textarea.fcf-form-control {
 label.fcf-label {
   display: inline-block;
   margin-bottom: 0.5rem;
+  font-size: 2rem;
 }
 
 .fcf-credit {
