@@ -125,14 +125,7 @@ session_start();
                                             }
                                         ?>
                                     </tbody>
-                                    <tfoot>
-                                        <tr>
-                                            <td><strong>Nummer</strong></td>
-                                            <td><strong>Name der Suche</strong></td>
-                                            <td><strong>Bearbeiten</strong></td>
-                                            <td><strong>Löschen</strong></td>
-                                        </tr>
-                                    </tfoot>
+
                                 </table>      
     </div>
 
