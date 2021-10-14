@@ -118,35 +118,35 @@
                 <div class="fcf-form-group">
                     <label for="Name" class="fcf-label">Unternehmensname</label>
                     <div class="fcf-input-group">
-                        <input type="text" id="Name" name="Name" class="fcf-form-control" name="unternehmensname" required value='<?php echo $entry['unternehmensname'];?>'>
+                        <input type="text" id="Name" class="fcf-form-control" name="unternehmensname" required value='<?php echo $entry['unternehmensname'];?>'>
                     </div>
                 </div>
         
                 <div class="fcf-form-group">
                     <label for="Name" class="fcf-label">Mitarbeiteranzahl</label>
                     <div class="fcf-input-group">
-                        <input type="text" id="Name" name="Name" class="fcf-form-control" name="mitarbeiteranzahl" required value='<?php echo $entry['mitarbeiteranzahl'];?>'>
+                        <input type="text" id="Name" class="fcf-form-control" name="mitarbeiteranzahl" required value='<?php echo $entry['mitarbeiteranzahl'];?>'>
                     </div>
                 </div>
         
                 <div class="fcf-form-group">
                     <label for="Message" class="fcf-label">Branche</label>
                     <div class="fcf-input-group">
-                        <input id="text" name="Message" class="fcf-form-control" rows="6" name="branche" required value='<?php echo $entry['branche'];?>'></input>
+                        <input id="text" class="fcf-form-control" rows="6" name="branche" required value='<?php echo $entry['branche'];?>'></input>
                     </div>
                 </div>
 
                 <div class="fcf-form-group">
                   <label for="Message" class="fcf-label">Link zur Website</label>
                   <div class="fcf-input-group">
-                      <input id="text" name="Message" class="fcf-form-control" rows="6" name="website" required value='<?php echo $entry['website'];?>'></input>
+                      <input id="text" class="fcf-form-control" rows="6" name="website" required value='<?php echo $entry['website'];?>'></input>
                   </div>
               </div>
 
               <div class="fcf-form-group">
                 <label for="Message" class="fcf-label">Verantwortlicher</label>
                 <div class="fcf-input-group">
-                    <input id="text" name="Message" class="fcf-form-control" rows="6" name="verantwortlicher" required value='<?php echo $entry['verantwortlicher'];?>'></input>
+                    <input id="text" class="fcf-form-control" rows="6" name="verantwortlicher" required value='<?php echo $entry['verantwortlicher'];?>'></input>
                 </div>
             </div>
         
