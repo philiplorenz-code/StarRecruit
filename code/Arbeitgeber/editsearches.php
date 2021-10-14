@@ -119,8 +119,8 @@ session_start();
                                                     echo "<tr>";
                                                     echo "<td>" . $row['id'] . "</td>";
                                                     echo "<td>" . $row['name'] . "</td>";
-                                                    echo "<td> " . " <form method='post'> <button type='submit' name='edit' value=" . $row['id'] . ">Suche Bearbeiten</button> </form>" . "</td>";
-                                                    echo "<td> " . " <form method='post'> <button type='submit' name='del' value=" . $row['id'] . ">Suche Löschen</button> </form>" . "</td>";
+                                                    echo "<td> " . " <form method='post'> <button type='submit' id='myButton' name='edit' value=" . $row['id'] . ">Suche Bearbeiten</button> </form>" . "</td>";
+                                                    echo "<td> " . " <form method='post'> <button type='submit' id='myButton' name='del' value=" . $row['id'] . ">Suche Löschen</button> </form>" . "</td>";
                                                     echo "</tr>";
                                             }
                                         ?>
@@ -133,7 +133,7 @@ session_start();
       </div>
 
 
-      <a href="https://webdev.learning-it.io/Arbeitgeber/newsearch.php" target="_parent"><button id="newsearchbutton">Neue Suche</button></a>
+      <a href="https://webdev.learning-it.io/Arbeitgeber/newsearch.php" target="_parent"><button id='myButton2' >Neue Suche</button></a>
 
 
     </div>
