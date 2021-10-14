@@ -21,7 +21,7 @@
     
             // save to db
             $query = "update users set unternehmensname='$unternehmensname',mitarbeiteranzahl='$mitarbeiteranzahl',branche='$branche',website='$website',verantwortlicher='$verantwortlicher' where user_id='$user_id';";
-            echo $query;
+
             // echo $query;
             mysqli_query($con, $query);
 
