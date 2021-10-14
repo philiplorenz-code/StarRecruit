@@ -106,13 +106,6 @@ session_start();
           <div class="body">
             <table>
             <thead>
-              <tr>
-                  <th>Nummer</th>
-                  <th>Status</th>
-                  <th>Bestätigen</th>
-                  <th>Ablehnen</th>
-              </tr>
-              <thead>
                                         <tr>
                                             <th>Nummer</th>
                                             <th>Name der Suche</th>
@@ -140,8 +133,7 @@ session_start();
                                             <td><strong>Löschen</strong></td>
                                         </tr>
                                     </tfoot>
-                                </table>
-      
+                                </table>      
     </div>
 
         </div>
