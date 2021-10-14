@@ -442,7 +442,7 @@ nav .profile-details i{
 .fcf-body {
   margin: 0;
   font-family: -apple-system, Arial, sans-serif;
-  font-size: 1rem;
+  font-size: 2rem;
   font-weight: 400;
   line-height: 1.5;
   color: #212529;
@@ -475,7 +475,7 @@ nav .profile-details i{
   width: 100%;
   height: calc(1.5em + 0.75rem + 2px);
   padding: 0.375rem 0.75rem;
-  font-size: 1rem;
+  font-size: 2rem;
   font-weight: 400;
   line-height: 1.5;
   color: #495057;
@@ -743,9 +743,4 @@ table {
   }
   a{
     color: #f05f40;
-  }
-
-  #newsearchbutton{
-    margin-left: 75%;
-    margin-top: 5;
   }
