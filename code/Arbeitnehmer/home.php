@@ -85,6 +85,7 @@
         <div class="recent-sales box">
         <div class="title"><?php echo "Hey " . $entry . ", du hast " . $num_rows . " neue Benachrichtigungen!" ?>
         </div>
+        </div>
       </div>
     </br>
 
