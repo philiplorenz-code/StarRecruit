@@ -8,32 +8,30 @@ session_start();
     $user_id = $user_data["user_id"];
 
     // Get all messages to user
-    $query = "select * from nachrichten where user_id='$user_id'"; // and status='accepted';
+    $query = "select * from nachrichten where user_id='$user_id';";
     $result = mysqli_query($con, $query);
 
     if($_SERVER['REQUEST_METHOD'] == "POST"){
+        //sth was posted
+        //echo "AUA";
 
-        if(isset($_POST['invite'])){
-            $nachricht_id = $_POST['invite'];
-            $query = "UPDATE nachrichten SET status='eingeladengespraech' WHERE id='$nachricht_id';";
+        // save to db
+        //$query = "update users set vorname='$vorname',name='$name',wohnort='$wohnort',user_alter='$user_alter',beschreibung='$beschreibung',sprachen='$sprachen',softskills='$softskills',hardskills='$hardskills',mind_gehalt='$mind_gehalt',beruf='$beruf' where user_id='$user_id';";
+
+        if(isset($_POST['accept'])){
+            $nachricht_id = $_POST['accept'];
+            $query = "UPDATE nachrichten SET status='accepted' WHERE id='$nachricht_id';";
             mysqli_query($con, $query);
-            header("Location: postfachag.php");
+            header("Location: postfachan.php");
             die;
         }
-        elseif(isset($_POST['assess'])){
-            $nachricht_id = $_POST['assess'];
-            $query = "UPDATE nachrichten SET status='eingeladenAssess' WHERE id='$nachricht_id';";
+        elseif(isset($_POST['deny'])){
+            $nachricht_id = $_POST['deny'];
+            $query = "UPDATE nachrichten SET status='denied' WHERE id='$nachricht_id';";
             mysqli_query($con, $query);
-            header("Location: postfachag.php");
+            header("Location: postfachan.php");
             die;
         }
-        elseif(isset($_POST['del'])){
-          $nachricht_id = $_POST['del'];
-          $query = "DELETE FROM nachrichten WHERE id='$nachricht_id';";
-          mysqli_query($con, $query);
-          header("Location: postfachag.php");
-          die;
-      }
         else{
         }
     }
@@ -109,24 +107,22 @@ session_start();
             <table>
                <thead>
                   <tr>
-                     <th>Nummer</th>
-                     <th>Status</th>
-                     <th>Bewerbungsgespräch</th>
-                     <th>Assessmentcenter</th>
-                     <th>Löschen</th>
+                  <th>Nummer</th>
+                  <th>Status</th>
+                  <th>Bestätigen</th>
+                  <th>Ablehnen</th>
                   </tr>
                </thead>
 
                <?php
-                while ($row = $result->fetch_assoc()) {
-                        echo "<tr>";
-                        echo "<td>" . $row['id'] . "</td>";
-                        echo "<td>" . $row['status'] . "</td>";
-                        echo "<td> " . " <form method='post'> <button type='submit' id='myButton' name='invite' value=" . $row['id'] . "> Einladung zu Gespräch </button> </form>" . "</td>";
-                        echo "<td> " . " <form method='post'> <button type='submit' id='myButton' name='assess' value=" . $row['id'] . "> Einladung zu AssessmentCenter </button> </form>" . "</td>";
-                        echo "<td> " . " <form method='post'> <button type='submit' id='myButton' name='del' value=" . $row['id'] . "> Löschen </button> </form>" . "</td>";
-                        echo "</tr>";
-                }
+                  while ($row = $result->fetch_assoc()) {
+                          echo "<tr>";
+                          echo "<td>" . $row['id'] . "</td>";
+                          echo "<td>" . $row['status'] . "</td>";
+                          echo "<td> " . " <form method='post'> <button type='submit' name='accept' value=" . $row['id'] . "> Bestätigen </button> </form>" . "</td>";
+                          echo "<td> " . " <form method='post'> <button type='submit' name='deny' value=" . $row['id'] . "> Ablehnen </button> </form>" . "</td>";
+                          echo "</tr>";
+                  }
               ?>
 
             </table>
