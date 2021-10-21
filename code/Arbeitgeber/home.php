@@ -8,17 +8,15 @@
        $user_data = check_login($con);
        $user_id = $user_data["user_id"];
 
-      // Get username
-      $query = "select vorname from users where user_id='$user_id';";
-      $result = mysqli_query($con, $query);
-      $entry = $result->fetch_assoc();
-      $entry = $entry["vorname"];
 
       // Get count of messages
       $query = "select * from nachrichten where user_id='$user_id' and not status='accepted' and not status='denied';";
       $result = mysqli_query($con, $query);
       //var_dump($result);
       $num_rows = mysqli_fetch_row($result)[0];
+      if(is_null($num_rows)){
+        $num_rows = 0;
+      }
 
 
 
@@ -93,7 +91,7 @@
     <div class="home-content">
       <div class="sales-boxes">
         <div class="recent-sales box">
-          <div class="title"><?php echo "Hey " . $entry . ", du hast " . $num_rows . " neue Benachrichtigungen!" ?>
+          <div class="title"><?php echo "Hey, du hast " . $num_rows . " neue Benachrichtigungen!" ?>
 </div>
         </div>
       </div>
