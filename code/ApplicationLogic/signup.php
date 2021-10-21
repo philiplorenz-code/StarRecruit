@@ -62,7 +62,7 @@ session_start();
                         </div>
                         <button class="btn btn-info mt-2" type="submit" style="background: #9c3f2a;">SignUp</button>
 
-                    </form><a href="signup.php" style="text-align: right;">Already having an account? Click here to Login!</a>
+                    </form><a href="login.php" style="text-align: right;">Already having an account? Click here to Login!</a>
                     <p class="mt-3 mb-0"></p>
                 </div>
 
