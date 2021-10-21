@@ -19,8 +19,10 @@
       $result = mysqli_query($con, $query);
       //var_dump($result);
       $num_rows = mysqli_fetch_row($result)[0];
+      if(is_null($num_rows)){
+        $num_rows = 0;
+    }
 
-      var_dump($num_rows);
 ?>
 
 <!DOCTYPE html>
