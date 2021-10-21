@@ -9,7 +9,7 @@
        $user_data = check_login($con);
        $user_id = $user_data["user_id"];
 
-       $query = "select * from search where search_id='$search_id';";
+       $query = "select * from search where id='$search_id';";
        $result = mysqli_query($con, $query);
        $entry = $result->fetch_assoc();
    
