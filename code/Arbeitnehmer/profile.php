@@ -13,20 +13,25 @@
            if($_SERVER['REQUEST_METHOD'] == "POST"){
             //sth was posted
             $user_id = $user_data["user_id"];
-            $unternehmensname = $_POST['unternehmensname'];
-            $mitarbeiteranzahl = $_POST['mitarbeiteranzahl'];
-            $branche = $_POST['branche'];
-            $website = $_POST['website'];
-            $verantwortlicher = $_POST['verantwortlicher'];
+            $vorname = $_POST['vorname'];
+            $name = $_POST['name'];
+            $wohnort = $_POST['wohnort'];
+            $user_alter = $_POST['user_alter'];
+            $beschreibung = $_POST['beschreibung'];
+            $sprachen = $_POST['sprachen'];
+            $softskills = $_POST['softskills'];
+            $hardskills = $_POST['hardskills'];
+            $mind_gehalt = $_POST['mind_gehalt'];
+            $beruf = $_POST['beruf'];
     
             // save to db
-            $query = "update users set unternehmensname='$unternehmensname',mitarbeiteranzahl='$mitarbeiteranzahl',branche='$branche',website='$website',verantwortlicher='$verantwortlicher' where user_id='$user_id';";
+            $query = "update users set vorname='$vorname',name='$name',wohnort='$wohnort',user_alter='$user_alter',beschreibung='$beschreibung',sprachen='$sprachen',softskills='$softskills',hardskills='$hardskills',mind_gehalt='$mind_gehalt',beruf='$beruf' where user_id='$user_id';";
 
             // echo $query;
             mysqli_query($con, $query);
 
 
-            // exec("php matching_algo.php");
+            exec("php matching_algo.php");
 
     
         }
@@ -110,37 +115,72 @@
             <form id="fcf-form-id" class="fcf-form-class" method="post">
                 
                 <div class="fcf-form-group">
-                    <label for="Name" class="fcf-label">Unternehmensname</label>
+                    <label for="Name" class="fcf-label">Vorname</label>
                     <div class="fcf-input-group">
-                        <input type="text" id="Name" class="fcf-form-control" name="unternehmensname" required value='<?php echo $entry['unternehmensname'];?>'>
+                        <input type="text" id="Name" class="fcf-form-control" name="vorname" value='<?php echo $entry['vorname'];?>'>
                     </div>
                 </div>
         
                 <div class="fcf-form-group">
-                    <label for="Name" class="fcf-label">Mitarbeiteranzahl</label>
+                    <label for="Name" class="fcf-label">Nachname</label>
                     <div class="fcf-input-group">
-                        <input type="text" id="Name" class="fcf-form-control" name="mitarbeiteranzahl" required value='<?php echo $entry['mitarbeiteranzahl'];?>'>
+                        <input type="text" id="Name" class="fcf-form-control" name="name" value='<?php echo $entry['name'];?>'>
                     </div>
                 </div>
         
                 <div class="fcf-form-group">
-                    <label for="Message" class="fcf-label">Branche</label>
+                    <label for="Message" class="fcf-label">Wohnort</label>
                     <div class="fcf-input-group">
-                        <input id="text" class="fcf-form-control" rows="6" name="branche" required value='<?php echo $entry['branche'];?>'></input>
+                        <input id="text" class="fcf-form-control" rows="6" name="wohnort" value='<?php echo $entry['wohnort'];?>'></input>
                     </div>
                 </div>
 
                 <div class="fcf-form-group">
-                  <label for="Message" class="fcf-label">Link zur Website</label>
+                  <label for="Message" class="fcf-label">Alter</label>
                   <div class="fcf-input-group">
-                      <input id="text" class="fcf-form-control" rows="6" name="website" required value='<?php echo $entry['website'];?>'></input>
+                      <input id="text" class="fcf-form-control" rows="6" name="user_alter" value='<?php echo $entry['user_alter'];?>'></input>
                   </div>
               </div>
 
               <div class="fcf-form-group">
-                <label for="Message" class="fcf-label">Verantwortlicher</label>
+                <label for="Message" class="fcf-label">Beschreibung</label>
                 <div class="fcf-input-group">
-                    <input id="text" class="fcf-form-control" rows="6" name="verantwortlicher" required value='<?php echo $entry['verantwortlicher'];?>'></input>
+                    <input id="text" class="fcf-form-control" rows="6" name="beschreibung" value='<?php echo $entry['beschreibung'];?>'></input>
+                </div>
+            </div>
+
+            <div class="fcf-form-group">
+                <label for="Message" class="fcf-label">Sprachen (kommagetrennt)</label>
+                <div class="fcf-input-group">
+                    <input id="text" class="fcf-form-control" rows="6" name="sprachen" value='<?php echo $entry['sprachen'];?>'></input>
+                </div>
+            </div>
+
+            <div class="fcf-form-group">
+                <label for="Message" class="fcf-label">SoftSkills (kommagetrennt)</label>
+                <div class="fcf-input-group">
+                    <input id="text" class="fcf-form-control" rows="6" name="softskills" value='<?php echo $entry['softskills'];?>'></input>
+                </div>
+            </div>
+
+            <div class="fcf-form-group">
+                <label for="Message" class="fcf-label">HardSkills (kommagetrennt)</label>
+                <div class="fcf-input-group">
+                    <input id="text" class="fcf-form-control" rows="6" name="hardskills" value='<?php echo $entry['hardskills'];?>'></input>
+                </div>
+            </div>
+
+            <div class="fcf-form-group">
+                <label for="Message" class="fcf-label">Gewünschtes Jahresgehalt</label>
+                <div class="fcf-input-group">
+                    <input id="text" class="fcf-form-control" rows="6" name="mind_gehalt" value='<?php echo $entry['mind_gehalt'];?>'></input>
+                </div>
+            </div>
+
+            <div class="fcf-form-group">
+                <label for="Message" class="fcf-label">Beruf</label>
+                <div class="fcf-input-group">
+                    <input id="text" class="fcf-form-control" rows="6" name="beruf" value='<?php echo $entry['beruf'];?>'></input>
                 </div>
             </div>
         
