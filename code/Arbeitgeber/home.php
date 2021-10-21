@@ -14,11 +14,15 @@
       $entry = $result->fetch_assoc();
       $entry = $entry["vorname"];
 
+
       // Get count of messages
       $query = "select * from nachrichten where user_id='$user_id' and not status='accepted' and not status='denied';";
       $result = mysqli_query($con, $query);
       //var_dump($result);
       $num_rows = mysqli_fetch_row($result)[0];
+
+      echo $entry;
+      echo $num_rows;
 
 
 ?>
