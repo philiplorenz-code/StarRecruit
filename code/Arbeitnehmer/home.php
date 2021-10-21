@@ -78,7 +78,7 @@
     <nav>
       <div class="sidebar-button">
         <i class='bx bx-menu sidebarBtn'></i>
-        <span class="dashboard">Ueberschrift</span>
+        <span class="dashboard">Account Startseite</span>r
       </div>
 
 
