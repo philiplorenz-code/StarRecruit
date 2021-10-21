@@ -13,6 +13,7 @@ session_start();
         if(!empty($user_email) && !empty($user_password) && !is_numeric($user_email)){
             // save to db
             $query = "insert into users (user_email,user_password,user_acctype) values ('$user_email','$user_password','$user_acctype');";
+            echo $query;
             mysqli_query($con, $query);
 
             header("Location: login.php");
@@ -39,6 +40,8 @@ session_start();
     <link rel="stylesheet" href="assets/css/styles.css">
     <link rel="stylesheet" href="assets/css/untitled.css">
 </head>
+
+
 
 <body>
     <div class="container-fluid">
