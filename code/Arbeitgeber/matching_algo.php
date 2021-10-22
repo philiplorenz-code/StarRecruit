@@ -4,8 +4,8 @@ include("functions.php");
 
 // Custom Reqs
 $ReqPointsAll = 3;
-$ReqPointsHard = 4;
-$ReqPointsSoft = 4;
+$ReqPointsHard = 1;
+$ReqPointsSoft = 1;
 $ReqPointsLang = 1;
 
 // Check Arrays for equal values
