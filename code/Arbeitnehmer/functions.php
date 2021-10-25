@@ -88,6 +88,7 @@ function run_algo(){
             // PLZ TODO (https://mizine.de/html/mit-google-maps-api-entfernungen-berechnen/)
             $PreMatch["PLZ"] = 1;
     
+            echo "algo6";
             // Softskills
             $searchForValue = ',';
 
@@ -118,7 +119,7 @@ function run_algo(){
             else{
                 $PreMatch["Softskills"] = 2;
             }
-    
+            echo "algo7";
             // Hardskills   
             $searchForValue = ',';   
             $SearchSkillsHard = [];  
@@ -155,7 +156,7 @@ function run_algo(){
     
 
 
-
+            echo "algo8";
             // Language       
             $searchForValue = ',';   
 
@@ -185,6 +186,7 @@ function run_algo(){
                 $PreMatch["Sprachen"] = 2;
             }
     
+            echo "algo9";
             // Merge to PreMatches Array
             array_push($PreMatches, $PreMatch);
         }
