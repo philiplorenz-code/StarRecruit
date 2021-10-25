@@ -31,7 +31,7 @@
             mysqli_query($con, $query);
 
 
-            exec("php matching_algo.php");
+            exec("php ./code/ApplicationLogic/matching_algo.php");
 
     
         }

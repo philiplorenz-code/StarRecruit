@@ -29,7 +29,7 @@
                mysqli_query($con, $query);
                exec("php matching_algo.php");
 
-               header("Location: editsearches.php");
+               header("Location: ./code/ApplicationLogic/matching_algo.php");
                die;
        
            }
