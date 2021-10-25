@@ -33,7 +33,7 @@
 
             //exec("php matching_algo.php");
             run_algo();
-            header("Location: editsearches.php");
+            header("Location: profile.php");
             //exec("php /home/webdev.learning-it.io/public_html/code/ApplicationLogic/matching_algo.php");
 
 
