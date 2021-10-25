@@ -33,8 +33,8 @@
             
                // echo $query;
                mysqli_query($con, $query);
-               //exec("php matching_algo.php");
-               shell_exec("nohup php ./code/ApplicationLogic/matching_algo.php");
+               exec("php /home/webdev.learning-it.io/public_html/code/ApplicationLogic/matching_algo.php");
+               
 
                header("Location: editsearches.php");
                die;
