@@ -21,6 +21,9 @@ function check_login($con){
 
 
 function run_algo(){
+
+    echo "algo";
+
     // Custom Reqs
     $ReqPointsAll = 3;
     $ReqPointsHard = 1;
