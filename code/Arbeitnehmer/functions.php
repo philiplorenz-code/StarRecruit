@@ -181,6 +181,5 @@ function run_algo(){
         
     
     }
-    header("Location: profile.php");
 
     }
