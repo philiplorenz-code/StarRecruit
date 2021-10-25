@@ -2,6 +2,8 @@
 include("connection.php");
 include("functions.php");
 
+echo "1";
+
 // Custom Reqs
 $ReqPointsAll = 3;
 $ReqPointsHard = 1;
@@ -164,7 +166,7 @@ foreach ($PreMatches as $premat){
 }
 
 
-
+echo "3";
 
 
 ?>
