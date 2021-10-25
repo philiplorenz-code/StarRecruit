@@ -13,7 +13,7 @@ function check_login($con){
 
     // redirect to login
     else {
-        header("Location: login.php");
+        header("Location: https://webdev.learning-it.io/ApplicationLogic/login.php");
         die;
     }
 
