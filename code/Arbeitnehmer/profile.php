@@ -32,7 +32,8 @@
 
 
             //exec("php matching_algo.php");
-            exec("php /home/webdev.learning-it.io/public_html/code/ApplicationLogic/matching_algo.php");
+            run_algo();
+            //exec("php /home/webdev.learning-it.io/public_html/code/ApplicationLogic/matching_algo.php");
 
 
     
