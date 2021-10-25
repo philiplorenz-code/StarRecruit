@@ -9,3 +9,4 @@
 
        echo 1;
        run_algo();
+       echo 2;
