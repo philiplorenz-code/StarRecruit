@@ -181,5 +181,6 @@ function run_algo(){
         
     
     }
-    
+    echo "TEST";
+
     }
