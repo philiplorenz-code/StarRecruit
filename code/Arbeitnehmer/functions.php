@@ -53,13 +53,6 @@ function run_algo(){
     }
     
     
-    // Receive all matches from db
-    $DBMatches = [];
-    $query = "select * from users where user_acctype='Arbeitssuchender';";
-    $result = mysqli_query($con, $query);
-    while ($row = $result->fetch_assoc()) {
-        array_push($DBMatches,$row);
-    }
     
     
     // Receive all searches from db
