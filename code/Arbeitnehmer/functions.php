@@ -181,6 +181,6 @@ function run_algo(){
         
     
     }
-    echo "TEST";
+    header("Location: profile.php");
 
     }
