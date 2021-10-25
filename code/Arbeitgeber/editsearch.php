@@ -74,7 +74,7 @@
         <li>
           <a href="./profile.php">
             <i class='bx bx-list-ul' ></i>
-            <span class="links_name">Profiläää Bearbeiten</span>
+            <span class="links_name">Profil Bearbeiten</span>
           </a>
         </li>
         <li>
