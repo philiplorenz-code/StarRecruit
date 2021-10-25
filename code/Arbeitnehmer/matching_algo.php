@@ -3,10 +3,10 @@ include("connection.php");
 include("functions.php");
 
 // Custom Reqs
-$ReqPointsAll = 3;
-$ReqPointsHard = 1;
-$ReqPointsSoft = 1;
-$ReqPointsLang = 1;
+$ReqPointsAll = 3; // Points that have to be gathered for creating a match
+$ReqPointsHard = 1; // Points that have to be gathered to add point to RePointsAll
+$ReqPointsSoft = 1; // Points that have to be gathered to add point to RePointsAll
+$ReqPointsLang = 1; // Points that have to be gathered to add point to RePointsAll
 
 // Check Arrays for equal values
 function checkArray($array1, $array2){
