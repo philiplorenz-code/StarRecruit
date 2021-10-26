@@ -10,14 +10,9 @@
 
 
       // Get count of messages
-      $query = "select * from nachrichten where user_id='$user_id' and not status='accepted' and not status='denied';";
+      $query = "select * from nachrichten where user_id='$user_id' and status='accepted';";
       $result = mysqli_query($con, $query);
-      //var_dump($result);
-      $num_rows = mysqli_fetch_row($result)[0];
-      if(is_null($num_rows)){
-        $num_rows = 0;
-      }
-
+      $num_rows=mysqli_num_rows($result);
 
 
 ?>
