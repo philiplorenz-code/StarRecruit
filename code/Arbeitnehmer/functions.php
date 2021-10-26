@@ -20,6 +20,23 @@ function check_login($con){
 }
 
 
+// Check Arrays for equal values
+function checkArray($array1, $array2){
+    $count = 0;
+    foreach ($array1 as $arr1){
+        foreach ($array2 as $arr2){
+            if ($arr1 == $arr2){
+                $count++;
+            }
+            else {
+
+            }
+        }
+    }
+    return $count;
+}
+
+
 function run_algo(){
 
     echo "algo1";
@@ -30,21 +47,6 @@ function run_algo(){
     $ReqPointsSoft = 1;
     $ReqPointsLang = 1;
     
-    // Check Arrays for equal values
-    function checkArray($array1, $array2){
-        $count = 0;
-        foreach ($array1 as $arr1){
-            foreach ($array2 as $arr2){
-                if ($arr1 == $arr2){
-                    $count++;
-                }
-                else {
-    
-                }
-            }
-        }
-        return $count;
-    }
     
     
     // Receive all users from db
