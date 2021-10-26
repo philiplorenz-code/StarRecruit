@@ -60,21 +60,12 @@ function run_algo(){
     // Receive all users from db
     $Users = [];
     $query = "select * from users where user_acctype='Arbeitssuchender';";
-
-    echo $query;
-
     $result = mysqli_query($con, $query);
-
-    var_dump($result);
-
     while ($row = $result->fetch_assoc()) {
         array_push($Users,$row);
     }
-
-    var_dump($Users);
     
     
-    echo "algo2";
     
     // Receive all searches from db
     $Searches = [];
@@ -83,7 +74,7 @@ function run_algo(){
     while ($row = $result->fetch_assoc()) {
         array_push($Searches,$row);
     }
-    echo "algo3";
+
     
     // Create PreMatches (Any constellation will be mapped and rated afterwards by its attributes (Gehalt, Sprachen, etc.))
     $PreMatches = [];
@@ -102,11 +93,11 @@ function run_algo(){
             else {
                 $PreMatch["Gehalt"] = 0;
             }
-            echo "algo5";
+
             // PLZ TODO (https://mizine.de/html/mit-google-maps-api-entfernungen-berechnen/)
             $PreMatch["PLZ"] = 1;
     
-            echo "algo6";
+
             // Softskills
             $searchForValue = ',';
 
@@ -137,7 +128,7 @@ function run_algo(){
             else{
                 $PreMatch["Softskills"] = 2;
             }
-            echo "algo7";
+
             // Hardskills   
             $searchForValue = ',';   
             $SearchSkillsHard = [];  
@@ -174,7 +165,7 @@ function run_algo(){
     
 
 
-            echo "algo8";
+
             // Language       
             $searchForValue = ',';   
 
@@ -204,7 +195,7 @@ function run_algo(){
                 $PreMatch["Sprachen"] = 2;
             }
     
-            echo "algo9";
+
             // Merge to PreMatches Array
             array_push($PreMatches, $PreMatch);
         }
