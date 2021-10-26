@@ -47,7 +47,7 @@ function run_algo(){
     $ReqPointsSoft = 1;
     $ReqPointsLang = 1;
     
-    
+    echo "algo1.1";
     
     // Receive all users from db
     $Users = [];
