@@ -21,29 +21,25 @@ function check_login($con){
 
 
 function run_algo(){
+
+    // Database Config
+    $servername = "localhost";
+    $username = "webd_philip";
+    $password = "nvzHol-#p6PEu#ai";
+    $dbname = "webd_db";
+
+    if(!$con = mysqli_connect($servername,$username,$password,$dbname)){
+        die("failed to connect!");
+    }
+
+
     // Custom Reqs
     $ReqPointsAll = 3;
     $ReqPointsHard = 1;
     $ReqPointsSoft = 1;
     $ReqPointsLang = 1;
     
-    // Check Arrays for equal values
-    function checkArray($array1, $array2){
-        $count = 0;
-        foreach ($array1 as $arr1){
-            foreach ($array2 as $arr2){
-                if ($arr1 == $arr2){
-                    $count++;
-                }
-                else {
-    
-                }
-            }
-        }
-        return $count;
-    }
-    
-    
+   
     // Receive all users from db
     $Users = [];
     $query = "select * from users where user_acctype='Arbeitssuchender';";
@@ -53,14 +49,6 @@ function run_algo(){
     }
     
     
-    // Receive all matches from db
-    $DBMatches = [];
-    $query = "select * from users where user_acctype='Arbeitssuchender';";
-    $result = mysqli_query($con, $query);
-    while ($row = $result->fetch_assoc()) {
-        array_push($DBMatches,$row);
-    }
-    
     
     // Receive all searches from db
     $Searches = [];
@@ -69,14 +57,13 @@ function run_algo(){
     while ($row = $result->fetch_assoc()) {
         array_push($Searches,$row);
     }
-    
+
     
     // Create PreMatches (Any constellation will be mapped and rated afterwards by its attributes (Gehalt, Sprachen, etc.))
     $PreMatches = [];
     foreach ($Searches as $search){
         foreach ($Users as $user){
             $PreMatch = [];
-    
             // IDs
             $PreMatch["SearchID"] = $search["id"];
             $PreMatch["UserID"] = $user["user_id"];
@@ -88,39 +75,98 @@ function run_algo(){
             else {
                 $PreMatch["Gehalt"] = 0;
             }
-    
+
             // PLZ TODO (https://mizine.de/html/mit-google-maps-api-entfernungen-berechnen/)
             $PreMatch["PLZ"] = 1;
     
-            // Softskills        
-            $SearchSkills = explode(',', $search["softskills"]);
-            $UserSkills = explode(',', $search["softskills"]);
-            if (checkArray($SearchSkills,$UserSkills) >= $ReqPointsSoft){
+
+            // Softskills
+            $searchForValue = ',';
+
+            $SearchSkillsSoft = [];   
+            if( strpos(($search["softskills"]), $searchForValue) !== false ) {
+                array_push($SearchSkillsSoft,(explode(',', $search["softskills"])));   
+            }
+            else {
+                array_push($SearchSkillsSoft,$search["softskills"]);  
+            }
+            // $SearchSkillsSoft[] = explode(',', $search["softskills"]);
+
+            $UserSkillsSoft = [];   
+            if( strpos(($user["softskills"]), $searchForValue) !== false ) {
+                array_push($UserSkillsSoft,(explode(',', $user["softskills"]))); 
+            }
+            else {
+                array_push($UserSkillsSoft,$user["softskills"]);  
+            }
+            // $UserSkills[] = explode(',', $search["softskills"]);
+
+            if (checkArray($SearchSkillsSoft,$UserSkillsSoft) >= $ReqPointsSoft){
                 $PreMatch["Softskills"] = 1;
             }
-            elseif(checkArray($SearchSkills,$UserSkills) < $ReqPointsSoft){
+            elseif(checkArray($SearchSkillsSoft,$UserSkillsSoft) < $ReqPointsSoft){
                 $PreMatch["Softskills"] = 0;
             }
             else{
                 $PreMatch["Softskills"] = 2;
             }
-    
-            // Hardskills        
-            $SearchSkills = explode(',', $search["hardskills"]);
-            $UserSkills = explode(',', $search["hardskills"]);
-            if (checkArray($SearchSkills,$UserSkills) >= $ReqPointsHard){
+
+            // Hardskills   
+            $searchForValue = ',';   
+            $SearchSkillsHard = [];  
+            if( strpos(($search["hardskills"]), $searchForValue) !== false ) {
+                array_push($SearchSkillsHard,(explode(',', $search["hardskills"])));  
+            }
+            else {
+                array_push($SearchSkillsHard,$search["hardskills"]);  
+            } 
+
+            // $SearchSkillsSoft[] = explode(',', $search["softskills"]);
+            $UserSkillsHard = []; 
+            if( strpos(($user["hardskills"]), $searchForValue) !== false ) {
+                array_push($UserSkillsHard,(explode(',', $user["hardskills"]))); 
+            }
+            else {
+                array_push($UserSkillsHard,$user["hardskills"]);  
+            }
+
+            // $UserSkills[] = explode(',', $search["softskills"]); 
+
+            // $SearchSkills = explode(',', $search["hardskills"]);
+            // $UserSkills = explode(',', $search["hardskills"]);
+
+            if (checkArray($SearchSkillsHard,$UserSkillsHard) >= $ReqPointsHard){
                 $PreMatch["Hardskills"] = 1;
             }
-            elseif(checkArray($SearchSkills,$UserSkills) < $ReqPointsHard){
+            elseif(checkArray($SearchSkillsHard,$UserSkillsHard) < $ReqPointsHard){
                 $PreMatch["Hardskills"] = 0;
             }
             else{
                 $PreMatch["Hardskills"] = 2;
             }
     
-            // Language        
-            $SearchSkills = explode(',', $search["sprachen"]);
-            $UserSkills = explode(',', $search["sprachen"]);
+
+
+
+            // Language       
+            $searchForValue = ',';   
+
+            $SearchSkillsLang = [];  
+            if( strpos(($search["sprachen"]), $searchForValue) !== false ) {
+                array_push($SearchSkillsLang,(explode(',', $search["sprachen"])));  
+            }
+            else {
+                array_push($SearchSkillsLang,$search["sprachen"]);  
+            } 
+
+            $UserSkillsLang = [];  
+            if( strpos(($user["sprachen"]), $searchForValue) !== false ) {
+                array_push($UserSkillsLang,(explode(',', $user["sprachen"])));  
+            }
+            else {
+                array_push($UserSkillsLang,$user["sprachen"]);  
+            } 
+            
             if (checkArray($SearchSkills,$UserSkills) >= $ReqPointsLang){
                 $PreMatch["Sprachen"] = 1;
             }
@@ -131,6 +177,7 @@ function run_algo(){
                 $PreMatch["Sprachen"] = 2;
             }
     
+
             // Merge to PreMatches Array
             array_push($PreMatches, $PreMatch);
         }
@@ -181,6 +228,6 @@ function run_algo(){
         
     
     }
-    echo "TEST";
+    return 0;
 
     }
