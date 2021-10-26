@@ -23,7 +23,7 @@
                $softskills = $_POST['softskills'];
                $hardskills = $_POST['hardskills'];
                $sprachen = $_POST['sprachen'];
-               $gehalt = $_POST['gehalt'];
+               $gehalt = $_POST['max_gehalt'];
                $wochenstunden = $_POST['wochenstunden'];
                $recruiterid = $user_id;
        
