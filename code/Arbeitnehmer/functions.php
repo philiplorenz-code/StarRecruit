@@ -39,7 +39,16 @@ function checkArray($array1, $array2){
 
 function run_algo(){
 
-    echo "algo1";
+    // Database Config
+    $servername = "localhost";
+    $username = "webd_philip";
+    $password = "nvzHol-#p6PEu#ai";
+    $dbname = "webd_db";
+
+    if(!$con = mysqli_connect($servername,$username,$password,$dbname)){
+        die("failed to connect!");
+    }
+
 
     // Custom Reqs
     $ReqPointsAll = 3;
@@ -47,8 +56,7 @@ function run_algo(){
     $ReqPointsSoft = 1;
     $ReqPointsLang = 1;
     
-    echo "algo1.1";
-    
+   
     // Receive all users from db
     $Users = [];
     $query = "select * from users where user_acctype='Arbeitssuchender';";
