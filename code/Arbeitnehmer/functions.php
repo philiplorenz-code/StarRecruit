@@ -81,7 +81,6 @@ function run_algo(){
     foreach ($Searches as $search){
         foreach ($Users as $user){
             $PreMatch = [];
-            echo "algo4";
             // IDs
             $PreMatch["SearchID"] = $search["id"];
             $PreMatch["UserID"] = $user["user_id"];
