@@ -27,7 +27,7 @@
       //  $num_rows = 0;
       //}
       //$num_rows = $result["num_rows"];
-      $rowcount=mysqli_num_rows($result);
+      $num_rows=mysqli_num_rows($result);
 
 ?>
 
