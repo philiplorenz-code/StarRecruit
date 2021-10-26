@@ -8,7 +8,7 @@
        $user_data = check_login($con);
        $user_id = $user_data["user_id"];
 
-             // Get username
+      // Get username
       $query = "select vorname from users where user_id='$user_id';";
       $result = mysqli_query($con, $query);
       $entry = $result->fetch_assoc();
@@ -18,8 +18,11 @@
       $query = "select * from nachrichten where user_id='$user_id' and not status='accepted' and not status='denied';";
       echo $query;
       $result = mysqli_query($con, $query);
-      //var_dump($result);
+      echo "</br>";
+      var_dump($result);
       $num_rows = mysqli_fetch_row($result)[0];
+      echo "</br>";
+      var_dump($num_rows);
       if(is_null($num_rows)){
         $num_rows = 0;
       }
@@ -79,7 +82,7 @@
     <nav>
       <div class="sidebar-button">
         <i class='bx bx-menu sidebarBtn'></i>
-        <span class="dashboard">Account Startseite</span>r
+        <span class="dashboard">Account Startseite</span>
       </div>
 
 
