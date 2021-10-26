@@ -52,10 +52,18 @@ function run_algo(){
     // Receive all users from db
     $Users = [];
     $query = "select * from users where user_acctype='Arbeitssuchender';";
+
+    echo $query;
+
     $result = mysqli_query($con, $query);
+
+    var_dump($result);
+
     while ($row = $result->fetch_assoc()) {
         array_push($Users,$row);
     }
+
+    var_dump($Users);
     
     
     echo "algo2";
