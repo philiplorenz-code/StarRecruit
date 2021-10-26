@@ -20,12 +20,12 @@
       $result = mysqli_query($con, $query);
       echo "</br>";
       var_dump($result);
-      $num_rows = mysqli_fetch_row($result)[0];
-      echo "</br>";
-      var_dump($num_rows);
-      if(is_null($num_rows)){
-        $num_rows = 0;
-      }
+      //$num_rows = mysqli_fetch_row($result)[0];
+      //echo "</br>";
+      //var_dump($num_rows);
+      //if(is_null($num_rows)){
+      //  $num_rows = 0;
+      //}
       $num_rows = $result["num_rows"];
 
 ?>
