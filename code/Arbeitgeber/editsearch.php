@@ -28,7 +28,7 @@
                $recruiterid = $user_id;
        
                // save to db
-               $query = "UPDATE search SET name='$name',stadt='$stadt',softskills='$softskills',hardskills='$hardskills',sprachen='$sprachen',gehalt='$gehalt',wochenstunden='$wochenstunden',recruiter_id='$recruiterid' WHERE id='$search_id';";
+               $query = "UPDATE search SET name='$name',stadt='$stadt',softskills='$softskills',hardskills='$hardskills',sprachen='$sprachen',maxgehalt='$gehalt',wochenstunden='$wochenstunden',recruiter_id='$recruiterid' WHERE id='$search_id';";
 
                echo $query;
             
