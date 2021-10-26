@@ -26,6 +26,7 @@
       if(is_null($num_rows)){
         $num_rows = 0;
       }
+      $num_rows = $result["num_rows"];
 
 ?>
 
