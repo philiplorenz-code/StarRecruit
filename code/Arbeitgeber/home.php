@@ -8,6 +8,12 @@
        $user_data = check_login($con);
        $user_id = $user_data["user_id"];
 
+      // Get username
+      $query = "select vorname from users where user_id='$user_id';";
+      $result = mysqli_query($con, $query);
+      $entry = $result->fetch_assoc();
+      $entry = $entry["vorname"];
+
 
       // Get count of messages
       $query = "select * from nachrichten where user_id='$user_id' and status='accepted';";
@@ -73,6 +79,8 @@
         </li>
       </ul>
   </div>
+
+
   <section class="home-section">
     <nav>
       <div class="sidebar-button">
@@ -86,7 +94,7 @@
     <div class="home-content">
       <div class="sales-boxes">
         <div class="recent-sales box">
-          <div class="title"><?php echo "Hey, du hast " . $num_rows . " neue Benachrichtigungen!" ?>
+          <div class="title"><?php echo "Hey " . $entry . ", du hast " . $num_rows . " neue Benachrichtigungen!" ?>
 </div>
         </div>
       </div>
