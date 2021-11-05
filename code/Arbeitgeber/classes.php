@@ -50,7 +50,7 @@ class Search {
         $this->sprachen = $sprachen;
         $this->gehalt = $gehalt;
         $this->wochenstunden = $wochenstunden;
-        $this->userid = $userid;
+        $this->recruiterid = $userid;
     }
 
 }
