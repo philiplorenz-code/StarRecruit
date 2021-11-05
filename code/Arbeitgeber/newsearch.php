@@ -14,7 +14,7 @@
            if($_SERVER['REQUEST_METHOD'] == "POST"){
 
               $search = new Search($_POST['name'],$_POST['stadt'],$_POST['softskills'],$_POST['hardskills'],$_POST['sprachen'],$_POST['gehalt'],$_POST['wochenstunden'],$user_id);
-              $query = "INSERT INTO search (name,stadt, softskills, hardskills, sprachen, max_gehalt, wochenstunden,recruiter_id) VALUES ('$search->getName()','$search->getStadt()', '$search->getSoftskills()', '$search->getHardskills()', '$search->getSprachen()', '$search->getGehalt()', '$search->getWochenstunden()', '$search->getRecruiterid()');";
+              $query = "INSERT INTO search (name,stadt, softskills, hardskills, sprachen, max_gehalt, wochenstunden,recruiter_id) VALUES ('{$search->getName()}','{$search->getStadt()}', '{$search->getSoftskills()}', '{$search->getHardskills()}', '{$search->getSprachen()}', '{$search->getGehalt()}', '{$search->getWochenstunden()}', '{$search->getRecruiterid()}');";
               var_dump($search);
               echo "</br>";
               var_dump($query);
