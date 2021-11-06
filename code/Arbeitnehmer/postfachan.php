@@ -8,7 +8,7 @@ session_start();
     $user_id = $user_data["user_id"];
 
     // Get all messages to user
-    $query = "select * from nachrichten where user_id='$user_id';";
+    $query = "select * from nachrichten where (user_id='$user_id' and status='offen') or (user_id='$user_id' and status='eingeladengespraech') or (user_id='$user_id' and status='eingeladenAssess');";
     $result = mysqli_query($con, $query);
 
     if($_SERVER['REQUEST_METHOD'] == "POST"){

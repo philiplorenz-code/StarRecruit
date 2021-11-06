@@ -8,7 +8,7 @@ session_start();
     $user_id = $user_data["user_id"];
 
     // Get all messages to user
-    $query = "select * from nachrichten where unternehmen_id='$user_id'"; // and status='accepted';
+    $query = "select * from nachrichten where unternehmen_id='$user_id' and status='accepted'";
     $result = mysqli_query($con, $query);
 
     if($_SERVER['REQUEST_METHOD'] == "POST"){
