@@ -119,8 +119,8 @@ session_start();
                           echo "<tr>";
                           echo "<td>" . $row['id'] . "</td>";
                           echo "<td>" . $row['status'] . "</td>";
-                          echo "<td> " . " <form method='post'> <button type='submit' name='accept' value=" . $row['id'] . "> Bestätigen </button> </form>" . "</td>";
-                          echo "<td> " . " <form method='post'> <button type='submit' name='deny' value=" . $row['id'] . "> Ablehnen </button> </form>" . "</td>";
+                          echo "<td> " . " <form method='post'> <button type='submit' id='myButton' name='accept' value=" . $row['id'] . "> Bestätigen </button> </form>" . "</td>";
+                          echo "<td> " . " <form method='post'> <button type='submit' id='myButton' name='deny' value=" . $row['id'] . "> Ablehnen </button> </form>" . "</td>";
                           echo "</tr>";
                   }
               ?>
