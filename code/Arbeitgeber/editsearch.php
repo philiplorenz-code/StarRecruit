@@ -21,7 +21,8 @@ if ($_SERVER['REQUEST_METHOD'] == "POST") {
     
     // Create new Search and write to DB
     $search = new Search($_POST['name'], $_POST['stadt'], $_POST['softskills'], $_POST['hardskills'], $_POST['sprachen'], $_POST['gehalt'], $_POST['wochenstunden'], $user_id);
-    $query  = "INSERT INTO search (name,stadt, softskills, hardskills, sprachen, max_gehalt, wochenstunden,recruiter_id) VALUES ('{$search->getName()}','{$search->getStadt()}', '{$search->getSoftskills()}', '{$search->getHardskills()}', '{$search->getSprachen()}', '{$search->getGehalt()}', '{$search->getWochenstunden()}', '{$search->getRecruiterid()}');";
+    // $query  = "INSERT INTO search (name,stadt, softskills, hardskills, sprachen, max_gehalt, wochenstunden,recruiter_id) VALUES ('{$search->getName()}','{$search->getStadt()}', '{$search->getSoftskills()}', '{$search->getHardskills()}', '{$search->getSprachen()}', '{$search->getGehalt()}', '{$search->getWochenstunden()}', '{$search->getRecruiterid()}');";
+    $query = "UPDATE search SET name='{$search->getName()}',stadt='{$search->getStadt()}',softskills='{$search->getSoftskills()}',hardskills='{$search->getHardskills()}',sprachen='{$search->getSprachen()}',max_gehalt='{$search->getGehalt()}',wochenstunden='{$search->getWochenstunden()}',recruiter_id='$recruiterid' WHERE id='{$search->getRecruiterid()}';";
     mysqli_query($con, $query);
     
     // Running MatchingAlgo
