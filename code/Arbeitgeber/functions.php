@@ -183,10 +183,10 @@ function run_algo(){
                 array_push($UserSkillsLang,$user["sprachen"]);  
             } 
             
-            if (checkArray($SearchSkills,$UserSkills) >= $ReqPointsLang){
+            if (checkArray($SearchSkillsLang,$UserSkillsLang) >= $ReqPointsLang){
                 $PreMatch["Sprachen"] = 1;
             }
-            elseif(checkArray($SearchSkills,$UserSkills) < $ReqPointsLang){
+            elseif(checkArray($SearchSkillsLang,$UserSkillsLang) < $ReqPointsLang){
                 $PreMatch["Sprachen"] = 0;
             }
             else{
